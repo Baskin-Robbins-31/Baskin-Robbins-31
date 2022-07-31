@@ -3,7 +3,7 @@
     "start": "run-p server watch",
     "tailwindcss": "tailwindcss -i ./src/css/input.css -o ./src/css/output.css",
     "watch": "npm run tailwindcss -- --watch",
-    "server": "live-server ./src/"
+    "server": "live-server ./"
   },
   "repository": {
     "type": "git",
