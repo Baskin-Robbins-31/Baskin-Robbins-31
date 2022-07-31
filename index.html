@@ -1,243 +1,308 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>배스킨라빈스</title>
-	</head>
-	<body>
-		<main>
-			<!-- 이벤트  -->
-			<section class="event">
-				<h2 class="sr-only">
-					이달의 맛 아이스 초당옥수수와 함께 다양한 할인 이벤트를 확인해보세요
-				</h2>
-				<div class="banner-top">
-					<h3 class="sr-only">
-						8월의 신제품 아이스 초당옥수수를 자세하게 살펴보세요
-					</h3>
-					<div class="banner-top__imageWrapper--short">
-						<img
-							src="./src/images/img_banner_top.jpg"
-							alt="아이스 초당옥수수 인스타그램 이벤트 안내"
-							srcset=""
-						/>
-					</div>
-					<div class="banner-top__imageWrapper--fullscreen">
-						<img
-							src="./src/images/img_banner_top_fullscreen.jpg"
-							alt="아이스 초당옥수수 인스타그램 이벤트 안내"
-						/>
-					</div>
-				</div>
-				<!-- carousel -->
-				<div class="banner-carousel">
-					<h3>
-						31데이, 멤버십 할인 등 배스킨라빈스만의 특별한 이벤트를
-						안내해드립니다
-					</h3>
-					<!-- 컨트롤 버튼 -->
-					<div class="controls">
-						<button
-							type="button"
-							class="rotation pause"
-							aria-label="Stop automatic slide show"
-						></button>
-						<button
-							type="button"
-							class="previous"
-							aria-controls="carousel-items"
-							aria-label="Previous Slide"
-						></button>
-						<button
-							type="button"
-							class="next"
-							aria-controls="carousel-items"
-							aria-label="Next Slide"
-						></button>
-						<!-- 인디케이터 -->
-						<ol role="tablist" aria-label="Slides">
-							<button
-								id="carousel-tab-1"
-								type="button"
-								role="tab"
-								aria-label="Slide 1"
-								aria-selected="true"
-								aria-controls="carousel-item-1"
-							></button>
-							<button
-								id="carousel-tab-2"
-								type="button"
-								role="tab"
-								tabindex="-1"
-								aria-label="Slide 2"
-								aria-selected="false"
-								aria-controls="carousel-item-2"
-							></button>
-							<button
-								id="carousel-tab-3"
-								type="button"
-								role="tab"
-								tabindex="-1"
-								aria-label="Slide 3"
-								aria-selected="false"
-								aria-controls="carousel-item-3"
-							></button>
-							<button
-								id="carousel-tab-4"
-								type="button"
-								role="tab"
-								tabindex="-1"
-								aria-label="Slide 4"
-								aria-selected="false"
-								aria-controls="carousel-item-4"
-							></button>
-							<button
-								id="carousel-tab-5"
-								type="button"
-								role="tab"
-								tabindex="-1"
-								aria-label="Slide 5"
-								aria-selected="false"
-								aria-controls="carousel-item-5"
-							></button>
-							<button
-								id="carousel-tab-6"
-								type="button"
-								role="tab"
-								tabindex="-1"
-								aria-label="Slide 6"
-								aria-selected="false"
-								aria-controls="carousel-item-6"
-							></button>
-						</ol>
-					</div>
-					<!-- 슬라이드 -->
-					<div id="carousel-items" class="carousel-items" aria-live="off">
-						<div
-							id="carousel-item-1"
-							class="carousel-item active"
-							role="group"
-							aria-roledescription="slide"
-							aria-label="1 of 7"
-						>
-							<div class="carousel-image">
-								<a href="#">
-									<img
-										src="./src/images/img_banner1.png"
-										alt="특별한 제휴 혜택을 알아보세요(2022년 상시 운영)"
-									/>
-								</a>
-							</div>
-						</div>
-						<div
-							id="carousel-item-2"
-							class="carousel-item active"
-							role="group"
-							aria-roledescription="slide"
-							aria-label="2 of 7"
-						>
-							<div class="carousel-image">
-								<a href="#">
-									<img
-										src="./src/images/img_banner2.png"
-										alt="기아 멤버스에게 최대 50% 제휴 혜택을 드립니다(2022년 상시 운영)"
-									/>
-								</a>
-							</div>
-						</div>
-						<div
-							id="carousel-item-3"
-							class="carousel-item active"
-							role="group"
-							aria-roledescription="slide"
-							aria-label="3 of 7"
-						>
-							<div class="carousel-image">
-								<a href="#">
-									<img
-										src="./src/images/img_banner3.png"
-										alt="31데이 사전예약 특별 혜택을 알아보세요(예약 기간: 2022년 7월 27일 수요일부터 7월 30일 토요일까지)"
-									/>
-								</a>
-							</div>
-						</div>
-						<div
-							id="carousel-item-4"
-							class="carousel-item active"
-							role="group"
-							aria-roledescription="slide"
-							aria-label="4 of 7"
-						>
-							<div class="carousel-image">
-								<a href="#">
-									<img
-										src="./src/images/img_banner4.png"
-										alt="현대카트 M포인트 50% 사용이라는데 무슨 말인지 모르겠어요"
-									/>
-								</a>
-							</div>
-						</div>
-						<div
-							id="carousel-item-5"
-							class="carousel-item active"
-							role="group"
-							aria-roledescription="slide"
-							aria-label="5 of 7"
-						>
-							<div class="carousel-image">
-								<a href="#">
-									<img
-										src="./src/images/img_banner5.png"
-										alt="T멤버십 회원에게는 싱글 레귤러를 최대 50% 할인 또는 적립해드립니다(기간: 2022년 3월 2일 수요일부터 2023년 1월 31일 화요일까지)"
-									/>
-								</a>
-							</div>
-						</div>
-						<div
-							id="carousel-item-6"
-							class="carousel-item active"
-							role="group"
-							aria-roledescription="slide"
-							aria-label="6 of 7"
-						>
-							<div class="carousel-image">
-								<a href="#">
-									<img
-										src="./src/images/img_banner6.png"
-										alt="해시태그 이벤트. 인스타그램에 아이스 초당옥수수맛 사진을 올려주세요(기간: 2022년 8월 1일 월요일부터 8월 26일 금요일까지)"
-									/>
-								</a>
-							</div>
-						</div>
-						<div
-							id="carousel-item-7"
-							class="carousel-item active"
-							role="group"
-							aria-roledescription="slide"
-							aria-label="7 of 7"
-						>
-							<div class="carousel-image">
-								<a href="#">
-									<img
-										src="./src/images/img_banner7.png"
-										alt="KT멤버십 고객에게는 파인트 30%할인, V.V.I.P 고객에게는 쿼터 1개를 무료로 드립니다(기간: 2022년 상시 운영. KT 더블할인 멤버십 제휴사 통합 월 1회 한정)"
-									/>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- 메뉴 안내  -->
-			<section>메뉴</section>
-			<!-- 주문 안내 -->
-			<section>주문 안내</section>
-			<!-- 매장 안내 -->
-			<section>매장 안내</section>
-			<!-- SNS 리뷰 소개  -->
-			<section>SNS 리뷰</section>
-		</main>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배스킨라빈스</title>
+  </head>
+  <body>
+    <main>
+      <!-- 이벤트  -->
+      <section class="event">
+        <h2 class="sr-only">
+          이달의 맛 아이스 초당옥수수와 함께 다양한 할인 이벤트를 확인해보세요
+        </h2>
+        <div class="banner-top">
+          <h3 class="sr-only">
+            8월의 신제품 아이스 초당옥수수를 자세하게 살펴보세요
+          </h3>
+          <div class="banner-top__imageWrapper--short">
+            <img
+              src="./src/images/img_banner_top.jpg"
+              alt="아이스 초당옥수수 인스타그램 이벤트 안내"
+              srcset=""
+            />
+          </div>
+          <div class="banner-top__imageWrapper--fullscreen">
+            <img
+              src="./src/images/img_banner_top_fullscreen.jpg"
+              alt="아이스 초당옥수수 인스타그램 이벤트 안내"
+            />
+          </div>
+        </div>
+        <!-- carousel -->
+        <div class="banner-carousel">
+          <h3>
+            31데이, 멤버십 할인 등 배스킨라빈스만의 특별한 이벤트를
+            안내해드립니다
+          </h3>
+          <!-- 컨트롤 버튼 -->
+          <div class="controls">
+            <button
+              type="button"
+              class="rotation pause"
+              aria-label="Stop automatic slide show"
+            ></button>
+            <button
+              type="button"
+              class="previous"
+              aria-controls="carousel-items"
+              aria-label="Previous Slide"
+            ></button>
+            <button
+              type="button"
+              class="next"
+              aria-controls="carousel-items"
+              aria-label="Next Slide"
+            ></button>
+            <!-- 인디케이터 -->
+            <ol role="tablist" aria-label="Slides">
+              <button
+                id="carousel-tab-1"
+                type="button"
+                role="tab"
+                aria-label="Slide 1"
+                aria-selected="true"
+                aria-controls="carousel-item-1"
+              ></button>
+              <button
+                id="carousel-tab-2"
+                type="button"
+                role="tab"
+                tabindex="-1"
+                aria-label="Slide 2"
+                aria-selected="false"
+                aria-controls="carousel-item-2"
+              ></button>
+              <button
+                id="carousel-tab-3"
+                type="button"
+                role="tab"
+                tabindex="-1"
+                aria-label="Slide 3"
+                aria-selected="false"
+                aria-controls="carousel-item-3"
+              ></button>
+              <button
+                id="carousel-tab-4"
+                type="button"
+                role="tab"
+                tabindex="-1"
+                aria-label="Slide 4"
+                aria-selected="false"
+                aria-controls="carousel-item-4"
+              ></button>
+              <button
+                id="carousel-tab-5"
+                type="button"
+                role="tab"
+                tabindex="-1"
+                aria-label="Slide 5"
+                aria-selected="false"
+                aria-controls="carousel-item-5"
+              ></button>
+              <button
+                id="carousel-tab-6"
+                type="button"
+                role="tab"
+                tabindex="-1"
+                aria-label="Slide 6"
+                aria-selected="false"
+                aria-controls="carousel-item-6"
+              ></button>
+            </ol>
+          </div>
+          <!-- 슬라이드 -->
+          <div id="carousel-items" class="carousel-items" aria-live="off">
+            <div
+              id="carousel-item-1"
+              class="carousel-item active"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="1 of 7"
+            >
+              <div class="carousel-image">
+                <a href="#">
+                  <img
+                    src="./src/images/img_banner1.png"
+                    alt="특별한 제휴 혜택을 알아보세요(2022년 상시 운영)"
+                  />
+                </a>
+              </div>
+            </div>
+            <div
+              id="carousel-item-2"
+              class="carousel-item active"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="2 of 7"
+            >
+              <div class="carousel-image">
+                <a href="#">
+                  <img
+                    src="./src/images/img_banner2.png"
+                    alt="기아 멤버스에게 최대 50% 제휴 혜택을 드립니다(2022년 상시 운영)"
+                  />
+                </a>
+              </div>
+            </div>
+            <div
+              id="carousel-item-3"
+              class="carousel-item active"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="3 of 7"
+            >
+              <div class="carousel-image">
+                <a href="#">
+                  <img
+                    src="./src/images/img_banner3.png"
+                    alt="31데이 사전예약 특별 혜택을 알아보세요(예약 기간: 2022년 7월 27일 수요일부터 7월 30일 토요일까지)"
+                  />
+                </a>
+              </div>
+            </div>
+            <div
+              id="carousel-item-4"
+              class="carousel-item active"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="4 of 7"
+            >
+              <div class="carousel-image">
+                <a href="#">
+                  <img
+                    src="./src/images/img_banner4.png"
+                    alt="현대카트 M포인트 50% 사용이라는데 무슨 말인지 모르겠어요"
+                  />
+                </a>
+              </div>
+            </div>
+            <div
+              id="carousel-item-5"
+              class="carousel-item active"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="5 of 7"
+            >
+              <div class="carousel-image">
+                <a href="#">
+                  <img
+                    src="./src/images/img_banner5.png"
+                    alt="T멤버십 회원에게는 싱글 레귤러를 최대 50% 할인 또는 적립해드립니다(기간: 2022년 3월 2일 수요일부터 2023년 1월 31일 화요일까지)"
+                  />
+                </a>
+              </div>
+            </div>
+            <div
+              id="carousel-item-6"
+              class="carousel-item active"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="6 of 7"
+            >
+              <div class="carousel-image">
+                <a href="#">
+                  <img
+                    src="./src/images/img_banner6.png"
+                    alt="해시태그 이벤트. 인스타그램에 아이스 초당옥수수맛 사진을 올려주세요(기간: 2022년 8월 1일 월요일부터 8월 26일 금요일까지)"
+                  />
+                </a>
+              </div>
+            </div>
+            <div
+              id="carousel-item-7"
+              class="carousel-item active"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="7 of 7"
+            >
+              <div class="carousel-image">
+                <a href="#">
+                  <img
+                    src="./src/images/img_banner7.png"
+                    alt="KT멤버십 고객에게는 파인트 30%할인, V.V.I.P 고객에게는 쿼터 1개를 무료로 드립니다(기간: 2022년 상시 운영. KT 더블할인 멤버십 제휴사 통합 월 1회 한정)"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 메뉴 안내  -->
+      <section class="menu">
+        <h2 class="sr-only">
+          아이스크림부터 음료와 디저트까지, 베스킨 라빈스의 다양한 메뉴를
+          만나보세요
+        </h2>
+        <div class="menu-contentWrapper">
+          <div class="menu-icecream">
+            <h3>ICECREAM</h3>
+            <p>아이스크림의 기준, 배스킨라빈스</p>
+            <a href="/views/menu.html">more</a>
+            <img
+              src="./src/images/icecream_float.png"
+              alt="딸기맛 아이스크림 사진"
+            />
+            <img
+              src="./src/images/icecream_float2.png"
+              alt="솜사탕맛 아이스크림 사진"
+            />
+          </div>
+          <div class="menu-icecreamCake">
+            <h3>ICECREAMCAKE</h3>
+            <p>
+              아이와 어른이 좋아하는 아이스크림을 하나의 케이크에서 모두
+              즐기세요!
+            </p>
+            <a href="/views/menu.html">more</a>
+            <img
+              src="./src/images/icecreamcake.png"
+              alt="미니언즈 아이스크림 케이크 사진"
+            />
+          </div>
+          <div class="menu-beverage">
+            <h3>BEVERAGE</h3>
+            <p>아이스크림으로 즐기는 배스킨라빈스만의 음료!</p>
+            <a href="/views/menu.html">more</a>
+            <img
+              src="./src/images/shake.png"
+              alt="미니언즈 초당옥수수 블라스트 사진"
+            />
+          </div>
+          <div class="menu-coffee">
+            <h3>COFFEE</h3>
+            <p>배스킨라빈스만의 부드러운 촉감과 달콤한 풍미!</p>
+            <a href="/views/menu.html">more</a>
+            <img src="./src/images/coffee.png" alt="뜨거운 아메리카노 사진" />
+          </div>
+          <div class="menu-dessert">
+            <h3>DESSERT</h3>
+            <p>배스킨라빈스만의 부드러운 촉감과 달콤한 풍미!</p>
+            <a href="/views/menu.html">more</a>
+            <img
+              src="./src/images/monaka.png"
+              alt="미니언즈 초당옥수수 아이스 모나카 사진"
+            />
+          </div>
+          <div class="menu-gift">
+            <h3>GIFT</h3>
+            <p>특별한 날, 배스킨라빈스로 달콤한 선물을 전해보세요!</p>
+            <a href="/views/menu.html">more</a>
+            <img
+              src="./src/images/giftcard.jpg"
+              alt="배스킨라빈스 상품권 사진"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- 주문 안내 -->
+      <section>주문 안내</section>
+      <!-- 매장 안내 -->
+      <section>매장 안내</section>
+      <!-- SNS 리뷰 소개  -->
+      <section>SNS 리뷰</section>
+    </main>
+  </body>
 </html>
