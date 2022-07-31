@@ -3,5 +3,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Baskin-Robbins-31/Baskin-Robbins-31.git"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"
   }
 }
