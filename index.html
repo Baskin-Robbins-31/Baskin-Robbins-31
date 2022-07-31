@@ -112,81 +112,28 @@
         </li>
         <!-- 패밀리 사이트 -->
         <!-- 버튼을 누르면 패밀리 사이트 리스트가 보입니다 -->
-        <button type="button">FAMILY SITE</button>
-        <ul>
-          <li>
-            <a
-              href="https://baskinschool.hunet.co.kr/Login/LoginGate"
-              target="_blank"
-              rel="noopener noreferrer"
-              >배스킨 스쿨</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.spc.co.kr/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >SPC그룹사이트</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.spcmagazine.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >SPC MAGAZINE</a
-            >
-          </li>
-          <li>
-            <a
-              href="http://www.brkorea.co.kr/main/main.php"
-              target="_blank"
-              rel="noopener noreferrer"
-              >BR코리아</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.happypointcard.com/page/main/index.spc"
-              target="_blank"
-              rel="noopener noreferrer"
-              >해피포인트카드</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.caffe-pascucci.co.kr/index.asp"
-              target="_blank"
-              rel="noopener noreferrer"
-              >파스쿠찌</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://spcsamlip.co.kr/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >삼립</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.paris.co.kr/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >파리바게트</a
-            >
-          </li>
-          <li>
-            <a
-              href="http://www.dunkindonuts.co.kr/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >던킨도너츠</a
-            >
-          </li>
-        </ul>
+        <li>
+          <label for="family-site-select">패밀리 사이트</label>
+          <select
+            name="family-sites"
+            id="family-site-select"
+            onchange="window.open(value, '_blank', 'noopener', 'noreferrer');"
+          >
+            <option value="none">FAMILY SITE</option>
+            <option value="https://baskinschool.hunet.co.kr/Login/LoginGate">
+              배스킨 스쿨
+            </option>
+            <option value="https://www.spc.co.kr/">SPC그룹사이트</option>
+            <option value="https://www.spcmagazine.com/">SPC MAGAZINE</option>
+            <option value="http://www.brkorea.co.kr/main/main.php">
+              BR코리아
+            </option>
+            <option value="https://www.caffe-pascucci.co.kr/index.asp">
+              파스쿠찌
+            </option>
+            <option value="https://spcsamlip.co.kr/">삼립</option>
+          </select>
+        </li>
       </ul>
       <!-- 3. 주소, 이메일, 사업자번호 등 -->
       <!-- ::before를 이용해 배스킨라빈스 로고를 넣을 예정 -->
