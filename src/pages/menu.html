@@ -19,15 +19,123 @@
   </head>
   <body>
     <!-- 1. 헤더 -->
-    <header class=""></header>
-
-    <!-- 2. 메인메뉴 -->
-    <nav class=""></nav>
+    <header>
+      <!-- 1. 로고 -->
+      <h1>
+        <a href="/">
+          <span class="sr-only">배스킨라빈스</span>
+          <picture>
+            <source srcset="./../images/sprite_main_0.avif" type="image/avif" />
+            <source srcset="./../images/sprite_main_0.webp" type="image/webp" />
+            <img src="./../images/sprite_main_0.png" />
+          </picture>
+        </a>
+      </h1>
+      <ul>
+        <li>
+          <!-- 해당 페이지들을 만들지 않을 예정이므로 href 속성을 /로 설정하였습니다! -->
+          <a href="/">로그인</a>
+        </li>
+        <li>
+          <a href="/">회원가입</a>
+        </li>
+      </ul>
+      <!-- 2. 메인 메뉴 -->
+      <nav>
+        <h2 class="sr-only">메인 메뉴</h2>
+        <!-- css를 이용하여 전부 대문자로 변경할 예정입니다! -->
+        <ul>
+          <li>
+            <a href="/">이달의 맛</a>
+          </li>
+          <li>
+            <a href="/">메뉴</a>
+          </li>
+          <li>
+            <a href="/">영양 성분 및 알레르기</a>
+          </li>
+          <li>
+            <a href="/">이벤트</a>
+          </li>
+          <li>
+            <a href="/">매장</a>
+          </li>
+          <li>
+            <a href="/">더보기</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- 3. 검색 버튼 -->
+      <!-- 배경이미지로 돋보기 모양 이미지를 넣을 예정입니다! -->
+      <button type="button" class="bg-icon_search" aria-label="검색"></button>
+      <!-- 4. sns 링크 + 고객센터 + contact us -->
+      <!-- sns 로고는 배경 이미지로 넣을 예정입니다! -->
+      <ul>
+        <li>
+          <a
+            href="https://www.facebook.com/baskinrobbinskr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-icon_facebook"
+            aria-label="페이스북 바로가기"
+          >
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/BaskinrobbinsKR"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-icon_twitter"
+            aria-label="트위터 바로가기"
+          >
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://blog.naver.com/brgirl31"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-icon_blog"
+            aria-label="블로그 바로가기"
+          >
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/baskinrobbinskorea/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-icon_instagram"
+            aria-label="인스타그램 바로가기"
+          >
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/user/baskinrobbinskorea"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-icon_youtube"
+            aria-label="유튜브 바로가기"
+          >
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="/">고객센터</a>
+        </li>
+        <li>
+          <a href="/" lang="en">Contact us</a>
+        </li>
+      </ul>
+    </header>
 
     <!-- 3. 메인콘텐츠 -->
     <main class="">
       <!-- 3-1. 스크린 리더에만 보이는 헤딩 -->
-      <h2 class="">아이스크림 메뉴</h2>
+      <h2 class="sr-only">아이스크림 메뉴</h2>
 
       <!-- 3-2. 상단 배너 -->
       <!-- gif 이미지 -->
@@ -41,294 +149,360 @@
       <section>
         <!-- 스타일링을 이용하여 대문자 변경 필요-->
         <!-- background image 또는 ::before 요소로 왕관 이미지 추가 필요 -->
-        <h3 class="">이달의 베스트 아이스크림</h3>
-        <ol class="">
+        <h3 class="menu__title menu__title--crown">이달의 베스트 아이스크림</h3>
+        <ol
+          class="mt-14 flex flex-nowrap gap-6 justify-center md:flex-wrap overflow-auto"
+        >
           <!-- 1위: 아이스 초당 옥수수 -->
           <li class="">
             <!-- 각 아이스크림 상세 페이지로 연결되는 링크 -->
-            <a href="" class="">
+            <a href="" class="best__link">
               <!-- ::before 요소로 순위 정보 추가 필요 -->
               <!-- !!! 아이스크림 콘과 아이스크림 스쿱 이미지가 별도로 있어서\
                 아래와 같은 구조로 짰는데 더 좋은 아이디어 있으면 말씀해주세요 !!! -->
-              <div>
+              <div class="best__link__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img
+                    class="best__img best__img--cone"
+                    src="./../images/1594025925.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img
+                    src="./../images/1594025925.png"
+                    class="best__img best__img--scoop"
+                    alt=""
+                  />
                 </picture>
               </div>
-              <p>아이스 초당 옥수수</p>
+              <p class="best__title">아이스 초당 옥수수</p>
             </a>
           </li>
           <!-- 2위: 마우나로아 마카다미아 -->
           <li class="">
             <!-- 각 아이스크림 상세 페이지로 연결되는 링크 -->
-            <a href="" class="">
+            <a href="" class="best__link">
               <!-- ::before 요소로 순위 정보 추가 필요 -->
               <!-- !!! 아이스크림 콘과 아이스크림 스쿱 이미지가 별도로 있어서\
                           아래와 같은 구조로 짰는데 더 좋은 아이디어 있으면 말씀해주세요 !!! -->
-              <div>
+              <div class="best__link__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img
+                    class="best__img best__img--cone"
+                    src="./../images/1594025925.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcxet="./../images/sprite_menu_0.avif"
+                    srcxet="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcxet="./../images/sprite_menu_0.webp"
+                    srcxet="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img
+                    src="./../images/1594025925.png"
+                    class="best__img best__img--scoop"
+                    alt=""
+                  />
                 </picture>
               </div>
-              <p>마우나로아 마카다미아</p>
+              <p class="best__title">마우나로아 마카다미아</p>
             </a>
           </li>
           <!-- 3위: 엄마는 외계인 -->
           <li class="">
             <!-- 각 아이스크림 상세 페이지로 연결되는 링크 -->
-            <a href="" class="">
+            <a href="" class="best__link">
               <!-- ::before 요소로 순위 정보 추가 필요 -->
               <!-- !!! 아이스크림 콘과 아이스크림 스쿱 이미지가 별도로 있어서\
                           아래와 같은 구조로 짰는데 더 좋은 아이디어 있으면 말씀해주세요 !!! -->
-              <div>
+              <div class="best__link__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcxet="./../images/sprite_menu_0.avif"
+                    srcxet="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcxet="./../images/sprite_menu_0.webp"
+                    srcxet="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img
+                    class="best__img best__img--cone"
+                    src="./../images/1594025925.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcxet="./../images/sprite_menu_0.avif"
+                    srcxet="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcxet="./../images/sprite_menu_0.webp"
+                    srcxet="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img
+                    src="./../images/1594025925.png"
+                    class="best__img best__img--scoop"
+                    alt=""
+                  />
                 </picture>
               </div>
-              <p>엄마는 외계인</p>
+              <p class="best__title">엄마는 외계인</p>
             </a>
           </li>
           <!-- 4위: 아몬드 봉봉 -->
           <li class="">
             <!-- 각 아이스크림 상세 페이지로 연결되는 링크 -->
-            <a href="" class="">
+            <a href="" class="best__link">
               <!-- ::before 요소로 순위 정보 추가 필요 -->
               <!-- !!! 아이스크림 콘과 아이스크림 스쿱 이미지가 별도로 있어서\
                           아래와 같은 구조로 짰는데 더 좋은 아이디어 있으면 말씀해주세요 !!! -->
-              <div>
+              <div class="best__link__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcxet="./../images/sprite_menu_0.avif"
+                    srcxet="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcxet="./../images/sprite_menu_0.webp"
+                    srcxet="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img
+                    class="best__img best__img--cone"
+                    src="./../images/1594025925.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcxet="./../images/sprite_menu_0.avif"
+                    srcxet="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcxet="./../images/sprite_menu_0.webp"
+                    srcxet="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img
+                    src="./../images/1594025925.png"
+                    class="best__img best__img--scoop"
+                    alt=""
+                  />
                 </picture>
               </div>
-              <p>아몬드 봉봉</p>
+              <p class="best__title">아몬드 봉봉</p>
             </a>
           </li>
           <!-- 5위: 민트 초콜릿 칩 -->
           <li class="">
             <!-- 각 아이스크림 상세 페이지로 연결되는 링크 -->
-            <a href="" class="">
+            <a href="" class="best__link">
               <!-- ::before 요소로 순위 정보 추가 필요 -->
               <!-- !!! 아이스크림 콘과 아이스크림 스쿱 이미지가 별도로 있어서\
                           아래와 같은 구조로 짰는데 더 좋은 아이디어 있으면 말씀해주세요 !!! -->
-              <div>
+              <div class="best__link__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcxet="./../images/sprite_menu_0.avif"
+                    srcxet="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcxet="./../images/sprite_menu_0.webp"
+                    srcxet="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img
+                    class="best__img best__img--cone"
+                    src="./../images/1594025925.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcxet="./../images/sprite_menu_0.avif"
+                    srcxet="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcxet="./../images/sprite_menu_0.webp"
+                    srcxet="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img
+                    src="./../images/1594025925.png"
+                    class="best__img best__img--scoop"
+                    alt=""
+                  />
                 </picture>
               </div>
-              <p>민트 초콜릿 칩</p>
+              <p class="best__title">민트 초콜릿 칩</p>
             </a>
           </li>
           <!-- 6위: 뉴욕 치즈케이크 -->
           <li class="">
             <!-- 각 아이스크림 상세 페이지로 연결되는 링크 -->
-            <a href="" class="">
+            <a href="" class="best__link">
               <!-- ::before 요소로 순위 정보 추가 필요 -->
               <!-- !!! 아이스크림 콘과 아이스크림 스쿱 이미지가 별도로 있어서\
                           아래와 같은 구조로 짰는데 더 좋은 아이디어 있으면 말씀해주세요 !!! -->
-              <div>
+              <div class="best__link__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcxet="./../images/sprite_menu_0.avif"
+                    srcxet="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcxet="./../images/sprite_menu_0.webp"
+                    srcxet="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img
+                    class="best__img best__img--cone"
+                    src="./../images/1594025925.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcxet="./../images/sprite_menu_0.avif"
+                    srcxet="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcxet="./../images/sprite_menu_0.webp"
+                    srcxet="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img
+                    src="./../images/1594025925.png"
+                    class="best__img best__img--scoop"
+                    alt=""
+                  />
                 </picture>
               </div>
-              <p>뉴욕 치즈케이크</p>
+              <p class="best__title">뉴욕 치즈케이크</p>
             </a>
           </li>
           <!-- 7위: 체리쥬빌레 -->
           <li class="">
             <!-- 각 아이스크림 상세 페이지로 연결되는 링크 -->
-            <a href="" class="">
+            <a href="" class="best__link">
               <!-- ::before 요소로 순위 정보 추가 필요 -->
               <!-- !!! 아이스크림 콘과 아이스크림 스쿱 이미지가 별도로 있어서\
                           아래와 같은 구조로 짰는데 더 좋은 아이디어 있으면 말씀해주세요 !!! -->
-              <div>
+              <div class="best__link__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcxet="./../images/sprite_menu_0.avif"
+                    srcxet="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcxet="./../images/sprite_menu_0.webp"
+                    srcxet="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img
+                    class="best__img best__img--cone"
+                    src="./../images/1594025925.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcxet="./../images/sprite_menu_0.avif"
+                    srcxet="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcxet="./../images/sprite_menu_0.webp"
+                    srcxet="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img
+                    src="./../images/1594025925.png"
+                    class="best__img best__img--scoop"
+                    alt=""
+                  />
                 </picture>
               </div>
-              <p>체리쥬빌레</p>
+              <p class="best__title">체리쥬빌레</p>
             </a>
           </li>
           <!-- 8위: 레인보우 샤베트 -->
           <li class="">
             <!-- 각 아이스크림 상세 페이지로 연결되는 링크 -->
-            <a href="" class="">
+            <a href="" class="best__link">
               <!-- ::before 요소로 순위 정보 추가 필요 -->
               <!-- !!! 아이스크림 콘과 아이스크림 스쿱 이미지가 별도로 있어서\
                           아래와 같은 구조로 짰는데 더 좋은 아이디어 있으면 말씀해주세요 !!! -->
-              <div>
+              <div class="best__link__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcxet="./../images/sprite_menu_0.avif"
+                    srcxet="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcxet="./../images/sprite_menu_0.webp"
+                    srcxet="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img
+                    class="best__img best__img--cone"
+                    src="./../images/1594025925.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcxet="./../images/sprite_menu_0.avif"
+                    srcxet="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcxet="./../images/sprite_menu_0.webp"
+                    srcxet="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img
+                    src="./../images/1594025925.png"
+                    class="best__img best__img--scoop"
+                    alt=""
+                  />
                 </picture>
               </div>
-              <p>레인보우 샤베트</p>
+              <p class="best__title">레인보우 샤베트</p>
             </a>
           </li>
         </ol>
@@ -337,13 +511,13 @@
       <!-- 3-4. Icecream -->
       <section class="">
         <!-- background image 또는 ::before, ::after 요소로 스푼 이미지 추가 필요 -->
-        <h3 class="">아이스크림 메뉴</h3>
+        <h3 class="menu__title menu__title--spoon">아이스크림 메뉴</h3>
 
-        <ul class="">
+        <ul class="product__list">
           <!-- 아이스 초당옥수수 -->
-          <li class="">
+          <li class="product__item">
             <!-- 각 아이스크림 상세 페이지로 연결되는 링크 -->
-            <a href="" class="">
+            <a href="" class="product__link">
               <!-- 아이스크림 이름 -->
               <p class="">아이스 초당 옥수수</p>
               <!-- 관련 해시태그 목록 -->
@@ -354,37 +528,45 @@
                 <li><a href="">#치즈아이스크림</a></li>
               </ul>
               <!-- 아이스크림 이미지 -->
-              <div>
+              <div class="product__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img
+                    class="product__img"
+                    src="./../images/1594025925.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img
+                    class="product__img"
+                    src="./../images/1594025925.png"
+                    alt=""
+                  />
                 </picture>
               </div>
             </a>
           </li>
 
           <!-- 마우나로아 마카다미아 -->
-          <li class="">
+          <li class="product__item">
             <a href="" class="">
               <!-- 아이스크림 이름 -->
               <p class="">마우나로아 마카다미아</p>
@@ -394,47 +576,49 @@
                 <li><a href="">#마카다미아</a></li>
                 <button aria-label="해시태그 더보기"></button>
               </ul>
+              <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
+              <div>
+                <div>
+                  <ul class="">
+                    <li><a href="">#마우나로아</a></li>
+                    <li><a href="">#마카다미아</a></li>
+                    <li><a href="">#카라멜</a></li>
+                  </ul>
+                  <button aria-label="해시태그 목록 닫기"></button>
+                </div>
+              </div>
+              <!-- 아이스크림 이미지 -->
+              <div>
+                <!-- 아이스크림 콘 -->
+                <picture>
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/webp"
+                  />
+                  <img src="./../images/1594025925.png" alt="" />
+                </picture>
+                <!-- 아이스크림 스쿱 -->
+                <picture>
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/webp"
+                  />
+                  <img src="./../images/1594025925.png" alt="" />
+                </picture>
+              </div>
             </a>
-            <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
-            <div>
-              <ul class="">
-                <li><a href="">#마우나로아</a></li>
-                <li><a href="">#마카다미아</a></li>
-                <li><a href="">#카라멜</a></li>
-              </ul>
-              <button aria-label="해시태그 목록 닫기"></button>
-            </div>
-            <!-- 아이스크림 이미지 -->
-            <div>
-              <!-- 아이스크림 콘 -->
-              <picture>
-                <source
-                  srcset="./../images/sprite_menu_0.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcset="./../images/sprite_menu_0.webp"
-                  type="image/webp"
-                />
-                <img src="./../images/sprite_menu_0.png" alt="" />
-              </picture>
-              <!-- 아이스크림 스쿱 -->
-              <picture>
-                <source
-                  srcset="./../images/sprite_menu_0.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcset="./../images/sprite_menu_0.webp"
-                  type="image/webp"
-                />
-                <img src="./../images/sprite_menu_0.png" alt="" />
-              </picture>
-            </div>
           </li>
 
           <!-- 나와라 꼬부기 -->
-          <li class="">
+          <li class="product__item">
             <a href="" class="">
               <!-- 아이스크림 이름 -->
               <p class="">나와라 꼬부기</p>
@@ -448,33 +632,33 @@
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img src="./../images/1594025925.png" alt="" />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img src="./../images/1594025925.png" alt="" />
                 </picture>
               </div>
             </a>
           </li>
 
           <!-- 도리도리 팽도리 -->
-          <li class="">
+          <li class="product__item">
             <a href="" class="">
               <!-- 아이스크림 이름 -->
               <p class="">도리도리 팽도리</p>
@@ -488,33 +672,33 @@
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img src="./../images/1594025925.png" alt="" />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img src="./../images/1594025925.png" alt="" />
                 </picture>
               </div>
             </a>
           </li>
 
           <!-- 치코치코 치코리타 -->
-          <li class="">
+          <li class="product__item">
             <a href="" class="">
               <!-- 아이스크림 이름 -->
               <p class="">치코치코 치코리타</p>
@@ -524,47 +708,49 @@
                 <li><a href="">#요거트</a></li>
                 <button aria-label="해시태그 더보기"></button>
               </ul>
+              <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
+              <div>
+                <div>
+                  <ul class="">
+                    <li><a href="">#청사과</a></li>
+                    <li><a href="">#요거트</a></li>
+                    <li><a href="">#샤베트</a></li>
+                  </ul>
+                  <button aria-label="해시태그 목록 닫기"></button>
+                </div>
+              </div>
+              <!-- 아이스크림 이미지 -->
+              <div>
+                <!-- 아이스크림 콘 -->
+                <picture>
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/webp"
+                  />
+                  <img src="./../images/1594025925.png" alt="" />
+                </picture>
+                <!-- 아이스크림 스쿱 -->
+                <picture>
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/webp"
+                  />
+                  <img src="./../images/1594025925.png" alt="" />
+                </picture>
+              </div>
             </a>
-            <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
-            <div>
-              <ul class="">
-                <li><a href="">#청사과</a></li>
-                <li><a href="">#요거트</a></li>
-                <li><a href="">#샤베트</a></li>
-              </ul>
-              <button aria-label="해시태그 목록 닫기"></button>
-            </div>
-            <!-- 아이스크림 이미지 -->
-            <div>
-              <!-- 아이스크림 콘 -->
-              <picture>
-                <source
-                  srcset="./../images/sprite_menu_0.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcset="./../images/sprite_menu_0.webp"
-                  type="image/webp"
-                />
-                <img src="./../images/sprite_menu_0.png" alt="" />
-              </picture>
-              <!-- 아이스크림 스쿱 -->
-              <picture>
-                <source
-                  srcset="./../images/sprite_menu_0.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcset="./../images/sprite_menu_0.webp"
-                  type="image/webp"
-                />
-                <img src="./../images/sprite_menu_0.png" alt="" />
-              </picture>
-            </div>
           </li>
 
           <!-- 찰떡콩떡 -->
-          <li class="">
+          <li class="product__item">
             <a href="" class="">
               <!-- 아이스크림 이름 -->
               <p class="">찰떡콩떡</p>
@@ -574,47 +760,49 @@
                 <li><a href="">#콩고물</a></li>
                 <button aria-label="해시태그 더보기"></button>
               </ul>
+              <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
+              <div>
+                <div>
+                  <ul class="">
+                    <li><a href="">#찰떡콩떡</a></li>
+                    <li><a href="">#콩고물</a></li>
+                    <li><a href="">#찰떡</a></li>
+                  </ul>
+                  <button aria-label="해시태그 목록 닫기"></button>
+                </div>
+              </div>
+              <!-- 아이스크림 이미지 -->
+              <div>
+                <!-- 아이스크림 콘 -->
+                <picture>
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/webp"
+                  />
+                  <img src="./../images/1594025925.png" alt="" />
+                </picture>
+                <!-- 아이스크림 스쿱 -->
+                <picture>
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/webp"
+                  />
+                  <img src="./../images/1594025925.png" alt="" />
+                </picture>
+              </div>
             </a>
-            <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
-            <div>
-              <ul class="">
-                <li><a href="">#찰떡콩떡</a></li>
-                <li><a href="">#콩고물</a></li>
-                <li><a href="">#찰떡</a></li>
-              </ul>
-              <button aria-label="해시태그 목록 닫기"></button>
-            </div>
-            <!-- 아이스크림 이미지 -->
-            <div>
-              <!-- 아이스크림 콘 -->
-              <picture>
-                <source
-                  srcset="./../images/sprite_menu_0.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcset="./../images/sprite_menu_0.webp"
-                  type="image/webp"
-                />
-                <img src="./../images/sprite_menu_0.png" alt="" />
-              </picture>
-              <!-- 아이스크림 스쿱 -->
-              <picture>
-                <source
-                  srcset="./../images/sprite_menu_0.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcset="./../images/sprite_menu_0.webp"
-                  type="image/webp"
-                />
-                <img src="./../images/sprite_menu_0.png" alt="" />
-              </picture>
-            </div>
           </li>
 
           <!-- 피나 콜라다 -->
-          <li class="">
+          <li class="product__item">
             <a href="" class="">
               <!-- 아이스크림 이름 -->
               <p class="">피나 콜라다</p>
@@ -624,47 +812,49 @@
                 <li><a href="">#코코넛</a></li>
                 <button aria-label="해시태그 더보기"></button>
               </ul>
+              <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
+              <div>
+                <div>
+                  <ul class="">
+                    <li><a href="">#파인애플</a></li>
+                    <li><a href="">#코코넛</a></li>
+                    <li><a href="">#샤베트</a></li>
+                  </ul>
+                  <button aria-label="해시태그 목록 닫기"></button>
+                </div>
+              </div>
+              <!-- 아이스크림 이미지 -->
+              <div>
+                <!-- 아이스크림 콘 -->
+                <picture>
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/webp"
+                  />
+                  <img src="./../images/1594025925.png" alt="" />
+                </picture>
+                <!-- 아이스크림 스쿱 -->
+                <picture>
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/webp"
+                  />
+                  <img src="./../images/1594025925.png" alt="" />
+                </picture>
+              </div>
             </a>
-            <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
-            <div>
-              <ul class="">
-                <li><a href="">#파인애플</a></li>
-                <li><a href="">#코코넛</a></li>
-                <li><a href="">#샤베트</a></li>
-              </ul>
-              <button aria-label="해시태그 목록 닫기"></button>
-            </div>
-            <!-- 아이스크림 이미지 -->
-            <div>
-              <!-- 아이스크림 콘 -->
-              <picture>
-                <source
-                  srcset="./../images/sprite_menu_0.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcset="./../images/sprite_menu_0.webp"
-                  type="image/webp"
-                />
-                <img src="./../images/sprite_menu_0.png" alt="" />
-              </picture>
-              <!-- 아이스크림 스쿱 -->
-              <picture>
-                <source
-                  srcset="./../images/sprite_menu_0.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcset="./../images/sprite_menu_0.webp"
-                  type="image/webp"
-                />
-                <img src="./../images/sprite_menu_0.png" alt="" />
-              </picture>
-            </div>
           </li>
 
           <!-- 해피 버스데이 -->
-          <li class="">
+          <li class="product__item">
             <a href="" class="">
               <!-- 아이스크림 이름 -->
               <p class="">해피 버스데이</p>
@@ -677,33 +867,33 @@
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img src="./../images/1594025925.png" alt="" />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img src="./../images/1594025925.png" alt="" />
                 </picture>
               </div>
             </a>
           </li>
 
           <!-- 오레오 쿠키 앤 크림 -->
-          <li class="">
+          <li class="product__item">
             <a href="" class="">
               <!-- 아이스크림 이름 -->
               <p class="">오레오 쿠키 앤 크림</p>
@@ -716,33 +906,33 @@
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img src="./../images/1594025925.png" alt="" />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img src="./../images/1594025925.png" alt="" />
                 </picture>
               </div>
             </a>
           </li>
 
           <!-- 월넛 -->
-          <li class="">
+          <li class="product__item">
             <a href="" class="">
               <!-- 아이스크림 이름 -->
               <p class="">월넛</p>
@@ -755,33 +945,33 @@
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img src="./../images/1594025925.png" alt="" />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img src="./../images/1594025925.png" alt="" />
                 </picture>
               </div>
             </a>
           </li>
 
           <!-- 블랙 소르베 -->
-          <li class="">
+          <li class="product__item">
             <a href="" class="">
               <!-- 아이스크림 이름 -->
               <p class="">블랙 소르베</p>
@@ -795,33 +985,33 @@
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img src="./../images/1594025925.png" alt="" />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img src="./../images/1594025925.png" alt="" />
                 </picture>
               </div>
             </a>
           </li>
 
           <!-- 바닐라 아몬드 크런치 -->
-          <li class="">
+          <li class="product__item">
             <a href="" class="">
               <!-- 아이스크림 이름 -->
               <p class="">바닐라 아몬드 크런치</p>
@@ -835,33 +1025,33 @@
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img src="./../images/1594025925.png" alt="" />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img src="./../images/1594025925.png" alt="" />
                 </picture>
               </div>
             </a>
           </li>
 
           <!-- 알폰소 망고 -->
-          <li class="">
+          <li class="product__item">
             <a href="" class="">
               <!-- 아이스크림 이름 -->
               <p class="">알폰소 망고</p>
@@ -874,33 +1064,33 @@
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img src="./../images/1594025925.png" alt="" />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img src="./../images/1594025925.png" alt="" />
                 </picture>
               </div>
             </a>
           </li>
 
           <!-- 엄마는 외계인 -->
-          <li class="">
+          <li class="product__item">
             <a href="" class="">
               <!-- 아이스크림 이름 -->
               <p class="">엄마는 외계인</p>
@@ -910,47 +1100,50 @@
                 <li><a href="">#초코볼</a></li>
                 <button aria-label="해시태그 더보기"></button>
               </ul>
+
+              <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
+              <div>
+                <div>
+                  <ul class="">
+                    <li><a href="">#초콜릿</a></li>
+                    <li><a href="">#초코볼</a></li>
+                    <li><a href="">#엄마는외계인</a></li>
+                  </ul>
+                  <button aria-label="해시태그 목록 닫기"></button>
+                </div>
+              </div>
+              <!-- 아이스크림 이미지 -->
+              <div>
+                <!-- 아이스크림 콘 -->
+                <picture>
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/webp"
+                  />
+                  <img src="./../images/1594025925.png" alt="" />
+                </picture>
+                <!-- 아이스크림 스쿱 -->
+                <picture>
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/webp"
+                  />
+                  <img src="./../images/1594025925.png" alt="" />
+                </picture>
+              </div>
             </a>
-            <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
-            <div>
-              <ul class="">
-                <li><a href="">#초콜릿</a></li>
-                <li><a href="">#초코볼</a></li>
-                <li><a href="">#엄마는외계인</a></li>
-              </ul>
-              <button aria-label="해시태그 목록 닫기"></button>
-            </div>
-            <!-- 아이스크림 이미지 -->
-            <div>
-              <!-- 아이스크림 콘 -->
-              <picture>
-                <source
-                  srcset="./../images/sprite_menu_0.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcset="./../images/sprite_menu_0.webp"
-                  type="image/webp"
-                />
-                <img src="./../images/sprite_menu_0.png" alt="" />
-              </picture>
-              <!-- 아이스크림 스쿱 -->
-              <picture>
-                <source
-                  srcset="./../images/sprite_menu_0.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcset="./../images/sprite_menu_0.webp"
-                  type="image/webp"
-                />
-                <img src="./../images/sprite_menu_0.png" alt="" />
-              </picture>
-            </div>
           </li>
 
           <!-- 아몬드 봉봉 -->
-          <li class="">
+          <li class="product__item">
             <a href="" class="">
               <!-- 아이스크림 이름 -->
               <p class="">아몬드 봉봉</p>
@@ -960,48 +1153,50 @@
                 <li><a href="">#초콜릿</a></li>
                 <button aria-label="해시태그 더보기"></button>
               </ul>
+              <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
+              <div>
+                <div>
+                  <ul class="">
+                    <li><a href="">#아몬드</a></li>
+                    <li><a href="">#초콜릿</a></li>
+                    <li><a href="">#초코</a></li>
+                    <li><a href="">#아몬드봉봉</a></li>
+                  </ul>
+                  <button aria-label="해시태그 목록 닫기"></button>
+                </div>
+              </div>
+              <!-- 아이스크림 이미지 -->
+              <div>
+                <!-- 아이스크림 콘 -->
+                <picture>
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/webp"
+                  />
+                  <img src="./../images/1594025925.png" alt="" />
+                </picture>
+                <!-- 아이스크림 스쿱 -->
+                <picture>
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/webp"
+                  />
+                  <img src="./../images/1594025925.png" alt="" />
+                </picture>
+              </div>
             </a>
-            <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
-            <div>
-              <ul class="">
-                <li><a href="">#아몬드</a></li>
-                <li><a href="">#초콜릿</a></li>
-                <li><a href="">#초코</a></li>
-                <li><a href="">#아몬드봉봉</a></li>
-              </ul>
-              <button aria-label="해시태그 목록 닫기"></button>
-            </div>
-            <!-- 아이스크림 이미지 -->
-            <div>
-              <!-- 아이스크림 콘 -->
-              <picture>
-                <source
-                  srcset="./../images/sprite_menu_0.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcset="./../images/sprite_menu_0.webp"
-                  type="image/webp"
-                />
-                <img src="./../images/sprite_menu_0.png" alt="" />
-              </picture>
-              <!-- 아이스크림 스쿱 -->
-              <picture>
-                <source
-                  srcset="./../images/sprite_menu_0.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcset="./../images/sprite_menu_0.webp"
-                  type="image/webp"
-                />
-                <img src="./../images/sprite_menu_0.png" alt="" />
-              </picture>
-            </div>
           </li>
 
           <!-- 민트 초콜릿 칩 -->
-          <li class="">
+          <li class="product__item">
             <a href="" class="">
               <!-- 아이스크림 이름 -->
               <p class="">민트 초콜릿 칩</p>
@@ -1011,47 +1206,49 @@
                 <li><a href="">#초콜릿칩</a></li>
                 <button aria-label="해시태그 더보기"></button>
               </ul>
+              <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
+              <div>
+                <div>
+                  <ul class="">
+                    <li><a href="">#민트</a></li>
+                    <li><a href="">#초콜릿칩</a></li>
+                    <li><a href="">#민트초콜릿칩</a></li>
+                  </ul>
+                  <button aria-label="해시태그 목록 닫기"></button>
+                </div>
+              </div>
+              <!-- 아이스크림 이미지 -->
+              <div>
+                <!-- 아이스크림 콘 -->
+                <picture>
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/webp"
+                  />
+                  <img src="./../images/1594025925.png" alt="" />
+                </picture>
+                <!-- 아이스크림 스쿱 -->
+                <picture>
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/webp"
+                  />
+                  <img src="./../images/1594025925.png" alt="" />
+                </picture>
+              </div>
             </a>
-            <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
-            <div>
-              <ul class="">
-                <li><a href="">#민트</a></li>
-                <li><a href="">#초콜릿칩</a></li>
-                <li><a href="">#민트초콜릿칩</a></li>
-              </ul>
-              <button aria-label="해시태그 목록 닫기"></button>
-            </div>
-            <!-- 아이스크림 이미지 -->
-            <div>
-              <!-- 아이스크림 콘 -->
-              <picture>
-                <source
-                  srcset="./../images/sprite_menu_0.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcset="./../images/sprite_menu_0.webp"
-                  type="image/webp"
-                />
-                <img src="./../images/sprite_menu_0.png" alt="" />
-              </picture>
-              <!-- 아이스크림 스쿱 -->
-              <picture>
-                <source
-                  srcset="./../images/sprite_menu_0.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcset="./../images/sprite_menu_0.webp"
-                  type="image/webp"
-                />
-                <img src="./../images/sprite_menu_0.png" alt="" />
-              </picture>
-            </div>
           </li>
 
           <!-- 사랑에 빠진 딸기 -->
-          <li class="">
+          <li class="product__item">
             <a href="" class="">
               <!-- 아이스크림 이름 -->
               <p class="">사랑에 빠진 딸기</p>
@@ -1061,48 +1258,50 @@
                 <li><a href="">#사랑에빠진딸기</a></li>
                 <button aria-label="해시태그 더보기"></button>
               </ul>
+              <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
+              <div>
+                <div>
+                  <ul class="">
+                    <li><a href="">#사빠딸</a></li>
+                    <li><a href="">#사랑에빠진딸기</a></li>
+                    <li><a href="">#크런치초콜릿</a></li>
+                    <li><a href="">#치즈케이크</a></li>
+                  </ul>
+                  <button aria-label="해시태그 목록 닫기"></button>
+                </div>
+              </div>
+              <!-- 아이스크림 이미지 -->
+              <div>
+                <!-- 아이스크림 콘 -->
+                <picture>
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/webp"
+                  />
+                  <img src="./../images/1594025925.png" alt="" />
+                </picture>
+                <!-- 아이스크림 스쿱 -->
+                <picture>
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/webp"
+                  />
+                  <img src="./../images/1594025925.png" alt="" />
+                </picture>
+              </div>
             </a>
-            <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
-            <div>
-              <ul class="">
-                <li><a href="">#사빠딸</a></li>
-                <li><a href="">#사랑에빠진딸기</a></li>
-                <li><a href="">#크런치초콜릿</a></li>
-                <li><a href="">#치즈케이크</a></li>
-              </ul>
-              <button aria-label="해시태그 목록 닫기"></button>
-            </div>
-            <!-- 아이스크림 이미지 -->
-            <div>
-              <!-- 아이스크림 콘 -->
-              <picture>
-                <source
-                  srcset="./../images/sprite_menu_0.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcset="./../images/sprite_menu_0.webp"
-                  type="image/webp"
-                />
-                <img src="./../images/sprite_menu_0.png" alt="" />
-              </picture>
-              <!-- 아이스크림 스쿱 -->
-              <picture>
-                <source
-                  srcset="./../images/sprite_menu_0.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcset="./../images/sprite_menu_0.webp"
-                  type="image/webp"
-                />
-                <img src="./../images/sprite_menu_0.png" alt="" />
-              </picture>
-            </div>
           </li>
 
           <!-- 애플 민트 -->
-          <li class="">
+          <li class="product__item">
             <a href="" class="">
               <!-- 아이스크림 이름 -->
               <p class="">애플 민트</p>
@@ -1112,48 +1311,50 @@
                 <li><a href="">#사과</a></li>
                 <button aria-label="해시태그 더보기"></button>
               </ul>
+              <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
+              <div>
+                <div>
+                  <ul class="">
+                    <li><a href="">#애플민트</a></li>
+                    <li><a href="">#사과</a></li>
+                    <li><a href="">#민트</a></li>
+                    <li><a href="">#샤베트</a></li>
+                  </ul>
+                  <button aria-label="해시태그 목록 닫기"></button>
+                </div>
+              </div>
+              <!-- 아이스크림 이미지 -->
+              <div>
+                <!-- 아이스크림 콘 -->
+                <picture>
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/webp"
+                  />
+                  <img src="./../images/1594025925.png" alt="" />
+                </picture>
+                <!-- 아이스크림 스쿱 -->
+                <picture>
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./../images/1594025925.png"
+                    type="image/webp"
+                  />
+                  <img src="./../images/1594025925.png" alt="" />
+                </picture>
+              </div>
             </a>
-            <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
-            <div>
-              <ul class="">
-                <li><a href="">#애플민트</a></li>
-                <li><a href="">#사과</a></li>
-                <li><a href="">#민트</a></li>
-                <li><a href="">#샤베트</a></li>
-              </ul>
-              <button aria-label="해시태그 목록 닫기"></button>
-            </div>
-            <!-- 아이스크림 이미지 -->
-            <div>
-              <!-- 아이스크림 콘 -->
-              <picture>
-                <source
-                  srcset="./../images/sprite_menu_0.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcset="./../images/sprite_menu_0.webp"
-                  type="image/webp"
-                />
-                <img src="./../images/sprite_menu_0.png" alt="" />
-              </picture>
-              <!-- 아이스크림 스쿱 -->
-              <picture>
-                <source
-                  srcset="./../images/sprite_menu_0.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcset="./../images/sprite_menu_0.webp"
-                  type="image/webp"
-                />
-                <img src="./../images/sprite_menu_0.png" alt="" />
-              </picture>
-            </div>
           </li>
 
           <!-- 뉴욕 치즈케이크 -->
-          <li class="">
+          <li class="product__item">
             <a href="" class="">
               <!-- 아이스크림 이름 -->
               <p class="">뉴욕 치즈케이크</p>
@@ -1167,33 +1368,33 @@
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img src="./../images/1594025925.png" alt="" />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img src="./../images/1594025925.png" alt="" />
                 </picture>
               </div>
             </a>
           </li>
 
           <!-- 피스타치오 아몬드 -->
-          <li class="">
+          <li class="product__item">
             <a href="" class="">
               <!-- 아이스크림 이름 -->
               <p class="">피스타치오 아몬드</p>
@@ -1207,26 +1408,26 @@
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img src="./../images/1594025925.png" alt="" />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/sprite_menu_0.avif"
+                    srcset="./../images/1594025925.png"
                     type="image/avif"
                   />
                   <source
-                    srcset="./../images/sprite_menu_0.webp"
+                    srcset="./../images/1594025925.png"
                     type="image/webp"
                   />
-                  <img src="./../images/sprite_menu_0.png" alt="" />
+                  <img src="./../images/1594025925.png" alt="" />
                 </picture>
               </div>
             </a>
@@ -1234,20 +1435,193 @@
         </ul>
         <!-- 페이지네이션 -->
         <nav aria-label="페이지 이동하기">
-          <ul>
-            <li><a href="" aria-label="이전 페이지"></a></li>
+          <ul class="pagination__list">
             <li>
-              <a href="" aria-label="현재 페이지" aria-current="true">1</a>
+              <a
+                class="pagination__btn pagination__btn--prev"
+                href=""
+                aria-label="이전 페이지"
+              ></a>
             </li>
-            <li><a href="" aria-label="2페이지 가기">2</a></li>
-            <li><a href="" aria-label="3페이지 가기">3</a></li>
-            <li><a href="" aria-label="다음 페이지"></a></li>
+            <li>
+              <a
+                class="pagination__btn pagination__btn--page"
+                href=""
+                aria-label="현재 페이지"
+                aria-current="true"
+                >1</a
+              >
+            </li>
+            <li>
+              <a
+                class="pagination__btn pagination__btn--page"
+                href=""
+                aria-label="2페이지 가기"
+                >2</a
+              >
+            </li>
+            <li>
+              <a
+                class="pagination__btn pagination__btn--page"
+                href=""
+                aria-label="3페이지 가기"
+                >3</a
+              >
+            </li>
+            <li>
+              <a
+                class="pagination__btn pagination__btn--next"
+                href=""
+                aria-label="다음 페이지"
+              ></a>
+            </li>
           </ul>
         </nav>
       </section>
     </main>
 
     <!-- 4. 푸터 -->
-    <footer class=""></footer>
+    <footer>
+      <!-- 1. 가이드 리스트 -->
+      <ul>
+        <li>
+          <a href="" target="_blank" rel="noopener noreferrer">
+            점포개설문의
+          </a>
+        </li>
+        <li>
+          <a href="" target="_blank" rel="noopener noreferrer">채용문의</a>
+        </li>
+        <li>
+          <a href="" target="_blank" rel="noopener noreferrer">
+            윤리신고센터
+          </a>
+        </li>
+        <li>
+          <a href="" target="_blank" rel="noopener noreferrer">이용약관</a>
+        </li>
+        <li>
+          <a href="" target="_blank" rel="noopener noreferrer">
+            개인정보처리방침
+          </a>
+        </li>
+        <li>
+          <a href="" target="_blank" rel="noopener noreferrer">
+            영상정보처리기기운영관리방침
+          </a>
+        </li>
+        <li>
+          <a href="" target="_blank" rel="noopener noreferrer">
+            안전보건 경영방침
+          </a>
+        </li>
+        <li>
+          <a href="" target="_blank" rel="noopener noreferrer">
+            거래희망회사 사전등록
+          </a>
+        </li>
+      </ul>
+      <!-- 2. 관련 사이트 리스트 -->
+      <!-- 사이트 아이콘은 background-image를 사용해서 넣을 예정 -->
+      <ul>
+        <li>
+          <a
+            href="https://www.happypointcard.com/page/main/index.spc"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-btn_happypoint"
+            aria-label="해피포인트 바로가기"
+          >
+          </a>
+        </li>
+        <li>
+          <a
+            href="http://m.celectory.com/mobile/gift/recommend?"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-btn_happymarket"
+            aria-label="해피마켓 바로가기"
+          >
+          </a>
+        </li>
+        <li>
+          <a
+            href="http://www.spc.co.kr/contributionAll"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-btn_spc_story"
+            aria-label="spc 바로가기"
+          >
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://sealinfo.verisign.com/splash?form_file=fdf/splash.fdf&dn=WWW.BASKINROBBINS.CO.KR&lang=ko"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-btn_norton"
+            aria-label="norton 바로가기"
+          >
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.kca.go.kr/ccm/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-btn_ccm_2"
+            aria-label="한국소비자원 바로가기"
+          >
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://knqa.ksa.or.kr/knqa/2276/subview.do"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-btn_ksa"
+            aria-label="국가품질상 정보 바로가기"
+          >
+          </a>
+        </li>
+        <!-- 패밀리 사이트 -->
+        <!-- 버튼을 누르면 패밀리 사이트 리스트가 보입니다 -->
+        <li>
+          <label for="family-site-select">패밀리 사이트</label>
+          <select
+            name="family-sites"
+            id="family-site-select"
+            onchange="window.open(value, '_blank', 'noopener', 'noreferrer');"
+          >
+            <option value="none">FAMILY SITE</option>
+            <option value="https://baskinschool.hunet.co.kr/Login/LoginGate">
+              배스킨 스쿨
+            </option>
+            <option value="https://www.spc.co.kr/">SPC그룹사이트</option>
+            <option value="https://www.spcmagazine.com/">SPC MAGAZINE</option>
+            <option value="http://www.brkorea.co.kr/main/main.php">
+              BR코리아
+            </option>
+            <option value="https://www.caffe-pascucci.co.kr/index.asp">
+              파스쿠찌
+            </option>
+            <option value="https://spcsamlip.co.kr/">삼립</option>
+          </select>
+        </li>
+      </ul>
+      <!-- 3. 주소, 이메일, 사업자번호 등 -->
+      <!-- ::before를 이용해 배스킨라빈스 로고를 넣을 예정 -->
+      <address>
+        <span>사업자 등록번호 : 303-81-09535</span>
+        <span>비알코리아(주) 대표이사 도세호</span>
+        <span>서울특별시 서초구 남부순환로 2620(양재동 11-149번지)</span>
+        <span>TEL : <a href="tel:0805553131">080-555-3131</a></span>
+        <span>개인정보관리책임자 : 김경우</span>
+      </address>
+      <!-- 4. 저작권 정보 -->
+      <small>
+        Copyright &copy; 2016 BRKOREA Company. All Rights Reserved.
+      </small>
+    </footer>
   </body>
 </html>
