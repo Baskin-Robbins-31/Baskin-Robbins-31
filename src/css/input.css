@@ -38,6 +38,10 @@
   margin-left: auto;
   margin-right: auto;
 }
+.best__list {
+  @apply flex flex-nowrap gap-6 p-10 mt-14 ml-auto mr-auto overflow-auto md:overflow-visible md:flex-wrap md:max-w-[800px] md:p-0 md:justify-center;
+  counter-reset: rank;
+}
 
 .best__link {
   /* display: block; */
@@ -47,20 +51,40 @@
   align-items: center;
 }
 .best__link::before {
-  content: '';
+  position: relative;
+  top: 2rem;
+  counter-increment: rank;
+  content: counter(rank) '위';
   width: 1.875rem;
   height: 2.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  line-height: 1.5rem;
   background-image: url('../images/icon_rank_1.png');
   background-repeat: no-repeat;
+  z-index: 1;
 }
+.best__link:hover,
+.best__link:focus {
+  transform: scale(1.1);
+  transition: all 200ms;
+}
+
 .best__link__img-box {
-  position: relative;
-  background-color: plum;
-  width: 10.25rem;
-  height: 10.25rem;
-  border-radius: 50%;
-  overflow: hidden;
+  @apply relative bg-[#f4f4f4] w-[10.25rem] h-[10.25rem] rounded-full overflow-hidden;
 }
+.best__list li:nth-child(1) .best__link__img-box {
+  @apply bg-[#ffe1e7];
+}
+.best__list li:nth-child(2) .best__link__img-box {
+  @apply bg-[#ffd882];
+}
+.best__list li:nth-child(3) .best__link__img-box {
+  @apply bg-[#e3d2bd];
+}
+
 .best__img {
   position: absolute;
   top: 50%;
@@ -76,7 +100,23 @@
   display: none;
 }
 .best__title {
+  @apply text-black2;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 1rem;
   white-space: nowrap;
+}
+
+/* 추천 메뉴 스크롤 */
+.best__list::-webkit-scrollbar {
+  width: 12px;
+  height: 6px;
+}
+.best__list::-webkit-scrollbar-thumb {
+  @apply bg-gray rounded-lg;
+}
+.best__list::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-500;
 }
 
 /* 전체 메뉴 */
