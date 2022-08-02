@@ -4,6 +4,13 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: (theme) => ({
+        "header-bg": "url('../images/bg_header.gif')",
+        "icon-search": "url('../images/icon_search.png')",
+        "icon-facebook": "url('../images/icon_facebook.png')",
+        "icon-twitter": "url('../images/icon_twitter.png')",
+        "icon-instagram": "url('../images/icon_instagram.png')",
+        "icon-blog": "url('../images/icon_blog.png')",
+        "icon-youtube": "url('../images/icon_youtube.png')",
       }),
       colors: {
         // white: "#ffffff",
