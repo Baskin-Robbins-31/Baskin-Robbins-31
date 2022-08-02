@@ -17,28 +17,28 @@
     <link rel="stylesheet" href="./src/css/output.css" />
     <title>배스킨라빈스</title>
   </head>
-  <body>
+  <body class="mobile-nav-back">
     <!-- <div class="skipNav">
       <a href="#main" class="skipNav">
         <span>본문 바로가기</span>
       </a>
     </div> -->
-    <div class="bg-header-bg border-t-4 border-pink1">
-      <header class="max-md:relative max-w-[1200px] mx-auto">
+    <div class="bg-header-bg border-t-4 border-pink1 max-md:border-none max-md:bg-none">
+      <header class="relative max-w-[1200px] mx-auto max-md:flex max-md:items-center">
         <!-- 1. 로고 -->
-        <h1 class="py-6">
+        <h1 class="py-6 max-md:py-3 max-md:inline-block max-md:grow max-md:z-[-10]">
           <a href="/">
             <span class="sr-only">배스킨라빈스</span>
             <picture>
               <source srcset="./src/images/logo_baskinrobbins.png" type="image/avif" />
               <source srcset="./src/images/logo_baskinrobbins.png" type="image/webp" />
-              <img class="mx-auto" src="./src/images/logo_baskinrobbins.png" />
+              <img class="mx-auto max-md:w-[55px] max-md:ml-3 max-md:mr-0" src="./src/images/logo_baskinrobbins.png" />
             </picture>
           </a>
         </h1>
         <!-- 2. 검색 버튼 -->
         <!-- 배경이미지로 돋보기 모양 이미지를 넣을 예정입니다! -->
-        <button type="button" class="bg-icon-search absolute w-[54px] h-[54px] right-0 top-[45px] mobile-icon-search" aria-label="검색"></button>
+        <button type="button" class="absolute w-[54px] h-[54px] right-0 top-[45px] bg-icon-search mobile-icon-search" aria-label="검색"></button>
         <!-- 3. sns 링크 + 고객센터 + contact us -->
         <!-- sns 로고는 배경 이미지로 넣을 예정입니다! -->
         <ul class="flex gap-3 absolute w-10 h-10 top-[53px] left-0 max-md:hidden">
@@ -93,7 +93,7 @@
             </a>
           </li>
         </ul>
-        <ul class="flex absolute text-sm gap-6 right-[78px] top-[64px] text-gray2">
+        <ul class="flex absolute text-sm gap-6 right-[78px] top-[64px] text-gray2 max-md:hidden">
           <li>
             <a href="/">고객센터</a>
           </li>
@@ -101,11 +101,28 @@
             <a href="/" lang="en" class="uppercase">Contact us</a>
           </li>
         </ul>
+        <!-- 4. 모바일에서만 보이는 메뉴 바 -->
+        <nav class="hidden justify-between items-center text-xl max-md:inline-flex max-md:text-[16px] max-md:mt-[8px] max-md:max-w-[244px] max-md:mb-1 max-md:mr-[40px]">
+          <h2 class="sr-only">메인 메뉴</h2>
+          <ul class="flex justify-between items-center max-w-[900px] w-[78vw] max-md:mb-1">
+            <li class="">
+              <a href="/" class="">이달의 맛</a>
+            </li>
+            <li class="">
+              <a href="/" class="">매장 찾기</a>
+            </li>
+            <li class="">
+              <a href="/" class="">단체주문</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- 5. 모바일에서만 보이는 햄버거 버튼 -->
+        <button type="button" class="hidden max-md:block  max-md:bg-btn-hamburger max-md:bg-no-repeat max-md:w-[25px] max-md:h-[25px] max-md:mr-7"></button>
       </header>
     </div>
     <!-- 내비게이션 바 -->
     <div class="border-y-[1px] border-gray bg-white max-md:absolute max-md:top-0 max-md:right-0 max-md:w-[75%] max-md:h-[100%]">
-      <div class="max-w-[1200px] mx-auto flex justify-between py-4 max-md:flex max-md:flex-col max-md:py-0">
+      <div class="max-w-[1200px] mx-auto flex justify-between py-4 max-md:flex max-md:flex-col max-md:py-0 max-md:relative">
         <ul class="flex justify-between items-center text-base w-[136px] max-md:bg-pink1 max-md:w-[100%] max-md:justify-start max-md:p-[16px] max-md:gap-[16px]">
           <li>
             <!-- 해당 페이지들을 만들지 않을 예정이므로 href 속성을 /로 설정하였습니다! -->
@@ -139,6 +156,8 @@
             </li>
           </ul>
         </nav>
+        <!-- 모바일에서만 보이는 X 버튼 -->
+        <button type="button" class="hidden max-md:block max-md:bg-btn-close max-md:absolute max-md:bg-no-repeat max-md:bg-contain max-md:w-[40px] max-md:h-[40px] max-md:left-[-54px] max-md:top-2 max-md:z-20"></button>
       </div>
       <ul class="mobile-icon-group hidden max-md:flex gap-3 absolute w-10 h-10">
         <li>
@@ -743,7 +762,7 @@
       <!-- 2. 관련 사이트 리스트 -->
       <!-- 사이트 아이콘은 background-image를 사용해서 넣을 예정 -->
       <div class="bg-beige1 mb-[40px]">
-        <ul class="flex max-w-[1200px] justify-center py-8">
+        <ul class="flex max-w-[1200px] mx-auto justify-center py-8">
           <li class="mr-[52px]">
             <a
               href="https://www.happypointcard.com/page/main/index.spc"
