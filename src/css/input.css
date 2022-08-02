@@ -72,3 +72,19 @@ body::after {
 .mobile-nav-back {
   @apply max-md:before:content-[''] max-md:before:block max-md:before:w-[100vw] max-md:before:h-[100vh] max-md:before:bg-black/[0.6] max-md:before:backdrop-blur-sm max-md:before:absolute max-md:z-10;
 }
+
+.footer-logo {
+  @apply before:block before:mx-auto before:content-[''] before:bg-footer-logo before:w-[128px] before:h-[27px] before:mb-[36px] before:absolute before:left-[50%] before:translate-x-[-50%] max-md:before:hidden;
+}
+
+.footer-link {
+  @apply block mx-7 my-2;
+}
+
+.select-dropdown {
+  @apply before:block before:content-[''] before:w-[12px] before:h-[8px] before:bg-select-dropdown before:bg-no-repeat before:absolute before:right-[10px] before:top-[50%] before:translate-y-[-90%] max-md:before:translate-y-[-50%];
+}
+
+.icon-customer-center {
+  @apply before:inline-block before:content-[''] before:w-[28px] before:h-[28px] before:bg-icon-customer-center before:bg-no-repeat before:mr-2;
+}
