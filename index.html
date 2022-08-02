@@ -18,13 +18,13 @@
     <title>배스킨라빈스</title>
   </head>
   <body>
-    <div class="skipNav">
+    <!-- <div class="skipNav">
       <a href="#main" class="skipNav">
         <span>본문 바로가기</span>
       </a>
-    </div>
+    </div> -->
     <div class="bg-header-bg border-t-4 border-pink1">
-      <header class="relative max-w-[1200px] mx-auto">
+      <header class="max-md:relative max-w-[1200px] mx-auto">
         <!-- 1. 로고 -->
         <h1 class="py-6">
           <a href="/">
@@ -38,10 +38,10 @@
         </h1>
         <!-- 2. 검색 버튼 -->
         <!-- 배경이미지로 돋보기 모양 이미지를 넣을 예정입니다! -->
-        <button type="button" class="bg-icon-search absolute w-[54px] h-[54px] right-0 top-[45px]" aria-label="검색"></button>
+        <button type="button" class="bg-icon-search absolute w-[54px] h-[54px] right-0 top-[45px] mobile-icon-search" aria-label="검색"></button>
         <!-- 3. sns 링크 + 고객센터 + contact us -->
         <!-- sns 로고는 배경 이미지로 넣을 예정입니다! -->
-        <ul class="flex gap-3 absolute w-10 h-10 top-[53px] left-0">
+        <ul class="flex gap-3 absolute w-10 h-10 top-[53px] left-0 max-md:hidden">
           <li>
             <a
               href="https://www.facebook.com/baskinrobbinskr/"
@@ -104,42 +104,94 @@
       </header>
     </div>
     <!-- 내비게이션 바 -->
-    <div class="border-y-[1px] border-gray bg-white">
-      <div class="max-w-[1200px] mx-auto flex justify-between py-4">
-        <ul class="flex justify-between items-center text-base w-[136px]">
+    <div class="border-y-[1px] border-gray bg-white max-md:absolute max-md:top-0 max-md:right-0 max-md:w-[75%] max-md:h-[100%]">
+      <div class="max-w-[1200px] mx-auto flex justify-between py-4 max-md:flex max-md:flex-col max-md:py-0">
+        <ul class="flex justify-between items-center text-base w-[136px] max-md:bg-pink1 max-md:w-[100%] max-md:justify-start max-md:p-[16px] max-md:gap-[16px]">
           <li>
             <!-- 해당 페이지들을 만들지 않을 예정이므로 href 속성을 /로 설정하였습니다! -->
-            <a href="/" class="text-pink1">로그인</a>
+            <a href="/" class="text-pink1 max-md:text-white">로그인</a>
           </li>
           <li>
-            <a href="/" class="text-gray2">회원가입</a>
+            <a href="/" class="text-gray2 max-md:text-white">회원가입</a>
           </li>
         </ul>
-        <nav class="flex justify-between text-xl">
+        <nav class="flex justify-between text-xl max-md:text-[16px] max-md:mt-[8px]">
           <h2 class="sr-only">메인 메뉴</h2>
           <!-- css를 이용하여 전부 대문자로 변경할 예정입니다! -->
-          <ul class="flex justify-between items-center max-w-[900px] w-[78vw]">
-            <li>
-              <a href="/">이달의 맛</a>
+          <ul class="flex justify-between items-center max-w-[900px] w-[78vw] max-md:flex-col">
+            <li class="mobile-nav">
+              <a href="/" class="mobile-nav-link">이달의 맛</a>
             </li>
-            <li>
-              <a href="/">메뉴</a>
+            <li class="mobile-nav">
+              <a href="/" class="mobile-nav-link">메뉴</a>
             </li>
-            <li>
-              <a href="/">영양 성분 및 알레르기</a>
+            <li class="mobile-nav">
+              <a href="/" class="mobile-nav-link">영양 성분 및 알레르기</a>
             </li>
-            <li>
-              <a href="/">이벤트</a>
+            <li class="mobile-nav">
+              <a href="/" class="mobile-nav-link">이벤트</a>
             </li>
-            <li>
-              <a href="/">매장</a>
+            <li class="mobile-nav">
+              <a href="/" class="mobile-nav-link">매장</a>
             </li>
-            <li>
-              <a href="/">더보기</a>
+            <li class="mobile-nav">
+              <a href="/" class="mobile-nav-link">더보기</a>
             </li>
           </ul>
         </nav>
       </div>
+      <ul class="mobile-icon-group hidden max-md:flex gap-3 absolute w-10 h-10">
+        <li>
+          <a
+            href="https://www.facebook.com/baskinrobbinskr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block w-[35px] h-[35px] bg-icon-facebook"
+            aria-label="페이스북 바로가기"
+          >
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/BaskinrobbinsKR"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block w-[35px] h-[35px] bg-icon-twitter"
+            aria-label="트위터 바로가기"
+          >
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://blog.naver.com/brgirl31"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block w-[35px] h-[35px] bg-icon-blog"
+            aria-label="블로그 바로가기"
+          >
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/baskinrobbinskorea/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block w-[35px] h-[35px] bg-icon-instagram"
+            aria-label="인스타그램 바로가기"
+          >
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/user/baskinrobbinskorea"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block w-[35px] h-[35px] bg-icon-youtube"
+            aria-label="유튜브 바로가기"
+          >
+          </a>
+        </li>
+      </ul>
     </div>
     <main>
       <!-- 이벤트  -->
@@ -609,7 +661,7 @@
       </section>
     </main>
     <!-- SNS 모달창 -->
-    <!-- <div class="sns-modal">
+    <div class="sns-modal">
       <div class="modal-wrapper">
         <div class="modal-content">
           <div class="modal__image">
@@ -647,7 +699,7 @@
         <button type="button">next</button>
       </div>
       <button type="button" class="button--exit">X</button>
-    </div> -->
+    </div>
     <footer class="border-t-[1px] border-brown1">
       <!-- 1. 가이드 리스트 -->
       <ul class="flex flex-wrap justify-center md:max-w-[700px] mx-auto text-sm text-brown2 py-3">
