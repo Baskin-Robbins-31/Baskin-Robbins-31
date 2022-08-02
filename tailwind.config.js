@@ -2,9 +2,13 @@
 module.exports = {
   content: ['./src/**/*.{html,js}', './index.html'],
   theme: {
+    screens: {
+      'max-md': {'max': '768px'},
+    },
     extend: {
       backgroundImage: (theme) => ({
         "header-bg": "url('../images/bg_header.gif')",
+        "icon-nav-search": "url('../images/icon_nav_search.png')",
         "icon-search": "url('../images/icon_search.png')",
         "icon-facebook": "url('../images/icon_facebook.png')",
         "icon-twitter": "url('../images/icon_twitter.png')",
