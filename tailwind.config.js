@@ -7,8 +7,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        "nanum": 'NanumSquareRound',
-        "baskin": 'BaskinRobbins',
+        "nanum": ['NanumSquareRound', 'sans-serif'],
+        "baskin": ['BaskinRobbins', 'sans-serif'],
       },
       backgroundImage: (theme) => ({
         "header-bg": "url('../images/bg_header.gif')",
@@ -25,7 +25,7 @@ module.exports = {
         "btn-spc": "url('../images/btn_spc_story.png')",
         "btn-norton": "url('../images/btn_norton.gif')",
         "btn-ccm": "url('../images/btn_ccm_2.png')",
-        "btn-ksa": "url('../images/btn_ksa.png')",
+        "btn-ksa": "url('../images/btn_ksa.nppng')",
         "btn-hamburger": "url('../images/btn_hamburger.png')",
         "btn-close": "url('../images/btn_close.png')",
         "footer-logo": "url('../images/footer_logo.png')",
