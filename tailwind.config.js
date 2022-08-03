@@ -1,7 +1,6 @@
 module.exports = {
   content: ['./src/**/*.{html,js}', './index.html'],
   theme: {
-    extend: {},
     extend: {
       screens: {
         'max-md': { max: '768px' },
