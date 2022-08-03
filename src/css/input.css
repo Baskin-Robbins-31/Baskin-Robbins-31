@@ -1,3 +1,72 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*:focus {
+  @apply outline-none outline-4 outline-blue-500;
+}
+
+.section {
+  @apply pt-[64px] pb-[100px] pl-[40px] pr-[40px] min-w-[400px];
+}
+
+.section__title {
+  @apply min-w-[320px] mb-[52px] text-center max-md:text-[48px] md:text-[56px] text-pink2 drop-shadow-[4px_4px_8px_rgba(0,0,0,0.25)];
+}
+
+.section__title span {
+  @apply md:text-[48px] text-navy1;
+}
+
+.menu__card {
+  @apply block max-md:text-[14px] bg-white drop-shadow-[8px_8px_12px_rgba(0,0,0,0.2)] relative;
+}
+
+.menu__card:hover {
+  @apply scale-105;
+}
+
+.menu__card a {
+  @apply block w-full h-full max-md:p-7 md:p-10;
+}
+
+.menu__card h3 {
+  @apply font-bold;
+}
+
+.menu__card p {
+  word-break: keep-all;
+}
+
+.menu__card span {
+  @apply text-gray;
+}
+
+.menu__card img {
+  @apply absolute;
+}
+
+.order img:hover {
+  @apply scale-105;
+}
+
+.insta-text::before,
+.insta-text::after {
+  content: '';
+  display: block;
+  width: 30%;
+  height: 2px;
+  background-color: currentColor;
+}
+
+.insta-text::before {
+  margin-right: 12px;
+}
+
+.insta-text::after {
+  margin-left: 12px;
+}
+
+.insta li {
+  @apply max-md:w-[30%] md:w-[20%];
+}
