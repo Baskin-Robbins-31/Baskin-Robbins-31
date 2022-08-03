@@ -1,11 +1,10 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{html,js}', './index.html'],
   theme: {
-    screens: {
-      "max-md": { 'max': '768px' },
-    },
     extend: {
+      screens: {
+        'max-md': { max: '768px' },
+      },
       fontFamily: {
         "nanum": ['NanumSquareRound', 'sans-serif'],
         "baskin": ['BaskinRobbins', 'sans-serif'],
@@ -32,8 +31,6 @@ module.exports = {
         "select-dropdown": "url('../images/select_dropdown.png')",
       }),
       colors: {
-        // white: "#ffffff",
-        // black: "#000000",
         pink1: '#FF7C98',
         pink2: '#E01883',
         navy1: '#224289',
