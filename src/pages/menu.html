@@ -20,119 +20,126 @@
   </head>
   <body>
     <!-- 1. 헤더 -->
-    <header>
-      <!-- 1. 로고 -->
-      <h1>
-        <a href="/">
-          <span class="sr-only">배스킨라빈스</span>
-          <picture>
-            <source srcset="./../images/sprite_main_0.avif" type="image/avif" />
-            <source srcset="./../images/sprite_main_0.webp" type="image/webp" />
-            <img src="./../images/sprite_main_0.png" />
-          </picture>
-        </a>
-      </h1>
-      <ul>
-        <li>
-          <!-- 해당 페이지들을 만들지 않을 예정이므로 href 속성을 /로 설정하였습니다! -->
-          <a href="/">로그인</a>
-        </li>
-        <li>
-          <a href="/">회원가입</a>
-        </li>
-      </ul>
-      <!-- 2. 메인 메뉴 -->
-      <nav>
-        <h2 class="sr-only">메인 메뉴</h2>
-        <!-- css를 이용하여 전부 대문자로 변경할 예정입니다! -->
-        <ul>
+    <div class="bg-header-bg border-t-4 border-pink1">
+      <header class="relative max-w-[1200px] mx-auto">
+        <!-- 1. 로고 -->
+        <h1 class="py-6">
+          <a href="/">
+            <span class="sr-only">배스킨라빈스</span>
+            <picture>
+              <source srcset="./../images/logo_baskinrobbins.png" type="image/avif" />
+              <source srcset="./../images/logo_baskinrobbins.png" type="image/webp" />
+              <img class="mx-auto" src="./../images/logo_baskinrobbins.png" />
+            </picture>
+          </a>
+        </h1>
+        <!-- 2. 검색 버튼 -->
+        <!-- 배경이미지로 돋보기 모양 이미지를 넣을 예정입니다! -->
+        <button type="button" class="bg-icon-search absolute w-[54px] h-[54px] right-0 top-[45px]" aria-label="검색"></button>
+        <!-- 3. sns 링크 + 고객센터 + contact us -->
+        <!-- sns 로고는 배경 이미지로 넣을 예정입니다! -->
+        <ul class="flex gap-3 absolute w-10 h-10 top-[53px] left-0">
           <li>
-            <a href="/">이달의 맛</a>
+            <a
+              href="https://www.facebook.com/baskinrobbinskr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-[35px] h-[35px] bg-icon-facebook"
+              aria-label="페이스북 바로가기"
+            >
+            </a>
           </li>
           <li>
-            <a href="/">메뉴</a>
+            <a
+              href="https://twitter.com/BaskinrobbinsKR"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-[35px] h-[35px] bg-icon-twitter"
+              aria-label="트위터 바로가기"
+            >
+            </a>
           </li>
           <li>
-            <a href="/">영양 성분 및 알레르기</a>
+            <a
+              href="https://blog.naver.com/brgirl31"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-[35px] h-[35px] bg-icon-blog"
+              aria-label="블로그 바로가기"
+            >
+            </a>
           </li>
           <li>
-            <a href="/">이벤트</a>
+            <a
+              href="https://www.instagram.com/baskinrobbinskorea/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-[35px] h-[35px] bg-icon-instagram"
+              aria-label="인스타그램 바로가기"
+            >
+            </a>
           </li>
           <li>
-            <a href="/">매장</a>
-          </li>
-          <li>
-            <a href="/">더보기</a>
+            <a
+              href="https://www.youtube.com/user/baskinrobbinskorea"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-[35px] h-[35px] bg-icon-youtube"
+              aria-label="유튜브 바로가기"
+            >
+            </a>
           </li>
         </ul>
-      </nav>
-      <!-- 3. 검색 버튼 -->
-      <!-- 배경이미지로 돋보기 모양 이미지를 넣을 예정입니다! -->
-      <button type="button" class="bg-icon_search" aria-label="검색"></button>
-      <!-- 4. sns 링크 + 고객센터 + contact us -->
-      <!-- sns 로고는 배경 이미지로 넣을 예정입니다! -->
-      <ul>
-        <li>
-          <a
-            href="https://www.facebook.com/baskinrobbinskr/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="bg-icon_facebook"
-            aria-label="페이스북 바로가기"
-          >
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://twitter.com/BaskinrobbinsKR"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="bg-icon_twitter"
-            aria-label="트위터 바로가기"
-          >
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://blog.naver.com/brgirl31"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="bg-icon_blog"
-            aria-label="블로그 바로가기"
-          >
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.instagram.com/baskinrobbinskorea/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="bg-icon_instagram"
-            aria-label="인스타그램 바로가기"
-          >
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/user/baskinrobbinskorea"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="bg-icon_youtube"
-            aria-label="유튜브 바로가기"
-          >
-          </a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a href="/">고객센터</a>
-        </li>
-        <li>
-          <a href="/" lang="en">Contact us</a>
-        </li>
-      </ul>
-    </header>
+        <ul class="flex absolute text-sm gap-6 right-[78px] top-[64px] text-gray2">
+          <li>
+            <a href="/">고객센터</a>
+          </li>
+          <li>
+            <a href="/" lang="en" class="uppercase">Contact us</a>
+          </li>
+        </ul>
+      </header>
+    </div>
 
+    <!-- 2. 메인메뉴 -->
+    <div class="border-y-[1px] border-gray bg-white">
+      <div class="max-w-[1200px] mx-auto flex justify-between py-4">
+        <ul class="flex justify-between items-center text-base w-[136px]">
+          <li>
+            <!-- 해당 페이지들을 만들지 않을 예정이므로 href 속성을 /로 설정하였습니다! -->
+            <a href="/" class="text-pink1">로그인</a>
+          </li>
+          <li>
+            <a href="/" class="text-gray2">회원가입</a>
+          </li>
+        </ul>
+        <nav class="flex justify-between text-xl">
+          <h2 class="sr-only">메인 메뉴</h2>
+          <!-- css를 이용하여 전부 대문자로 변경할 예정입니다! -->
+          <ul class="flex justify-between items-center max-w-[900px] w-[78vw]">
+            <li>
+              <a href="/">이달의 맛</a>
+            </li>
+            <li>
+              <a href="/">메뉴</a>
+            </li>
+            <li>
+              <a href="/">영양 성분 및 알레르기</a>
+            </li>
+            <li>
+              <a href="/">이벤트</a>
+            </li>
+            <li>
+              <a href="/">매장</a>
+            </li>
+            <li>
+              <a href="/">더보기</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    
     <!-- 3. 메인콘텐츠 -->
     <main class="">
       <!-- 3-1. 스크린 리더에만 보이는 헤딩 -->
