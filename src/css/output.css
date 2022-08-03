@@ -1530,6 +1530,7 @@ body::after {
 .menu__title {
   margin-top: 4.5rem;
   text-align: center;
+  font-family: BaskinRobbins, sans-serif;
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
@@ -1568,6 +1569,12 @@ body::after {
 .menu__title--spoon::after {
   background-position: -503px -568px;
   margin-left: 1rem;
+}
+
+.menu__banner {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* 추천 메뉴 */
@@ -1884,7 +1891,6 @@ body::after {
 .pagination__btn span {
   font-size: 1.5rem;
   font-weight: 700;
-  line-height: 1.5rem;
 }
 
 .hover\:scale-105:hover {

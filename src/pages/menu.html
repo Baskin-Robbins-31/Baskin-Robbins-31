@@ -27,15 +27,25 @@
           <a href="/">
             <span class="sr-only">배스킨라빈스</span>
             <picture>
-              <source srcset="./../images/logo_baskinrobbins.png" type="image/avif" />
-              <source srcset="./../images/logo_baskinrobbins.png" type="image/webp" />
+              <source
+                srcset="./../images/logo_baskinrobbins.png"
+                type="image/avif"
+              />
+              <source
+                srcset="./../images/logo_baskinrobbins.png"
+                type="image/webp"
+              />
               <img class="mx-auto" src="./../images/logo_baskinrobbins.png" />
             </picture>
           </a>
         </h1>
         <!-- 2. 검색 버튼 -->
         <!-- 배경이미지로 돋보기 모양 이미지를 넣을 예정입니다! -->
-        <button type="button" class="bg-icon-search absolute w-[54px] h-[54px] right-0 top-[45px]" aria-label="검색"></button>
+        <button
+          type="button"
+          class="bg-icon-search absolute w-[54px] h-[54px] right-0 top-[45px]"
+          aria-label="검색"
+        ></button>
         <!-- 3. sns 링크 + 고객센터 + contact us -->
         <!-- sns 로고는 배경 이미지로 넣을 예정입니다! -->
         <ul class="flex gap-3 absolute w-10 h-10 top-[53px] left-0">
@@ -90,7 +100,9 @@
             </a>
           </li>
         </ul>
-        <ul class="flex absolute text-sm gap-6 right-[78px] top-[64px] text-gray2">
+        <ul
+          class="flex absolute text-sm gap-6 right-[78px] top-[64px] text-gray2"
+        >
           <li>
             <a href="/">고객센터</a>
           </li>
@@ -139,7 +151,7 @@
         </nav>
       </div>
     </div>
-    
+
     <!-- 3. 메인콘텐츠 -->
     <main class="">
       <!-- 3-1. 스크린 리더에만 보이는 헤딩 -->
@@ -147,11 +159,35 @@
 
       <!-- 3-2. 상단 배너 -->
       <!-- gif 이미지 -->
-      <img
-        src="./../images/bg_icecream_menu.gif"
-        alt="아이스크림의 기준,배스킨라빈스"
-        class=""
-      />
+      <picture>
+        <source
+          media="(max-width: 768px)"
+          srcset="./../images/menu_banner/mobile_bg_icecream_menu.webp"
+          type="image/webp"
+        />
+        <source
+          media="(max-width: 768px)"
+          srcset="./../images/menu_banner/mobile_bg_icecream_menu.jpg"
+          type="image/jpg"
+        />
+        <source
+          srcset="./../images/menu_banner/bg_icecream_menu.avif"
+          type="image/avif"
+        />
+        <source
+          srcset="./../images/menu_banner/bg_icecream_menu.webp"
+          type="image/webp"
+        />
+        <source
+          srcset="./../images/menu_banner/bg_icecream_menu.gif"
+          type="image/avif"
+        />
+        <img
+          src="./../images/menu_banner/bg_icecream_menu.avif"
+          alt="아이스크림의 기준,배스킨라빈스"
+          class="menu__banner"
+        />
+      </picture>
 
       <!-- 3-3. Monthly best icecream -->
       <section>

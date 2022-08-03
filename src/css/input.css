@@ -149,7 +149,7 @@ body::after {
 /* 섹션 타이틀 */
 
 .menu__title {
-  @apply text-center text-4xl mt-[4.5rem];
+  @apply text-center text-4xl mt-[4.5rem] font-baskin;
 }
 .menu__title--crown::before {
   content: '';
@@ -181,6 +181,12 @@ body::after {
 .menu__title--spoon::after {
   background-position: -503px -568px;
   margin-left: 1rem;
+}
+
+.menu__banner {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* 추천 메뉴 */
@@ -398,5 +404,5 @@ body::after {
   @apply border-pink1 text-pink1 text-center;
 }
 .pagination__btn span {
-  @apply font-bold text-[1.5rem] leading-6;
+  @apply font-bold text-[1.5rem];
 }
