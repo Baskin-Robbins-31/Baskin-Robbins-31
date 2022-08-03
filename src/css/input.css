@@ -7,7 +7,7 @@
 }
 
 .btn-indicator {
-  @apply w-6 h-6 bg-white rounded-full shadow-lg shadow-gray2;
+  @apply w-6 h-6 bg-white rounded-full shadow-lg shadow-gray2 max-md:w-5 max-md:h-5;
 }
 
 .btn-indicator[aria-selected='true'] {
@@ -16,8 +16,7 @@
 
 /* control button */
 .controls {
-  display: flex;
-  padding: 24px 32px;
+  padding: 1.5rem 2rem;
 }
 
 .play,
@@ -27,8 +26,6 @@
 }
 
 .play {
-  width: 4.375rem;
-  height: 4.375rem;
   border-radius: 50%;
   background: no-repeat center white;
   background-size: 20px;
@@ -48,8 +45,6 @@
 
 .previous {
   order: 3;
-  width: 4.375rem;
-  height: 4.375rem;
   border-radius: 50%;
   background: url(../images/carouselPrevButton.svg) no-repeat center white;
   background-size: 20px;
@@ -58,8 +53,6 @@
 
 .next {
   order: 4;
-  width: 4.375rem;
-  height: 4.375rem;
   border-radius: 50%;
   background: url(../images/carouselNextButton.svg) no-repeat center white;
   background-size: 20px;
