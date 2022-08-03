@@ -32,8 +32,6 @@ module.exports = {
         'select-dropdown': "url('../images/select_dropdown.png')",
       }),
       colors: {
-        // white: "#ffffff",
-        // black: "#000000",
         pink1: '#FF7C98',
         pink2: '#E01883',
         navy1: '#224289',
