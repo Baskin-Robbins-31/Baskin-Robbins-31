@@ -10,7 +10,7 @@ module.exports = {
         baskin: ['BaskinRobbins', 'sans-serif'],
       },
       backgroundImage: (theme) => ({
-        'header-bg': "url('../images/png/common/bg_header.png')",
+        'header-bg': "url('../images/webp/common/bg_header.webp')",
         'icon-nav-search': "url('../images/webp/common/icon_nav_search.webp')",
         'icon-search': "url('../images/webp/common/icon_search.webp')",
         'icon-facebook': "url('../images/png/common/sns_facebook_35.png')",
