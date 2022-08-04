@@ -412,12 +412,12 @@ body::after {
   padding: 1rem;
 }
 .product__hashtag__link {
-  @apply bg-brown1 text-white pt-1 pb-1 pl-3 pr-3 rounded-full;
+  @apply bg-brown2 text-white pt-1 pb-1 pl-3 pr-3 rounded-full;
   transition: all 150ms;
 }
 .product__hashtag__link:hover,
 .product__hashtag__link:focus {
-  @apply bg-brown2;
+  @apply bg-pink2;
 }
 
 .product__hashtag__modal {

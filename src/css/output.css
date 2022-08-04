@@ -2013,7 +2013,7 @@ body::after {
 .product__hashtag__link {
   border-radius: 9999px;
   --tw-bg-opacity: 1;
-  background-color: rgb(145 137 132 / var(--tw-bg-opacity));
+  background-color: rgb(114 100 84 / var(--tw-bg-opacity));
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.75rem;
@@ -2026,7 +2026,7 @@ body::after {
 .product__hashtag__link:hover, 
 .product__hashtag__link:focus {
   --tw-bg-opacity: 1;
-  background-color: rgb(114 100 84 / var(--tw-bg-opacity));
+  background-color: rgb(224 24 131 / var(--tw-bg-opacity));
 }
 
 .product__hashtag__modal {
