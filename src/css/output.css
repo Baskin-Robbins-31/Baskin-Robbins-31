@@ -1148,6 +1148,14 @@ video {
   font-weight: 400;
 }
 
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -1213,6 +1221,16 @@ video {
 .text-brown2 {
   --tw-text-opacity: 1;
   color: rgb(114 100 84 / var(--tw-text-opacity));
+}
+
+.text-pink2 {
+  --tw-text-opacity: 1;
+  color: rgb(224 24 131 / var(--tw-text-opacity));
+}
+
+.text-gray {
+  --tw-text-opacity: 1;
+  color: rgb(205 204 213 / var(--tw-text-opacity));
 }
 
 .shadow-md {
