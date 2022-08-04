@@ -623,18 +623,6 @@ video {
   left: 50%;
 }
 
-.right-0 {
-  right: 0px;
-}
-
-.left-0 {
-  left: 0px;
-}
-
-.right-\[78px\] {
-  right: 78px;
-}
-
 .z-40 {
   z-index: 40;
 }
