@@ -967,9 +967,9 @@ video {
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
 }
 
-.bg-pink1 {
+.bg-pink2 {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 124 152 / var(--tw-bg-opacity));
+  background-color: rgb(224 24 131 / var(--tw-bg-opacity));
 }
 
 .bg-beige1 {
@@ -985,6 +985,11 @@ video {
 .bg-brown1 {
   --tw-bg-opacity: 1;
   background-color: rgb(145 137 132 / var(--tw-bg-opacity));
+}
+
+.bg-pink1 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 124 152 / var(--tw-bg-opacity));
 }
 
 .bg-header-bg {
@@ -1650,7 +1655,7 @@ body::after {
 
 .menu__card span {
   --tw-text-opacity: 1;
-  color: rgb(205 204 213 / var(--tw-text-opacity));
+  color: rgb(126 126 129 / var(--tw-text-opacity));
 }
 
 .menu__card img {
