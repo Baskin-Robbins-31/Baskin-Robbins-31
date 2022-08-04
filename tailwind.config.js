@@ -34,7 +34,7 @@ module.exports = {
         'btn-hamburger': "url('../images/webp/common/button-hamburger.webp')",
         'btn-close': "url('../images/webp/common/btn_close.webp')",
         'footer-logo': "url('../images/webp/common/footer_logo.webp')",
-        'select-dropdown': "url('../images/select_dropdown.png')",
+        'select-dropdown': "url('../images/png/common/select_dropdown.png')",
       }),
       colors: {
         pink1: '#FF7C98',

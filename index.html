@@ -33,11 +33,11 @@
       >
         <!-- 1. 로고 -->
         <h1
-          class="py-6 max-md:py-3 max-md:inline-block max-md:grow max-md:z-[-10]"
+          class="py-6 md:text-center max-md:py-3 max-md:inline-block max-md:grow max-md:z-[-10]"
         >
-          <a href="/">
+          <a href="/" class="inline-block">
             <span class="sr-only">배스킨라빈스</span>
-            <picture>
+            <picture class="inline-block">
               <source
                 srcset="./src/images/png/common/logo_baskinrobbins.png"
                 type="image/png"
@@ -57,20 +57,20 @@
         <!-- 배경이미지로 돋보기 모양 이미지를 넣을 예정입니다! -->
         <button
           type="button"
-          class="absolute w-[54px] h-[54px] right-0 top-[45px] bg-icon-search mobile-icon-search"
+          class="absolute w-[54px] h-[54px] right-[20px] top-[45px] bg-icon-search mobile-icon-search"
           aria-label="검색"
         ></button>
         <!-- 3. sns 링크 + 고객센터 + contact us -->
         <!-- sns 로고는 배경 이미지로 넣을 예정입니다! -->
         <ul
-          class="flex gap-3 absolute w-10 h-10 top-[53px] left-0 max-md:hidden"
+          class="flex gap-3 absolute w-10 h-10 top-[53px] left-[20px] max-md:hidden"
         >
           <li>
             <a
               href="https://www.facebook.com/baskinrobbinskr/"
               target="_blank"
               rel="noopener noreferrer"
-              class="bg-icon-facebook"
+              class="block w-[35px] h-[35px] bg-icon-facebook"
               aria-label="페이스북 바로가기"
             >
             </a>
@@ -117,7 +117,7 @@
           </li>
         </ul>
         <ul
-          class="flex absolute text-sm gap-6 right-[78px] top-[64px] text-gray2 max-md:hidden"
+          class="flex absolute text-sm gap-6 right-[98px] top-[64px] text-gray2 max-md:hidden"
         >
           <li>
             <a href="/">고객센터</a>
@@ -150,9 +150,9 @@
       </header>
     </div>
     <!-- 내비게이션 바 -->
-    <div class="mobile-nav-back max-md:hidden"></div>
-    <div class="nav-bar-viewport hidden">
-      <div class="nav-bar-wrapper">
+    <div class="mobile-nav-back max-md:hidden z-40"></div>
+    <div class="nav-bar-viewport md:transform-none z-50">
+      <div class="nav-bar-wrapper md:px-[20px]">
         <ul class="nav-bar-default">
           <li>
             <!-- 해당 페이지들을 만들지 않을 예정이므로 href 속성을 /로 설정하였습니다! -->
@@ -174,7 +174,7 @@
               <a href="/" class="mobile-nav-link">이달의 맛</a>
             </li>
             <li class="mobile-nav">
-              <a href="/" class="mobile-nav-link">메뉴</a>
+              <a href="./src/pages/menu.html" class="mobile-nav-link">메뉴</a>
             </li>
             <li class="mobile-nav">
               <a href="/" class="mobile-nav-link">영양 성분 및 알레르기</a>
@@ -934,7 +934,7 @@
           </li>
         </ul>
         <span
-          class="insta-text whitespace-nowrap flex justify-center items-center text-brown1 text-[28px]"
+          class="insta-text whitespace-nowrap flex justify-center items-center text-brown1 text-[28px] font-baskin"
           >배라 in 인스타그램</span
         >
         <ul class="insta flex flex-wrap justify-center gap-1 pt-12">
