@@ -1,4 +1,4 @@
-export default (function () {
+(function () {
   'use strict';
 
   const get = (target) => {
