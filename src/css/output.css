@@ -2216,6 +2216,30 @@ body::after {
     bottom: 25px;
   }
 
+  .md\:top-\[80px\] {
+    top: 80px;
+  }
+
+  .md\:top-\[85px\] {
+    top: 85px;
+  }
+
+  .md\:-right-\[90px\] {
+    right: -90px;
+  }
+
+  .md\:-right-\[40px\] {
+    right: -40px;
+  }
+
+  .md\:top-\[100px\] {
+    top: 100px;
+  }
+
+  .md\:top-\[120px\] {
+    top: 120px;
+  }
+
   .md\:col-start-2 {
     grid-column-start: 2;
   }
@@ -2331,6 +2355,12 @@ body::after {
   .md\:scale-\[1\.2\] {
     --tw-scale-x: 1.2;
     --tw-scale-y: 1.2;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:scale-\[1\.1\] {
+    --tw-scale-x: 1.1;
+    --tw-scale-y: 1.1;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
