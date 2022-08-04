@@ -39,16 +39,15 @@
             <span class="sr-only">배스킨라빈스</span>
             <picture class="inline-block">
               <source
-                srcset="./src/images/png/common/logo_baskinrobbins.png"
-                type="image/png"
-              />
-              <source
                 srcset="./src/images/webp/common/logo_baskinrobbins.webp"
                 type="image/webp"
               />
               <img
+                src="./src/images/webp/common/logo_baskinrobbins.png"
                 class="mx-auto max-md:w-[55px] max-md:ml-3 max-md:mr-0"
-                src="./src/images/webp/common/logo_baskinrobbins.webp"
+                width="92"
+                height="92"
+                alt=""
               />
             </picture>
           </a>
@@ -117,7 +116,7 @@
           </li>
         </ul>
         <ul
-          class="flex absolute text-sm gap-6 right-[98px] top-[64px] text-gray2 max-md:hidden"
+          class="flex absolute text-sm gap-6 right-[98px] top-[64px] text-gray1 max-md:hidden"
         >
           <li>
             <a href="/">고객센터</a>
@@ -146,24 +145,28 @@
           </ul>
         </nav>
         <!-- 5. 모바일에서만 보이는 햄버거 버튼 -->
-        <button type="button" class="md:hidden mobile-btn-hamburger"></button>
+        <button
+          type="button"
+          class="md:hidden mobile-btn-hamburger"
+          aria-label="메인 메뉴 보기"
+        ></button>
       </header>
     </div>
     <!-- 내비게이션 바 -->
     <div class="mobile-nav-back max-md:hidden z-40"></div>
     <div class="nav-bar-viewport md:transform-none z-50">
       <div class="nav-bar-wrapper md:px-[20px]">
-        <ul class="nav-bar-default">
+        <ul class="nav-bar-default font-normal">
           <li>
             <!-- 해당 페이지들을 만들지 않을 예정이므로 href 속성을 /로 설정하였습니다! -->
-            <a href="/" class="text-pink1 max-md:text-white">로그인</a>
+            <a href="/" class="text-pink2 max-md:text-white">로그인</a>
           </li>
           <li>
-            <a href="/" class="text-gray2 max-md:text-white">회원가입</a>
+            <a href="/" class="text-gray1 max-md:text-white">회원가입</a>
           </li>
         </ul>
         <nav
-          class="flex justify-between text-xl max-md:text-[16px] font-baskin"
+          class="flex justify-between text-xl max-md:text-[16px] font-baskin font-medium"
         >
           <h2 class="sr-only">메인 메뉴</h2>
           <!-- css를 이용하여 전부 대문자로 변경할 예정입니다! -->
@@ -191,7 +194,11 @@
           </ul>
         </nav>
         <!-- 모바일에서만 보이는 X 버튼 -->
-        <button type="button" class="hidden mobile-close"></button>
+        <button
+          type="button"
+          class="hidden mobile-close"
+          aria-label="메뉴 닫기"
+        ></button>
       </div>
       <ul class="mobile-icon-group hidden max-md:flex gap-3 absolute w-10 h-10">
         <li>
@@ -635,7 +642,7 @@
             class="menu__card max-md:w-[60%] max-md:h-[300px] md:w-[400px] md:h-[300px] menu-icecream ml-auto row-start-1 row-end-2 col-start-1 col-end-3 z-30"
           >
             <a href="./src/pages/menu.html" class="">
-              <h3 lang="en" class="text-[#FC84B5]">ICECREAM</h3>
+              <h3 lang="en" class="text-pink2">ICECREAM</h3>
               <p>아이스크림의 기준 배스킨라빈스</p>
               <span>more</span>
               <picture>
@@ -649,6 +656,8 @@
                   type="image/png"
                   alt=""
                   class="w-[55%] -right-[10%] top-[30%] rotate-[15deg]"
+                  width="283"
+                  height="321"
                 />
               </picture>
             </a>
@@ -670,7 +679,9 @@
                   src="./src/images/png/main/monaka.png"
                   type="image/png"
                   alt=""
-                  class="max-md:w-[300px] md:scale-[0.6] md:top-[60px] max-md:-right-[50px] md:-right-[80px]"
+                  class="max-md:w-[300px] md:scale-[1.1] md:top-[120px] max-md:-right-[50px] md:-right-[40px]"
+                  width="207"
+                  height="207"
                 />
               </picture>
             </a>
@@ -694,6 +705,8 @@
                   type="image/png"
                   alt=""
                   class="max-md:w-[350px] md:scale-[1.4] max-md:-right-[50px] -right-[25%] md:top-[45%]"
+                  width="362"
+                  height="362"
                 />
               </picture>
             </a>
@@ -719,6 +732,8 @@
                   type="image/png"
                   alt=""
                   class="max-md:w-[250px] md:scale-[1.2] max-md:right-[50px] md:-right-[20%] max-md:top-[30%] md:bottom-[10px]"
+                  width="311"
+                  height="311"
                 />
               </picture>
             </a>
@@ -741,6 +756,8 @@
                   type="image/png"
                   alt=""
                   class="max-md:w-[350px] m:scale-[0.9] max-md:-right-[50px] md:-right-[60px] md:-bottom-[70px]"
+                  width="345"
+                  height="345"
                 />
               </picture>
             </a>
@@ -763,6 +780,8 @@
                   type="image/png"
                   alt=""
                   class="max-md:w-[60%] md:w-[70%] max-md:left-[20%] m:left-[10px] max-md:bottom-[10%] md:bottom-[25px]"
+                  width="182"
+                  height="144"
                 />
               </picture>
             </a>
@@ -786,12 +805,16 @@
                   src="./src/images/png/main/order_call.png"
                   type="image/png"
                   alt="배달 콜센터로 주문하기. 전화번호: 1670-3131"
+                  width="227"
+                  height="227"
                 />
               </picture>
             </a>
           </li>
           <li class="max-md:w-[40%]">
-            <a href="/">
+            <a
+              href="https://www.happyorder.co.kr/?am=commonOrder/storeView&itemCode=&brandCode=BRkorea&storeCode=11100&orderType=D&orderDetail=O&orderDate=20220804&lat=127.0373774&lon=37.4843843&cpIds=&pp=commonOrder/storeList"
+            >
               <picture>
                 <source
                   srcset="./src/images/webp/main/order_happy.webp"
@@ -801,12 +824,14 @@
                   src="./src/images/png/main/order_happy.png"
                   type="image/png"
                   alt="해피오더로 주문하기"
+                  width="227"
+                  height="227"
                 />
               </picture>
             </a>
           </li>
           <li class="max-md:w-[30%]">
-            <a href="/">
+            <a href="https://www.baemin.com/">
               <picture>
                 <source
                   srcset="./src/images/webp/main/order_bm.webp"
@@ -816,12 +841,14 @@
                   src="./src/images/png/main/order_bm.png"
                   type="image/png"
                   alt="배달의 민족으로 주문하기"
+                  width="227"
+                  height="227"
                 />
               </picture>
             </a>
           </li>
           <li class="max-md:w-[30%]">
-            <a href="/">
+            <a href="https://order.kakao.com/pc.html">
               <picture>
                 <source
                   srcset="./src/images/webp/main/order_kakao.webp"
@@ -831,12 +858,14 @@
                   src="./src/images/png/main/order_kakao.png"
                   type="image/png"
                   alt="카카오톡으로 주문하기"
+                  width="227"
+                  height="227"
                 />
               </picture>
             </a>
           </li>
           <li class="max-md:w-[30%]">
-            <a href="/">
+            <a href="https://www.yogiyo.co.kr/mobile/#/245470/">
               <picture>
                 <source
                   srcset="./src/images/webp/main/order_ygy.webp"
@@ -846,6 +875,8 @@
                   src="./src/images/png/main/order_ygy.png"
                   type="image/png"
                   alt="요기요로 주문하기"
+                  width="227"
+                  height="227"
                 />
               </picture>
             </a>
@@ -858,12 +889,12 @@
         <div class="inline-block relative">
           <picture>
             <source
-              srcset="./src/images/png/main/desktop/search-store 1.webp"
+              srcset="./src/images/webp/main/search-store.webp"
               type="image/webp"
               class="md:w-[675px] md:h-[398px] mx-auto min-w-[320px]"
             />
             <img
-              src="./src/images/png/main/desktop/search-store 1.png"
+              src="./src/images/png/main/search-store.png"
               type="image/png"
               alt="주변의 배스킨라빈스 매장을 찾아보세요!"
               class="md:w-[675px] md:h-[398px] mx-auto min-w-[320px]"
@@ -943,6 +974,8 @@
               <img
                 src="./src/images/jpg/sns1.jpg"
                 alt="파인트 컵에 아이스크림이 가득 담겨있다."
+                width="200"
+                height="200"
               />
             </button>
           </li>
@@ -951,6 +984,8 @@
               <img
                 src="./src/images/jpg/sns2.jpg"
                 alt="세 명의 사람이 각각 다른 맛의 아이스크림 콘을 들고있다."
+                width="200"
+                height="200"
               />
             </button>
           </li>
@@ -959,6 +994,8 @@
               <img
                 src="./src/images/jpg/sns3.jpg"
                 alt="쿼터 컵에 아이스크림이 가득 담겨있다."
+                width="200"
+                height="200"
               />
             </button>
           </li>
@@ -975,6 +1012,8 @@
               <img
                 src="./src/images/jpg/sns5.jpg"
                 alt="테이블 위에 네 개의 싱글 컵에 아이스크림이 가득 담겨있다."
+                width="200"
+                height="200"
               />
             </button>
           </li>
@@ -983,6 +1022,8 @@
               <img
                 src="./src/images/jpg/sns2.jpg"
                 alt="세 명의 사람이 각각 다른 맛의 아이스크림 콘을 들고있다."
+                width="200"
+                height="200"
               />
             </button>
           </li>
@@ -991,6 +1032,8 @@
               <img
                 src="./src/images/jpg/sns3.jpg"
                 alt="쿼터 컵에 아이스크림이 가득 담겨있다."
+                width="200"
+                height="200"
               />
             </button>
           </li>
@@ -999,6 +1042,8 @@
               <img
                 src="./src/images/jpg/sns4.jpg"
                 alt="쿼터 컵에 아이스크림이 가득 담겨있다."
+                width="200"
+                height="200"
               />
             </button>
           </li>
@@ -1007,6 +1052,8 @@
               <img
                 src="./src/images/jpg/sns5.jpg"
                 alt="테이블 위에 네 개의 싱글 컵에 아이스크림이 가득 담겨있다."
+                width="200"
+                height="200"
               />
             </button>
           </li>
@@ -1015,6 +1062,8 @@
               <img
                 src="./src/images/jpg/sns1.jpg"
                 alt="파인트 컵에 아이스크림이 가득 담겨있다."
+                width="200"
+                height="200"
               />
             </button>
           </li>
@@ -1023,6 +1072,8 @@
               <img
                 src="./src/images/jpg/sns3.jpg"
                 alt="쿼터 컵에 아이스크림이 가득 담겨있다."
+                width="200"
+                height="200"
               />
             </button>
           </li>
@@ -1031,6 +1082,8 @@
               <img
                 src="./src/images/jpg/sns4.jpg"
                 alt="쿼터 컵에 아이스크림이 가득 담겨있다."
+                width="200"
+                height="200"
               />
             </button>
           </li>
@@ -1039,6 +1092,8 @@
               <img
                 src="./src/images/jpg/sns5.jpg"
                 alt="테이블 위에 네 개의 싱글 컵에 아이스크림이 가득 담겨있다."
+                width="200"
+                height="200"
               />
             </button>
           </li>
@@ -1047,6 +1102,8 @@
               <img
                 src="./src/images/jpg/sns1.jpg"
                 alt="파인트 컵에 아이스크림이 가득 담겨있다."
+                width="200"
+                height="200"
               />
             </button>
           </li>
@@ -1055,52 +1112,14 @@
               <img
                 src="./src/images/jpg/sns2.jpg"
                 alt="세 명의 사람이 각각 다른 맛의 아이스크림 콘을 들고있다."
+                width="200"
+                height="200"
               />
             </button>
           </li>
         </ul>
       </section>
     </main>
-    <!-- SNS 모달창 -->
-    <div class="sns-modal hidden">
-      <div class="modal-wrapper">
-        <div class="modal-content">
-          <div class="modal__image">
-            <img src="./src/images/png/common/" alt="" />
-          </div>
-          <div class="modal__description">
-            <div class="modal__description__header">
-              <img
-                src="./src/images/1638868047.png"
-                alt="작성자 프로필 이미지"
-              />
-              <a href="작성자 인스타 주소" rel="noreferrer nopenner"
-                >작성자 아이디</a
-              >
-              <time>작성 시간</time>
-            </div>
-            <div class="modal__description__text">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-                deleniti quia dolorem numquam dolores, ad pariatur provident
-                amet illo eum fuga quisquam veritatis nam placeat in totam
-                corporis impedit. Ad!
-                <br />
-                #해 #시 #태 #그
-              </p>
-            </div>
-            <div class="modal__description__buttons">
-              <button type="button">좋아요</button>
-              <button type="button">댓글</button>
-              <button type="button">공유하기</button>
-            </div>
-          </div>
-        </div>
-        <button type="button">prev</button>
-        <button type="button">next</button>
-      </div>
-      <button type="button" class="button--exit">X</button>
-    </div>
     <footer class="relative border-t-[1px] border-brown1">
       <!-- 1. 가이드 리스트 -->
       <ul

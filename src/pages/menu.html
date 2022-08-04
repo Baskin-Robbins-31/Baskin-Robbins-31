@@ -33,22 +33,21 @@
       >
         <!-- 1. 로고 -->
         <h1
-          class="py-6 max-md:py-3 max-md:inline-block max-md:grow max-md:z-[-10]"
+          class="py-6 md:text-center max-md:py-3 max-md:inline-block max-md:grow max-md:z-[-10]"
         >
-          <a href="/index.html">
+          <a href="/" class="inline-block">
             <span class="sr-only">배스킨라빈스</span>
-            <picture>
-              <source
-                srcset="./../images/png/common/logo_baskinrobbins.png"
-                type="image/png"
-              />
+            <picture class="inline-block">
               <source
                 srcset="./../images/webp/common/logo_baskinrobbins.webp"
                 type="image/webp"
               />
               <img
+                src="./../images/webp/common/logo_baskinrobbins.png"
                 class="mx-auto max-md:w-[55px] max-md:ml-3 max-md:mr-0"
-                src="./../images/webp/common/logo_baskinrobbins.webp"
+                width="92"
+                height="92"
+                alt=""
               />
             </picture>
           </a>
@@ -115,7 +114,7 @@
           </li>
         </ul>
         <ul
-          class="flex absolute text-sm gap-6 right-[98px] top-[64px] text-gray2 max-md:hidden"
+          class="flex absolute text-sm gap-6 right-[98px] top-[64px] text-gray1 max-md:hidden"
         >
           <li>
             <a href="./menu.html">고객센터</a>
@@ -151,20 +150,20 @@
     <div class="mobile-nav-back max-md:hidden z-40"></div>
     <div class="nav-bar-viewport md:transform-none z-50">
       <div class="nav-bar-wrapper md:px-[20px]">
-        <ul class="nav-bar-default">
+        <ul class="nav-bar-default font-normal">
           <li>
-            <a href="./menu.html" class="text-pink1 max-md:text-white"
+            <a href="./menu.html" class="text-pink2 max-md:text-white"
               >로그인</a
             >
           </li>
           <li>
-            <a href="./menu.html" class="text-gray2 max-md:text-white"
+            <a href="./menu.html" class="text-gray1 max-md:text-white"
               >회원가입</a
             >
           </li>
         </ul>
         <nav
-          class="flex justify-between text-xl max-md:text-[16px] font-baskin"
+          class="flex justify-between text-xl max-md:text-[16px] font-baskin font-medium"
         >
           <h2 class="sr-only">메인 메뉴</h2>
           <ul
@@ -274,12 +273,9 @@
           srcset="./../images/menu_banner/bg_icecream_menu.webp"
           type="image/webp"
         />
-        <source
-          srcset="./../images/menu_banner/bg_icecream_menu.gif"
-          type="image/avif"
-        />
         <img
-          src="./../images/menu_banner/bg_icecream_menu.avif"
+          src="./../images/menu_banner/bg_icecream_menu.gif"
+          type="image/gif"
           alt="아이스크림의 기준,배스킨라빈스"
           class="menu__banner"
           width="100%"
