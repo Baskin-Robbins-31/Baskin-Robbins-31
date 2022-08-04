@@ -406,3 +406,90 @@ body::after {
 .pagination__btn span {
   @apply font-bold text-[1.5rem];
 }
+.banner-carousel {
+  max-width: 100vw;
+}
+
+.btn-indicator {
+  @apply w-6 h-6 bg-white rounded-full shadow-lg shadow-gray2 max-md:w-5 max-md:h-5;
+}
+
+.btn-indicator[aria-selected='true'] {
+  @apply bg-navy1;
+}
+
+/* 캐러셀 컨트롤 */
+.controls {
+  padding: 1.5rem 2rem;
+}
+
+.play,
+.previous,
+.next {
+  @apply shadow-md shadow-gray2;
+}
+
+.play {
+  border-radius: 50%;
+  background: no-repeat center white;
+  background-size: 20px;
+}
+
+.pause {
+  background-image: url(../images/playButton.svg);
+}
+
+.rotation {
+  background-image: url(../images/pauseButton.svg);
+}
+
+.rotation {
+  order: 1;
+}
+
+.previous {
+  order: 3;
+  border-radius: 50%;
+  background: url(../images/carouselPrevButton.svg) no-repeat center white;
+  background-size: 20px;
+  margin-left: auto;
+}
+
+.next {
+  order: 4;
+  border-radius: 50%;
+  background: url(../images/carouselNextButton.svg) no-repeat center white;
+  background-size: 20px;
+  margin-left: 20px;
+}
+
+.indicator-list {
+  order: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+}
+
+.carousel-wrapper {
+  max-width: 100vw;
+}
+
+.carousel-image img {
+  max-width: 100vw;
+}
+
+img {
+  width: 100vw;
+}
+
+/* @keyframes fadeInUp {
+  0% {
+    opacity: 1;
+    height: 100%;
+  }
+  to {
+    opacity: 0;
+    height: 0;
+  }
+} */
