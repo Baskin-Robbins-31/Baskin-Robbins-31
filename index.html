@@ -33,14 +33,23 @@
       >
         <!-- 1. 로고 -->
         <h1
-          class="py-6 max-md:py-3 max-md:inline-block max-md:grow max-md:z-[-10]"
+          class="py-6 md:text-center max-md:py-3 max-md:inline-block max-md:grow max-md:z-[-10]"
         >
-          <a href="/">
+          <a href="/" class="inline-block">
             <span class="sr-only">배스킨라빈스</span>
-            <picture>
-              <source srcset="./src/images/png/common/logo_baskinrobbins.png" type="image/png" />
-              <source srcset="./src/images/webp/common/logo_baskinrobbins.webp" type="image/webp" />
-              <img class="mx-auto max-md:w-[55px] max-md:ml-3 max-md:mr-0" src="./src/images/webp/common/logo_baskinrobbins.webp" />
+            <picture class="inline-block">
+              <source
+                srcset="./src/images/png/common/logo_baskinrobbins.png"
+                type="image/png"
+              />
+              <source
+                srcset="./src/images/webp/common/logo_baskinrobbins.webp"
+                type="image/webp"
+              />
+              <img
+                class="mx-auto max-md:w-[55px] max-md:ml-3 max-md:mr-0"
+                src="./src/images/webp/common/logo_baskinrobbins.webp"
+              />
             </picture>
           </a>
         </h1>
@@ -48,13 +57,13 @@
         <!-- 배경이미지로 돋보기 모양 이미지를 넣을 예정입니다! -->
         <button
           type="button"
-          class="absolute w-[54px] h-[54px] right-0 top-[45px] bg-icon-search mobile-icon-search"
+          class="absolute w-[54px] h-[54px] right-[20px] top-[45px] bg-icon-search mobile-icon-search"
           aria-label="검색"
         ></button>
         <!-- 3. sns 링크 + 고객센터 + contact us -->
         <!-- sns 로고는 배경 이미지로 넣을 예정입니다! -->
         <ul
-          class="flex gap-3 absolute w-10 h-10 top-[53px] left-0 max-md:hidden"
+          class="flex gap-3 absolute w-10 h-10 top-[53px] left-[20px] max-md:hidden"
         >
           <li>
             <a
@@ -108,7 +117,7 @@
           </li>
         </ul>
         <ul
-          class="flex absolute text-sm gap-6 right-[78px] top-[64px] text-gray2 max-md:hidden"
+          class="flex absolute text-sm gap-6 right-[98px] top-[64px] text-gray2 max-md:hidden"
         >
           <li>
             <a href="/">고객센터</a>
@@ -141,9 +150,9 @@
       </header>
     </div>
     <!-- 내비게이션 바 -->
-    <div class="mobile-nav-back max-md:hidden"></div>
-    <div class="nav-bar-viewport hidden">
-      <div class="nav-bar-wrapper">
+    <div class="mobile-nav-back max-md:hidden z-40"></div>
+    <div class="nav-bar-viewport md:transform-none z-50">
+      <div class="nav-bar-wrapper md:px-[20px]">
         <ul class="nav-bar-default">
           <li>
             <!-- 해당 페이지들을 만들지 않을 예정이므로 href 속성을 /로 설정하였습니다! -->
@@ -165,7 +174,7 @@
               <a href="/" class="mobile-nav-link">이달의 맛</a>
             </li>
             <li class="mobile-nav">
-              <a href="/" class="mobile-nav-link">메뉴</a>
+              <a href="./src/pages/menu.html" class="mobile-nav-link">메뉴</a>
             </li>
             <li class="mobile-nav">
               <a href="/" class="mobile-nav-link">영양 성분 및 알레르기</a>
@@ -270,7 +279,7 @@
           </div>
         </div>
         <!-- carousel -->
-        <div class="banner-carousel absolute">
+        <div class="banner-carousel relative">
           <h3 class="sr-only">이벤트 안내 슬라이드</h3>
           <!-- 컨트롤 버튼 -->
           <div class="controls absolute bottom-0 z-10 w-full flex items-center">
@@ -617,45 +626,76 @@
         </div>
       </section>
       <!-- 메뉴 안내  -->
-      <section class="menu section bg-slate-100 w-full pt-16 pb-[100px]">
+      <section class="menu section bg-slate-100 w-full pt-16">
         <h2 class="section__title"><span>배라</span> 메뉴</h2>
         <ul
           class="menu-contentWrapper mx-auto md:max-w-[920px] grid auto-rows-auto grid-cols-[1fr_1fr] md:grid-cols-[3fr_4fr_3fr] gap-7"
         >
           <li
-            class="menu__card max-md:w-[60%] max-md:h-[450px] md:w-[400px] md:h-[300px] menu-icecream ml-auto row-start-1 row-end-2 col-start-1 col-end-3"
+            class="menu__card max-md:w-[60%] max-md:h-[300px] md:w-[400px] md:h-[300px] menu-icecream ml-auto row-start-1 row-end-2 col-start-1 col-end-3 z-30"
           >
             <a href="./src/pages/menu.html" class="">
               <h3 lang="en" class="text-[#FC84B5]">ICECREAM</h3>
               <p>아이스크림의 기준 배스킨라빈스</p>
               <span>more</span>
-              <img src="./src/images/icecream_float.png" alt="" class="w-1/2" />
-              <img
-                src="./src/images/icecream_float2.png"
-                alt=""
-                class="w-1/2"
-              />
+              <picture>
+                <source
+                  srcset="./src/images/webp/main/icecream_float.webp"
+                  type="image/webp"
+                  class="w-[55%] -right-[10%] top-[30%] rotate-[15deg]"
+                />
+                <img
+                  src="./src/images/png/main/icecream_float.png"
+                  type="image/png"
+                  alt=""
+                  class="w-[55%] -right-[10%] top-[30%] rotate-[15deg]"
+                />
+              </picture>
             </a>
           </li>
           <li
-            class="menu__card max-md:h-[365px] md:h-[180px] max-md:row-start-2 max-md:row-end-3 max-md:col-start-1 max-md:col-end-2 md:row-start-4 md:row-end-5 md:col-start-2 md:col-end-3"
+            class="menu__card max-md:h-[365px] md:h-[220px] max-md:row-start-2 max-md:row-end-3 max-md:col-start-1 max-md:col-end-2 md:row-start-4 md:row-end-5 md:col-start-2 md:col-end-3 z-20"
           >
             <a href="/" class="">
               <h3 lang="en" class="text-[#F07492]">DESSERT</h3>
               <p>아이스크림을 더욱 재미있게! 간편하게 즐기는 방법!</p>
               <span>more</span>
-              <img src="./src/images/monaka.png" alt="" />
+              <picture>
+                <source
+                  srcset="./src/images/webp/main/monaka.webp"
+                  type="image/webp"
+                  class="max-md:w-[300px] md:scale-[0.6] md:top-[60px] max-md:-right-[50px] md:-right-[80px]"
+                />
+                <img
+                  src="./src/images/png/main/monaka.png"
+                  type="image/png"
+                  alt=""
+                  class="max-md:w-[300px] md:scale-[0.6] md:top-[60px] max-md:-right-[50px] md:-right-[80px]"
+                />
+              </picture>
             </a>
           </li>
 
           <li
-            class="menu__card h-[365px] row-start-2 max-md:row-end-3 md:row-end-5 max-md:col-start-2 md:col-start-1 max-md:col-end-2 md:col-end-2"
+            class="menu__card h-[365px] row-start-2 max-md:row-end-3 md:row-end-5 max-md:col-start-2 md:col-start-1 max-md:col-end-2 md:col-end-2 z-20"
           >
             <a href="/" class="">
               <h3 lang="en" class="text-[#FC7689]">BEVERAGE</h3>
               <p>아이스크림으로 즐기는 배스킨라빈스만의 음료!</p>
               <span>more</span>
-              <img src="./src/images/shake.png" alt="" />
+              <picture>
+                <source
+                  srcset="./src/images/webp/main/shake.webp"
+                  type="image/webp"
+                  class="max-md:w-[350px] md:scale-[1.4] max-md:-right-[50px] -right-[25%] md:top-[45%]"
+                />
+                <img
+                  src="./src/images/png/main/shake.png"
+                  type="image/png"
+                  alt=""
+                  class="max-md:w-[350px] md:scale-[1.4] max-md:-right-[50px] -right-[25%] md:top-[45%]"
+                />
+              </picture>
             </a>
           </li>
           <li
@@ -668,17 +708,41 @@
                 즐기세요!
               </p>
               <span>more</span>
-              <img src="./src/images/icecreamcake.png" alt="" />
+              <picture>
+                <source
+                  srcset="./src/images/webp/main/icecreamcake.webp"
+                  type="image/webp"
+                  class="max-md:w-[250px] md:scale-[1.2] max-md:right-[50px] md:-right-[20%] max-md:top-[30%] md:bottom-[10px]"
+                />
+                <img
+                  src="./src/images/png/main/icecreamcake.png"
+                  type="image/png"
+                  alt=""
+                  class="max-md:w-[250px] md:scale-[1.2] max-md:right-[50px] md:-right-[20%] max-md:top-[30%] md:bottom-[10px]"
+                />
+              </picture>
             </a>
           </li>
           <li
-            class="menu__card max-md:h-[365px] md:h-[320px] max-md:row-start-4 md:row-start-2 max-md:row-end-5 md:row-end-4 max-md:col-start-1 md:col-start-2 max-md:col-end-2 md:col-end-3"
+            class="menu__card max-md:h-[365px] md:h-[320px] max-md:row-start-4 md:row-start-2 max-md:row-end-5 md:row-end-4 max-md:col-start-1 md:col-start-2 max-md:col-end-2 md:col-end-3 z-20"
           >
             <a href="/" class="">
               <h3 lang="en" class="text-[#AB673C]">COFFEE</h3>
               <p>배스킨라빈스만의 부드러운 촉감과 달콤한 풍미!</p>
               <span>more</span>
-              <img src="./src/images/coffee.png" alt="" />
+              <picture>
+                <source
+                  srcset="./src/images/webp/main/coffee.webp"
+                  type="image/webp"
+                  class="max-md:w-[350px] m:scale-[0.9] max-md:-right-[50px] md:-right-[60px] md:-bottom-[70px]"
+                />
+                <img
+                  src="./src/images/png/main/coffee.png"
+                  type="image/png"
+                  alt=""
+                  class="max-md:w-[350px] m:scale-[0.9] max-md:-right-[50px] md:-right-[60px] md:-bottom-[70px]"
+                />
+              </picture>
             </a>
           </li>
           <li
@@ -688,7 +752,19 @@
               <h3 lang="en" class="text-[#E35F98]">GIFT</h3>
               <p>특별한 날, 배스킨라빈스로 달콤한 선물을 전해보세요!</p>
               <span>more</span>
-              <img src="./src/images/giftcard.jpg" alt="" />
+              <picture>
+                <source
+                  srcset="./src/images/webp/main/giftcard.webp"
+                  type="image/webp"
+                  class="max-md:w-[60%] md:w-[70%] max-md:left-[20%] m:left-[10px] max-md:bottom-[10%] md:bottom-[25px]"
+                />
+                <img
+                  src="./src/images/png/main/giftcard.png"
+                  type="image/png"
+                  alt=""
+                  class="max-md:w-[60%] md:w-[70%] max-md:left-[20%] m:left-[10px] max-md:bottom-[10%] md:bottom-[25px]"
+                />
+              </picture>
             </a>
           </li>
         </ul>
@@ -696,45 +772,82 @@
       <!-- 주문 안내 -->
       <section class="order section">
         <h2 class="section__title"><span>간편</span> 주문</h2>
-        <ul class="flex justify-center gap-4 max-md:flex-wrap">
+        <ul
+          class="flex gap-4 justify-center max-md:flex-wrap md:max-w-[1200px] mx-auto"
+        >
           <li class="max-md:w-[40%]">
             <a href="tel:16703131">
-              <img
-                src="./src/images/banner_delivery.png"
-                alt="배달 콜센터로 주문하기. 전화번호: 1670-3131"
-              />
+              <picture>
+                <source
+                  srcset="./src/images/webp/main/order_call.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="./src/images/png/main/order_call.png"
+                  type="image/png"
+                  alt="배달 콜센터로 주문하기. 전화번호: 1670-3131"
+                />
+              </picture>
             </a>
           </li>
           <li class="max-md:w-[40%]">
             <a href="/">
-              <img
-                src="./src/images/banner_delivery.png"
-                alt="해피오더로 주문하기"
-              />
+              <picture>
+                <source
+                  srcset="./src/images/webp/main/order_happy.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="./src/images/png/main/order_happy.png"
+                  type="image/png"
+                  alt="해피오더로 주문하기"
+                />
+              </picture>
             </a>
           </li>
           <li class="max-md:w-[30%]">
             <a href="/">
-              <img
-                src="./src/images/banner_delivery_bm.png"
-                alt="배달의 민족으로 주문하기"
-              />
+              <picture>
+                <source
+                  srcset="./src/images/webp/main/order_bm.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="./src/images/png/main/order_bm.png"
+                  type="image/png"
+                  alt="배달의 민족으로 주문하기"
+                />
+              </picture>
             </a>
           </li>
           <li class="max-md:w-[30%]">
             <a href="/">
-              <img
-                src="./src/images/banner_delivery_kakao.png"
-                alt="카카오톡으로 주문하기"
-              />
+              <picture>
+                <source
+                  srcset="./src/images/webp/main/order_kakao.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="./src/images/png/main/order_kakao.png"
+                  type="image/png"
+                  alt="카카오톡으로 주문하기"
+                />
+              </picture>
             </a>
           </li>
           <li class="max-md:w-[30%]">
             <a href="/">
-              <img
-                src="./src/images/banner_delivery_ygy.png"
-                alt="요기요로 주문하기"
-              />
+              <picture>
+                <source
+                  srcset="./src/images/webp/main/order_ygy.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="./src/images/png/main/order_ygy.png"
+                  type="image/png"
+                  alt="요기요로 주문하기"
+                />
+              </picture>
             </a>
           </li>
         </ul>
@@ -743,15 +856,23 @@
       <section class="store section text-center">
         <h2 class="section__title"><span>매장</span> 찾기</h2>
         <div class="inline-block relative">
-          <img
-            src="./src/images/search-store 1.png"
-            alt="주변의 배스킨라빈스 매장을 찾아보세요!"
-            class="md:w-[675px] md:h-[398px] mx-auto"
-          />
+          <picture>
+            <source
+              srcset="./src/images/png/main/desktop/search-store 1.webp"
+              type="image/webp"
+              class="md:w-[675px] md:h-[398px] mx-auto min-w-[320px]"
+            />
+            <img
+              src="./src/images/png/main/desktop/search-store 1.png"
+              type="image/png"
+              alt="주변의 배스킨라빈스 매장을 찾아보세요!"
+              class="md:w-[675px] md:h-[398px] mx-auto min-w-[320px]"
+            />
+          </picture>
           <a
             href="/"
             class="flex justify-center items-center w-[30%] h-[15%] leading-[70px] absolute top-[70%] left-[50%] -translate-x-1/2 rounded-full bg-pink1 drop-shadow-[4px_4px_8px_rgba(0,0,0,0.25)] hover:scale-105"
-            ><span class="max-md:text-xl md:text-3xl text-white"
+            ><span class="max-md:text-[4vw] md:text-3xl text-white font-baskin"
               >매장 찾기</span
             ></a
           >
@@ -760,13 +881,13 @@
       <!-- SNS 리뷰 소개  -->
       <section class="sns section max-w-[1300px] mx-auto">
         <h2 class="section__title"><span>배라</span> SNS</h2>
-        <ul>
+        <ul class="flex justify-center gap-5 mb-14">
           <li>
             <a
               href="https://www.facebook.com/baskinrobbinskr/"
               target="_blank"
               rel="noopener noreferrer"
-              class="bg-icon_facebook"
+              class="bg-icon-facebook-big"
               aria-label="페이스북 바로가기"
             >
             </a>
@@ -776,7 +897,7 @@
               href="https://twitter.com/BaskinrobbinsKR"
               target="_blank"
               rel="noopener noreferrer"
-              class="bg-icon_twitter"
+              class="bg-icon-twitter-big"
               aria-label="트위터 바로가기"
             >
             </a>
@@ -786,7 +907,7 @@
               href="https://blog.naver.com/brgirl31"
               target="_blank"
               rel="noopener noreferrer"
-              class="bg-icon_blog"
+              class="bg-icon-blog-big"
               aria-label="블로그 바로가기"
             >
             </a>
@@ -796,7 +917,7 @@
               href="https://www.instagram.com/baskinrobbinskorea/"
               target="_blank"
               rel="noopener noreferrer"
-              class="bg-icon_instagram"
+              class="bg-icon-instagram-big"
               aria-label="인스타그램 바로가기"
             >
             </a>
@@ -806,21 +927,45 @@
               href="https://www.youtube.com/user/baskinrobbinskorea"
               target="_blank"
               rel="noopener noreferrer"
-              class="bg-icon_youtube"
+              class="bg-icon-youtube-big"
               aria-label="유튜브 바로가기"
             >
             </a>
           </li>
         </ul>
         <span
-          class="insta-text whitespace-nowrap flex justify-center items-center text-brown1 text-[28px]"
+          class="insta-text whitespace-nowrap flex justify-center items-center text-brown1 text-[28px] font-baskin"
           >배라 in 인스타그램</span
         >
         <ul class="insta flex flex-wrap justify-center gap-1 pt-12">
           <li>
             <button>
               <img
-                src="./src/images/sns1.jpg"
+                src="./src/images/jpg/sns1.jpg"
+                alt="파인트 컵에 아이스크림이 가득 담겨있다."
+              />
+            </button>
+          </li>
+          <li>
+            <button>
+              <img
+                src="./src/images/jpg/sns2.jpg"
+                alt="세 명의 사람이 각각 다른 맛의 아이스크림 콘을 들고있다."
+              />
+            </button>
+          </li>
+          <li>
+            <button>
+              <img
+                src="./src/images/jpg/sns3.jpg"
+                alt="쿼터 컵에 아이스크림이 가득 담겨있다."
+              />
+            </button>
+          </li>
+          <li>
+            <button>
+              <img
+                src="./src/images/jpg/sns4.jpg"
                 alt="라이언 어피치 컵에 담긴 배스킨라빈스 아이스크림"
               />
             </button>
@@ -828,112 +973,88 @@
           <li>
             <button>
               <img
-                src="./src/images/sns2.jpg"
-                alt="테이블에 예쁘게 차려진 배스킨라빈스 아이스 모찌와 디저트"
+                src="./src/images/jpg/sns5.jpg"
+                alt="테이블 위에 네 개의 싱글 컵에 아이스크림이 가득 담겨있다."
               />
             </button>
           </li>
           <li>
             <button>
               <img
-                src="./src/images/sns3.jpg"
-                alt="민트초코와 엄마는 외계인이 담긴 쿼터 사이즈 배스킨라빈스 아이스크림"
+                src="./src/images/jpg/sns2.jpg"
+                alt="세 명의 사람이 각각 다른 맛의 아이스크림 콘을 들고있다."
               />
             </button>
           </li>
           <li>
             <button>
               <img
-                src="./src/images/sns1.jpg"
-                alt="라이언 어피치 컵에 담긴 배스킨라빈스 아이스크림"
+                src="./src/images/jpg/sns3.jpg"
+                alt="쿼터 컵에 아이스크림이 가득 담겨있다."
               />
             </button>
           </li>
           <li>
             <button>
               <img
-                src="./src/images/sns2.jpg"
-                alt="테이블에 예쁘게 차려진 배스킨라빈스 아이스 모찌와 디저트"
+                src="./src/images/jpg/sns4.jpg"
+                alt="쿼터 컵에 아이스크림이 가득 담겨있다."
               />
             </button>
           </li>
           <li>
             <button>
               <img
-                src="./src/images/sns3.jpg"
-                alt="민트초코와 엄마는 외계인이 담긴 쿼터 사이즈 배스킨라빈스 아이스크림"
+                src="./src/images/jpg/sns5.jpg"
+                alt="테이블 위에 네 개의 싱글 컵에 아이스크림이 가득 담겨있다."
               />
             </button>
           </li>
           <li>
             <button>
               <img
-                src="./src/images/sns1.jpg"
-                alt="라이언 어피치 컵에 담긴 배스킨라빈스 아이스크림"
+                src="./src/images/jpg/sns1.jpg"
+                alt="파인트 컵에 아이스크림이 가득 담겨있다."
               />
             </button>
           </li>
           <li>
             <button>
               <img
-                src="./src/images/sns2.jpg"
-                alt="테이블에 예쁘게 차려진 배스킨라빈스 아이스 모찌와 디저트"
+                src="./src/images/jpg/sns3.jpg"
+                alt="쿼터 컵에 아이스크림이 가득 담겨있다."
               />
             </button>
           </li>
           <li>
             <button>
               <img
-                src="./src/images/sns3.jpg"
-                alt="민트초코와 엄마는 외계인이 담긴 쿼터 사이즈 배스킨라빈스 아이스크림"
+                src="./src/images/jpg/sns4.jpg"
+                alt="쿼터 컵에 아이스크림이 가득 담겨있다."
               />
             </button>
           </li>
           <li>
             <button>
               <img
-                src="./src/images/sns1.jpg"
-                alt="라이언 어피치 컵에 담긴 배스킨라빈스 아이스크림"
+                src="./src/images/jpg/sns5.jpg"
+                alt="테이블 위에 네 개의 싱글 컵에 아이스크림이 가득 담겨있다."
               />
             </button>
           </li>
           <li>
             <button>
               <img
-                src="./src/images/sns2.jpg"
-                alt="테이블에 예쁘게 차려진 배스킨라빈스 아이스 모찌와 디저트"
+                src="./src/images/jpg/sns1.jpg"
+                alt="파인트 컵에 아이스크림이 가득 담겨있다."
               />
             </button>
           </li>
           <li>
             <button>
               <img
-                src="./src/images/sns3.jpg"
-                alt="민트초코와 엄마는 외계인이 담긴 쿼터 사이즈 배스킨라빈스 아이스크림"
-              />
-            </button>
-          </li>
-          <li>
-            <button>
-              <img
-                src="./src/images/sns1.jpg"
-                alt="라이언 어피치 컵에 담긴 배스킨라빈스 아이스크림"
-              />
-            </button>
-          </li>
-          <li>
-            <button>
-              <img
-                src="./src/images/sns2.jpg"
-                alt="테이블에 예쁘게 차려진 배스킨라빈스 아이스 모찌와 디저트"
-              />
-            </button>
-          </li>
-          <li>
-            <button>
-              <img
-                src="./src/images/sns3.jpg"
-                alt="민트초코와 엄마는 외계인이 담긴 쿼터 사이즈 배스킨라빈스 아이스크림"
+                src="./src/images/jpg/sns2.jpg"
+                alt="세 명의 사람이 각각 다른 맛의 아이스크림 콘을 들고있다."
               />
             </button>
           </li>
@@ -945,7 +1066,7 @@
       <div class="modal-wrapper">
         <div class="modal-content">
           <div class="modal__image">
-            <img src="./src/images/sns1.jpg" alt="" />
+            <img src="./src/images/png/common/" alt="" />
           </div>
           <div class="modal__description">
             <div class="modal__description__header">
