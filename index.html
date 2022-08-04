@@ -19,7 +19,7 @@
     <script src="./src/js/sidebar.js" defer></script>
     <script src="./src/js/carousel.js" defer></script>
   </head>
-  <body class="mobile-nav-back">
+  <body class="">
     <!-- <div class="skipNav">
       <a href="#main" class="skipNav">
         <span>본문 바로가기</span>
@@ -38,18 +38,9 @@
           <a href="/">
             <span class="sr-only">배스킨라빈스</span>
             <picture>
-              <source
-                srcset="./src/images/logo_baskinrobbins.png"
-                type="image/avif"
-              />
-              <source
-                srcset="./src/images/logo_baskinrobbins.png"
-                type="image/webp"
-              />
-              <img
-                class="mx-auto max-md:w-[55px] max-md:ml-3 max-md:mr-0"
-                src="./src/images/logo_baskinrobbins.png"
-              />
+              <source srcset="./src/images/png/common/logo_baskinrobbins.png" type="image/png" />
+              <source srcset="./src/images/webp/common/logo_baskinrobbins.webp" type="image/webp" />
+              <img class="mx-auto max-md:w-[55px] max-md:ml-3 max-md:mr-0" src="./src/images/webp/common/logo_baskinrobbins.webp" />
             </picture>
           </a>
         </h1>
@@ -146,22 +137,14 @@
           </ul>
         </nav>
         <!-- 5. 모바일에서만 보이는 햄버거 버튼 -->
-        <button
-          type="button"
-          class="hidden max-md:block max-md:bg-btn-hamburger max-md:bg-no-repeat max-md:w-[25px] max-md:h-[25px] max-md:mr-7"
-        ></button>
+        <button type="button" class="md:hidden mobile-btn-hamburger"></button>
       </header>
     </div>
     <!-- 내비게이션 바 -->
-    <div
-      class="border-y-[1px] border-gray bg-white max-md:absolute max-md:top-0 max-md:right-0 max-md:w-[75%] max-md:h-[100%]"
-    >
-      <div
-        class="max-w-[1200px] mx-auto flex justify-between py-4 max-md:flex max-md:flex-col max-md:py-0 max-md:relative"
-      >
-        <ul
-          class="flex justify-between items-center text-base w-[136px] max-md:bg-pink1 max-md:w-[100%] max-md:justify-start max-md:p-[16px] max-md:gap-[16px] font-baskin max-md:font-medium"
-        >
+    <div class="mobile-nav-back max-md:hidden"></div>
+    <div class="nav-bar-viewport hidden">
+      <div class="nav-bar-wrapper">
+        <ul class="nav-bar-default">
           <li>
             <!-- 해당 페이지들을 만들지 않을 예정이므로 href 속성을 /로 설정하였습니다! -->
             <a href="/" class="text-pink1 max-md:text-white">로그인</a>
@@ -199,10 +182,7 @@
           </ul>
         </nav>
         <!-- 모바일에서만 보이는 X 버튼 -->
-        <button
-          type="button"
-          class="hidden max-md:block max-md:bg-btn-close max-md:absolute max-md:bg-no-repeat max-md:bg-contain max-md:w-[40px] max-md:h-[40px] max-md:left-[-54px] max-md:top-2 max-md:z-20"
-        ></button>
+        <button type="button" class="hidden mobile-close"></button>
       </div>
       <ul class="mobile-icon-group hidden max-md:flex gap-3 absolute w-10 h-10">
         <li>
@@ -257,6 +237,7 @@
         </li>
       </ul>
     </div>
+
     <main>
       <!-- 이벤트  -->
       <section class="event relative">
@@ -276,23 +257,17 @@
                   type="image/webp"
                 />
                 <img
-                  src="src/images/png/main/mobile/mobile_banner_short.jpg"
+                  srcset="
+                    src/images/png/main/mobile/mobile_banner_short.jpg 768w,
+                    src/images/webp/main/desktop/banner_short.webp
+                  "
                   alt="초당옥수수로 만든 다양한 신제품과 이벤트 안내"
+                  width="1600"
+                  height="150"
                 />
               </picture>
             </a>
           </div>
-          <!-- 배너 풀스크린 -->
-          <!-- <div
-            class="banner-top__imageWrapper--fullscreen absolute -top-0 z-20"
-          >
-            <a href="/">
-              <img
-                src="./src/images/img_banner_top_fullscreen.jpg"
-                alt="초당옥수수로 만든 다양한 신제품과 이벤트 안내"
-              />
-            </a>
-          </div> -->
         </div>
         <!-- carousel -->
         <div class="banner-carousel absolute">
@@ -301,18 +276,18 @@
           <div class="controls absolute bottom-0 z-10 w-full flex items-center">
             <button
               type="button"
-              class="rotation pause play w-16 h-16 max-md:w-12 max-md:h-12"
+              class="rotation pause play w-16 h-16 max-md:w-12 max-md:h-12 hidden sm:block hover:bg-pink1"
               aria-label="자동 슬라이드 정지"
             ></button>
             <button
               type="button"
-              class="previous w-16 h-16 max-md:w-12 max-md:h-12"
+              class="previous w-16 h-16 max-md:w-12 max-md:h-12 hidden sm:block hover:bg-pink1"
               aria-controls="carousel-items"
               aria-label="이전 슬라이드로 이동"
             ></button>
             <button
               type="button"
-              class="next w-16 h-16 max-md:w-12 max-md:h-12"
+              class="next w-16 h-16 max-md:w-12 max-md:h-12 hidden sm:block hover:bg-pink1"
               aria-controls="carousel-items"
               aria-label="다음 슬라이드로 이동"
             ></button>
@@ -427,8 +402,13 @@
                         type="image/webp"
                       />
                       <img
-                        src="src/images/png/main/mobile/mobile_banner1.jpg"
+                        srcset="
+                          src/images/png/main/mobile/mobile_banner1.jpg 768w,
+                          src/images/webp/main/desktop/banner1.png
+                        "
                         alt="특별한 제휴 혜택을 알아보세요(2022년 상시 운영)"
+                        width="1600"
+                        height="700"
                       />
                     </picture>
                   </a>
@@ -455,8 +435,13 @@
                         type="image/webp"
                       />
                       <img
-                        src="src/images/png/main/desktop/banner2.png"
+                        srcset="
+                          src/images/webp/main/mobile/mobile_banner2.jpg 768w,
+                          src/images/webp/main/desktop/banner2.png
+                        "
                         alt="기아 멤버스에게 최대 50% 제휴 혜택을 드립니다(2022년 상시 운영)"
+                        width="1600"
+                        height="700"
                       />
                     </picture>
                   </a>
@@ -483,8 +468,13 @@
                         type="image/webp"
                       />
                       <img
-                        src="src/images/png/main/desktop/banner3.png"
+                        srcset="
+                          src/images/png/main/mobile/mobile_banner3.png 768w,
+                          src/images/png/main/desktop/banner3.png
+                        "
                         alt="31데이 사전예약 특별 혜택을 알아보세요(예약 기간: 2022년 7월 27일 수요일부터 7월 30일 토요일까지)"
+                        width="1600"
+                        height="700"
                       />
                     </picture>
                   </a>
@@ -511,8 +501,13 @@
                         type="image/webp"
                       />
                       <img
-                        src="src/images/png/main/desktop/banner4.png"
+                        srcset="
+                          src/images/png/main/mobile/mobile_banner4.png 768w,
+                          src/images/png/main/desktop/banner4.png
+                        "
                         alt="현대카드 M 포인트를 사용하여 금액의 50%까지 할인 받을 수 있습니다(2022년 상시 운영)"
+                        width="1600"
+                        height="700"
                       />
                     </picture>
                   </a>
@@ -539,8 +534,13 @@
                         type="image/webp"
                       />
                       <img
-                        src="src/images/png/main/desktop/banner5.png"
+                        srcset="
+                          src/images/png/main/mobile/mobile_banner5.png 768w,
+                          src/images/png/main/desktop/banner5.png
+                        "
                         alt="T멤버십 회원에게는 싱글 레귤러를 최대 50% 할인 또는 적립해드립니다(기간: 2022년 3월 2일 수요일부터 2023년 1월 31일 화요일까지)"
+                        width="1600"
+                        height="700"
                       />
                     </picture>
                   </a>
@@ -567,8 +567,13 @@
                         type="image/webp"
                       />
                       <img
-                        src="src/images/png/main/desktop/banner6.png"
+                        srcset="
+                          src/images/png/main/mobile/mobile_banner6.png 768w,
+                          src/images/png/main/desktop/banner6.jpg
+                        "
                         alt="해시태그 이벤트. 인스타그램에 아이스 초당옥수수맛 사진을 올려주세요(기간: 2022년 8월 1일 월요일부터 8월 26일 금요일까지)"
+                        width="1600"
+                        height="700"
                       />
                     </picture>
                   </a>
@@ -595,8 +600,13 @@
                         type="image/webp"
                       />
                       <img
-                        src="src/images/png/main/desktop/banner7.png"
+                        srcset="
+                          src/images/png/main/mobile/mobile_banner7.png 768w,
+                          src/images/png/main/desktop/banner7.jpg
+                        "
                         alt="KT멤버십 고객에게는 파인트 30%할인, V.V.I.P 고객에게는 쿼터 1개를 무료로 드립니다(기간: 2022년 상시 운영. KT 더블할인 멤버십 제휴사 통합 월 1회 한정)"
+                        width="1600"
+                        height="700"
                       />
                     </picture>
                   </a>
