@@ -374,7 +374,7 @@ body::after {
 }
 
 .btn-indicator {
-  @apply w-6 h-6 bg-white rounded-full shadow-lg shadow-gray2 max-md:w-5 max-md:h-5;
+  @apply w-6 h-6 bg-white rounded-full shadow-lg shadow-gray2 max-md:w-5 max-md:h-5 hover:bg-pink1;
 }
 
 .btn-indicator[aria-selected='true'] {
