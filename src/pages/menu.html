@@ -15,6 +15,82 @@
     <!-- 이미지 링크 확인해야 함 -->
     <meta property="og:image" content="공유하기에서 나타날 이미지 링크" />
     <title>아이스크림 메뉴 - 베스킨라빈스</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./../images/br-favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./../images/br-favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./../images/br-favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./../images/br-favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./../images/br-favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./../images/br-favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./../images/br-favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./../images/br-favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./../images/br-favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./../images/br-favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./../images/br-favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./../images/br-favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./../images/br-favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./../images/br-favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="./../images/br-favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="./../css/output.css" />
     <script src="./../js/sprite.js" defer></script>
     <script src="./../js/sidebar.js" defer></script>
@@ -143,7 +219,11 @@
           </ul>
         </nav>
         <!-- 5. 모바일에서만 보이는 햄버거 버튼 -->
-        <button type="button" class="md:hidden mobile-btn-hamburger"></button>
+        <button
+          type="button"
+          class="md:hidden mobile-btn-hamburger"
+          aria-label="메인 메뉴 보기"
+        ></button>
       </header>
     </div>
     <!-- 내비게이션 바 -->
@@ -192,7 +272,11 @@
           </ul>
         </nav>
         <!-- 모바일에서만 보이는 X 버튼 -->
-        <button type="button" class="hidden mobile-close"></button>
+        <button
+          type="button"
+          class="hidden mobile-close"
+          aria-label="메뉴 닫기"
+        ></button>
       </div>
       <ul class="mobile-icon-group hidden max-md:flex gap-3 absolute w-10 h-10">
         <li>
@@ -536,7 +620,7 @@
                 </picture>
                 <picture>
                   <source
-                    srcxet="./../images/sprites/sprite_menu_best.webp"
+                    srcset="./../images/sprites/sprite_menu_best.webp"
                     type="image/webp"
                   />
                   <img
@@ -648,30 +732,7 @@
                   >#마카다미아</a
                 >
               </li>
-              <button aria-label="해시태그 더보기"></button>
             </ul>
-            <div class="product__hashtag__modal">
-              <div>
-                <ul>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#마우나로아</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#마카다미아</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#카라멜</a
-                    >
-                  </li>
-                </ul>
-                <button aria-label="해시태그 목록 닫기"></button>
-              </div>
-            </div>
           </li>
 
           <li class="product__item">
@@ -797,30 +858,7 @@
               <li>
                 <a href="./menu.html" class="product__hashtag__link">#요거트</a>
               </li>
-              <button aria-label="해시태그 더보기"></button>
             </ul>
-            <div class="product__hashtag__modal">
-              <div>
-                <ul>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#청사과</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#요거트</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#샤베트</a
-                    >
-                  </li>
-                </ul>
-                <button aria-label="해시태그 목록 닫기"></button>
-              </div>
-            </div>
           </li>
 
           <li class="product__item">
@@ -864,30 +902,7 @@
               <li>
                 <a href="./menu.html" class="product__hashtag__link">#콩고물</a>
               </li>
-              <button aria-label="해시태그 더보기"></button>
             </ul>
-            <div class="product__hashtag__modal">
-              <div>
-                <ul>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#찰떡콩떡</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#콩고물</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#찰떡</a
-                    >
-                  </li>
-                </ul>
-                <button aria-label="해시태그 목록 닫기"></button>
-              </div>
-            </div>
           </li>
 
           <li class="product__item">
@@ -931,30 +946,7 @@
               <li>
                 <a href="./menu.html" class="product__hashtag__link">#코코넛</a>
               </li>
-              <button aria-label="해시태그 더보기"></button>
             </ul>
-            <div class="product__hashtag__modal">
-              <div>
-                <ul>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#파인애플</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#코코넛</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#샤베트</a
-                    >
-                  </li>
-                </ul>
-                <button aria-label="해시태그 목록 닫기"></button>
-              </div>
-            </div>
           </li>
 
           <li class="product__item">
@@ -1243,30 +1235,7 @@
               <li>
                 <a href="./menu.html" class="product__hashtag__link">#초코볼</a>
               </li>
-              <button aria-label="해시태그 더보기"></button>
             </ul>
-            <div class="product__hashtag__modal">
-              <div>
-                <ul>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#초콜릿</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#초코볼</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#엄마는외계인</a
-                    >
-                  </li>
-                </ul>
-                <button aria-label="해시태그 목록 닫기"></button>
-              </div>
-            </div>
           </li>
 
           <li class="product__item">
@@ -1308,35 +1277,7 @@
               <li>
                 <a href="./menu.html" class="product__hashtag__link">#초콜릿</a>
               </li>
-              <button aria-label="해시태그 더보기"></button>
             </ul>
-            <div class="product__hashtag__modal">
-              <div>
-                <ul>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#아몬드</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#초콜릿</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#초코</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#아몬드봉봉</a
-                    >
-                  </li>
-                </ul>
-                <button aria-label="해시태그 목록 닫기"></button>
-              </div>
-            </div>
           </li>
 
           <li class="product__item">
@@ -1380,30 +1321,7 @@
                   >#초콜릿칩</a
                 >
               </li>
-              <button aria-label="해시태그 더보기"></button>
             </ul>
-            <div class="product__hashtag__modal">
-              <div>
-                <ul>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#민트</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#초콜릿칩</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#민트초콜릿칩</a
-                    >
-                  </li>
-                </ul>
-                <button aria-label="해시태그 목록 닫기"></button>
-              </div>
-            </div>
           </li>
 
           <li class="product__item">
@@ -1447,35 +1365,7 @@
                   >#사랑에빠진딸기</a
                 >
               </li>
-              <button aria-label="해시태그 더보기"></button>
             </ul>
-            <div class="product__hashtag__modal">
-              <div>
-                <ul>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#사빠딸</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#사랑에빠진딸기</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#크런치초콜릿</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#치즈케이크</a
-                    >
-                  </li>
-                </ul>
-                <button aria-label="해시태그 목록 닫기"></button>
-              </div>
-            </div>
           </li>
 
           <li class="product__item">
@@ -1519,35 +1409,7 @@
               <li>
                 <a href="./menu.html" class="product__hashtag__link">#사과</a>
               </li>
-              <button aria-label="해시태그 더보기"></button>
             </ul>
-            <div class="product__hashtag__modal">
-              <div>
-                <ul>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#애플민트</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#사과</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#민트</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./menu.html" class="product__hashtag__link"
-                      >#샤베트</a
-                    >
-                  </li>
-                </ul>
-                <button aria-label="해시태그 목록 닫기"></button>
-              </div>
-            </div>
           </li>
 
           <li class="product__item">

@@ -175,7 +175,6 @@
   document.addEventListener('DOMContentLoaded', () => {
     const carouselElement = get('.banner-carousel');
     const carousel = new Carousel(carouselElement);
-    console.log(carousel);
 
     carousel.initCarousel();
     carousel.setEventListener();

@@ -155,7 +155,7 @@ body::after {
 }
 
 .menu__card span {
-  @apply text-gray;
+  @apply text-gray2;
 }
 
 .menu__card img {
