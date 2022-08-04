@@ -2313,6 +2313,10 @@ body::after {
     height: 398px;
   }
 
+  .md\:h-\[412px\] {
+    height: 412px;
+  }
+
   .md\:w-\[400px\] {
     width: 400px;
   }
