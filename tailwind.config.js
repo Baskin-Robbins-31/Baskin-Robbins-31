@@ -6,8 +6,8 @@ module.exports = {
         'max-md': { max: '768px' },
       },
       fontFamily: {
-        "nanum": ['NanumSquareRound', 'sans-serif'],
-        "baskin": ['BaskinRobbins', 'sans-serif'],
+        nanum: ['NanumSquareRound', 'sans-serif'],
+        baskin: ['BaskinRobbins', 'sans-serif'],
       },
       backgroundImage: (theme) => ({
         "header-bg": "url('../images/png/common/bg_header.png')",
@@ -38,6 +38,7 @@ module.exports = {
         brown1: '#918984',
         brown2: '#726454',
         white: '#FEFEFE',
+        white1: '#ededed',
         gray: '#CDCCD5',
         gray2: '#7E7E81',
         black1: '#2F231C',

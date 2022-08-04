@@ -16,32 +16,46 @@
     <meta property="og:image" content="공유하기에서 나타날 이미지 링크" />
     <title>아이스크림 메뉴 - 베스킨라빈스</title>
     <link rel="stylesheet" href="./../css/output.css" />
+    <script src="./../js/sprite.js" defer></script>
+    <script src="./src/js/sidebar.js" defer></script>
   </head>
   <body>
-    <!-- 1. 헤더 -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> aee781d1e73adc0035d23e4c5b5a49ec91b1fc5a
-    <div class="bg-header-bg border-t-4 border-pink1">
-      <header class="relative max-w-[1200px] mx-auto">
+     <!-- <div class="skipNav">
+      <a href="#main" class="skipNav">
+        <span>본문 바로가기</span>
+      </a>
+    </div> -->
+    <div
+      class="bg-header-bg border-t-4 border-pink1 max-md:border-none max-md:bg-none"
+    >
+      <header
+        class="relative max-w-[1200px] mx-auto max-md:flex max-md:items-center"
+      >
         <!-- 1. 로고 -->
-        <h1 class="py-6">
+        <h1
+          class="py-6 max-md:py-3 max-md:inline-block max-md:grow max-md:z-[-10]"
+        >
           <a href="/">
             <span class="sr-only">배스킨라빈스</span>
             <picture>
-              <source srcset="./../images/logo_baskinrobbins.png" type="image/avif" />
-              <source srcset="./../images/logo_baskinrobbins.png" type="image/webp" />
-              <img class="mx-auto" src="./../images/logo_baskinrobbins.png" />
+              <source srcset="./src/images/png/common/logo_baskinrobbins.png" type="image/png" />
+              <source srcset="./src/images/webp/common/logo_baskinrobbins.webp" type="image/webp" />
+              <img class="mx-auto max-md:w-[55px] max-md:ml-3 max-md:mr-0" src="./src/images/webp/common/logo_baskinrobbins.webp" />
             </picture>
           </a>
         </h1>
         <!-- 2. 검색 버튼 -->
         <!-- 배경이미지로 돋보기 모양 이미지를 넣을 예정입니다! -->
-        <button type="button" class="bg-icon-search absolute w-[54px] h-[54px] right-0 top-[45px]" aria-label="검색"></button>
+        <button
+          type="button"
+          class="absolute w-[54px] h-[54px] right-0 top-[45px] bg-icon-search mobile-icon-search"
+          aria-label="검색"
+        ></button>
         <!-- 3. sns 링크 + 고객센터 + contact us -->
         <!-- sns 로고는 배경 이미지로 넣을 예정입니다! -->
-        <ul class="flex gap-3 absolute w-10 h-10 top-[53px] left-0">
+        <ul
+          class="flex gap-3 absolute w-10 h-10 top-[53px] left-0 max-md:hidden"
+        >
           <li>
             <a
               href="https://www.facebook.com/baskinrobbinskr/"
@@ -93,7 +107,9 @@
             </a>
           </li>
         </ul>
-        <ul class="flex absolute text-sm gap-6 right-[78px] top-[64px] text-gray2">
+        <ul
+          class="flex absolute text-sm gap-6 right-[78px] top-[64px] text-gray2 max-md:hidden"
+        >
           <li>
             <a href="/">고객센터</a>
           </li>
@@ -101,107 +117,80 @@
             <a href="/" lang="en" class="uppercase">Contact us</a>
           </li>
         </ul>
-      </header>
-    </div>
-
-    <!-- 2. 메인메뉴 -->
-    <div class="border-y-[1px] border-gray bg-white">
-      <div class="max-w-[1200px] mx-auto flex justify-between py-4">
-        <ul class="flex justify-between items-center text-base w-[136px]">
-          <li>
-            <!-- 해당 페이지들을 만들지 않을 예정이므로 href 속성을 /로 설정하였습니다! -->
-            <a href="/" class="text-pink1">로그인</a>
-          </li>
-          <li>
-            <a href="/" class="text-gray2">회원가입</a>
-          </li>
-        </ul>
-        <nav class="flex justify-between text-xl">
+        <!-- 4. 모바일에서만 보이는 메뉴 바 -->
+        <nav
+          class="hidden justify-between items-center text-xl max-md:inline-flex max-md:text-[16px] max-md:mt-[8px] max-md:max-w-[244px] max-md:mb-1 max-md:mr-[40px] max-md:font-baskin"
+        >
           <h2 class="sr-only">메인 메뉴</h2>
-          <!-- css를 이용하여 전부 대문자로 변경할 예정입니다! -->
-          <ul class="flex justify-between items-center max-w-[900px] w-[78vw]">
-            <li>
-              <a href="/">이달의 맛</a>
+          <ul
+            class="flex justify-between items-center max-w-[900px] w-[78vw] max-md:mb-1"
+          >
+            <li class="">
+              <a href="/" class="">이달의 맛</a>
             </li>
-            <li>
-              <a href="/">메뉴</a>
+            <li class="">
+              <a href="/" class="">매장 찾기</a>
             </li>
-            <li>
-              <a href="/">영양 성분 및 알레르기</a>
-            </li>
-            <li>
-              <a href="/">이벤트</a>
-            </li>
-            <li>
-              <a href="/">매장</a>
-            </li>
-            <li>
-              <a href="/">더보기</a>
+            <li class="">
+              <a href="/" class="">단체주문</a>
             </li>
           </ul>
         </nav>
-      </div>
+        <!-- 5. 모바일에서만 보이는 햄버거 버튼 -->
+        <button type="button" class="md:hidden mobile-btn-hamburger"></button>
+      </header>
     </div>
-<<<<<<< HEAD
-=======
-    <header>
-      <!-- 1. 로고 -->
-      <h1>
-        <a href="/">
-          <span class="sr-only">배스킨라빈스</span>
-          <picture>
-            <source srcset="./../images/sprite_main_0.avif" type="image/avif" />
-            <source srcset="./../images/sprite_main_0.webp" type="image/webp" />
-            <img src="./../images/sprite_main_0.png" />
-          </picture>
-        </a>
-      </h1>
-      <ul>
-        <li>
-          <!-- 해당 페이지들을 만들지 않을 예정이므로 href 속성을 /로 설정하였습니다! -->
-          <a href="/">로그인</a>
-        </li>
-        <li>
-          <a href="/">회원가입</a>
-        </li>
-      </ul>
-      <!-- 2. 메인 메뉴 -->
-      <nav>
-        <h2 class="sr-only">메인 메뉴</h2>
-        <!-- css를 이용하여 전부 대문자로 변경할 예정입니다! -->
-        <ul>
+    <!-- 내비게이션 바 -->
+    <div class="mobile-nav-back max-md:hidden"></div>
+    <div class="nav-bar-viewport hidden">
+      <div class="nav-bar-wrapper">
+        <ul class="nav-bar-default">
           <li>
-            <a href="/">이달의 맛</a>
+            <!-- 해당 페이지들을 만들지 않을 예정이므로 href 속성을 /로 설정하였습니다! -->
+            <a href="/" class="text-pink1 max-md:text-white">로그인</a>
           </li>
           <li>
-            <a href="/">메뉴</a>
-          </li>
-          <li>
-            <a href="/">영양 성분 및 알레르기</a>
-          </li>
-          <li>
-            <a href="/">이벤트</a>
-          </li>
-          <li>
-            <a href="/">매장</a>
-          </li>
-          <li>
-            <a href="/">더보기</a>
+            <a href="/" class="text-gray2 max-md:text-white">회원가입</a>
           </li>
         </ul>
-      </nav>
-      <!-- 3. 검색 버튼 -->
-      <!-- 배경이미지로 돋보기 모양 이미지를 넣을 예정입니다! -->
-      <button type="button" class="bg-icon_search" aria-label="검색"></button>
-      <!-- 4. sns 링크 + 고객센터 + contact us -->
-      <!-- sns 로고는 배경 이미지로 넣을 예정입니다! -->
-      <ul>
+        <nav
+          class="flex justify-between text-xl max-md:text-[16px] font-baskin"
+        >
+          <h2 class="sr-only">메인 메뉴</h2>
+          <!-- css를 이용하여 전부 대문자로 변경할 예정입니다! -->
+          <ul
+            class="flex justify-between items-center max-w-[900px] w-[78vw] max-md:flex-col"
+          >
+            <li class="mobile-nav">
+              <a href="/" class="mobile-nav-link">이달의 맛</a>
+            </li>
+            <li class="mobile-nav">
+              <a href="/" class="mobile-nav-link">메뉴</a>
+            </li>
+            <li class="mobile-nav">
+              <a href="/" class="mobile-nav-link">영양 성분 및 알레르기</a>
+            </li>
+            <li class="mobile-nav">
+              <a href="/" class="mobile-nav-link">이벤트</a>
+            </li>
+            <li class="mobile-nav">
+              <a href="/" class="mobile-nav-link">매장</a>
+            </li>
+            <li class="mobile-nav">
+              <a href="/" class="mobile-nav-link">더보기</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- 모바일에서만 보이는 X 버튼 -->
+        <button type="button" class="hidden mobile-close"></button>
+      </div>
+      <ul class="mobile-icon-group hidden max-md:flex gap-3 absolute w-10 h-10">
         <li>
           <a
             href="https://www.facebook.com/baskinrobbinskr/"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-icon_facebook"
+            class="block w-[35px] h-[35px] bg-icon-facebook"
             aria-label="페이스북 바로가기"
           >
           </a>
@@ -211,7 +200,7 @@
             href="https://twitter.com/BaskinrobbinsKR"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-icon_twitter"
+            class="block w-[35px] h-[35px] bg-icon-twitter"
             aria-label="트위터 바로가기"
           >
           </a>
@@ -221,7 +210,7 @@
             href="https://blog.naver.com/brgirl31"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-icon_blog"
+            class="block w-[35px] h-[35px] bg-icon-blog"
             aria-label="블로그 바로가기"
           >
           </a>
@@ -231,7 +220,7 @@
             href="https://www.instagram.com/baskinrobbinskorea/"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-icon_instagram"
+            class="block w-[35px] h-[35px] bg-icon-instagram"
             aria-label="인스타그램 바로가기"
           >
           </a>
@@ -241,26 +230,13 @@
             href="https://www.youtube.com/user/baskinrobbinskorea"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-icon_youtube"
+            class="block w-[35px] h-[35px] bg-icon-youtube"
             aria-label="유튜브 바로가기"
           >
           </a>
         </li>
       </ul>
-      <ul>
-        <li>
-          <a href="/">고객센터</a>
-        </li>
-        <li>
-          <a href="/" lang="en">Contact us</a>
-        </li>
-      </ul>
-    </header>
->>>>>>> 7c72008060c123a3a4366b547777ef4040fc0de9
-
-=======
-    
->>>>>>> aee781d1e73adc0035d23e4c5b5a49ec91b1fc5a
+    </div>
     <!-- 3. 메인콘텐츠 -->
     <main class="">
       <!-- 3-1. 스크린 리더에만 보이는 헤딩 -->
@@ -268,20 +244,42 @@
 
       <!-- 3-2. 상단 배너 -->
       <!-- gif 이미지 -->
-      <img
-        src="./../images/bg_icecream_menu.gif"
-        alt="아이스크림의 기준,배스킨라빈스"
-        class=""
-      />
+      <picture>
+        <source
+          media="(max-width: 768px)"
+          srcset="./../images/menu_banner/mobile_bg_icecream_menu.webp"
+          type="image/webp"
+        />
+        <source
+          media="(max-width: 768px)"
+          srcset="./../images/menu_banner/mobile_bg_icecream_menu.jpg"
+          type="image/jpg"
+        />
+        <source
+          srcset="./../images/menu_banner/bg_icecream_menu.avif"
+          type="image/avif"
+        />
+        <source
+          srcset="./../images/menu_banner/bg_icecream_menu.webp"
+          type="image/webp"
+        />
+        <source
+          srcset="./../images/menu_banner/bg_icecream_menu.gif"
+          type="image/avif"
+        />
+        <img
+          src="./../images/menu_banner/bg_icecream_menu.avif"
+          alt="아이스크림의 기준,배스킨라빈스"
+          class="menu__banner"
+        />
+      </picture>
 
       <!-- 3-3. Monthly best icecream -->
       <section>
         <!-- 스타일링을 이용하여 대문자 변경 필요-->
         <!-- background image 또는 ::before 요소로 왕관 이미지 추가 필요 -->
         <h3 class="menu__title menu__title--crown">이달의 베스트 아이스크림</h3>
-        <ol
-          class="mt-14 flex flex-nowrap gap-6 justify-center md:flex-wrap overflow-auto"
-        >
+        <ol class="best__list">
           <!-- 1위: 아이스 초당 옥수수 -->
           <li class="">
             <!-- 각 아이스크림 상세 페이지로 연결되는 링크 -->
@@ -289,35 +287,27 @@
               <!-- ::before 요소로 순위 정보 추가 필요 -->
               <!-- !!! 아이스크림 콘과 아이스크림 스쿱 이미지가 별도로 있어서\
                 아래와 같은 구조로 짰는데 더 좋은 아이디어 있으면 말씀해주세요 !!! -->
-              <div class="best__link__img-box">
+              <div class="bg-pink1 best__link__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_best.webp"
                     type="image/webp"
                   />
                   <img
                     class="best__img best__img--cone"
-                    src="./../images/1594025925.png"
+                    src="./../images/sprites/sprite_menu_best.png"
                     alt=""
                   />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_best.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./../images/1594025925.png"
+                    src="./../images/sprites/sprite_menu_best.png"
                     class="best__img best__img--scoop"
                     alt=""
                   />
@@ -337,31 +327,23 @@
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_best.webp"
                     type="image/webp"
                   />
                   <img
                     class="best__img best__img--cone"
-                    src="./../images/1594025925.png"
+                    src="./../images/sprites/sprite_menu_best.png"
                     alt=""
                   />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcxet="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcxet="./../images/1594025925.png"
+                    srcxet="./../images/sprites/sprite_menu_best.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./../images/1594025925.png"
+                    src="./../images/sprites/sprite_menu_best.png"
                     class="best__img best__img--scoop"
                     alt=""
                   />
@@ -381,31 +363,23 @@
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcxet="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcxet="./../images/1594025925.png"
+                    srcxet="./../images/sprites/sprite_menu_best.webp"
                     type="image/webp"
                   />
                   <img
                     class="best__img best__img--cone"
-                    src="./../images/1594025925.png"
+                    src="./../images/sprites/sprite_menu_best.png"
                     alt=""
                   />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcxet="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcxet="./../images/1594025925.png"
+                    srcxet="./../images/sprites/sprite_menu_best.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./../images/1594025925.png"
+                    src="./../images/sprites/sprite_menu_best.webp"
                     class="best__img best__img--scoop"
                     alt=""
                   />
@@ -425,31 +399,23 @@
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcxet="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcxet="./../images/1594025925.png"
+                    srcxet="./../images/sprites/sprite_menu_best.webp"
                     type="image/webp"
                   />
                   <img
                     class="best__img best__img--cone"
-                    src="./../images/1594025925.png"
+                    src="./../images/sprites/sprite_menu_best.png"
                     alt=""
                   />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcxet="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcxet="./../images/1594025925.png"
+                    srcxet="./../images/sprites/sprite_menu_best.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./../images/1594025925.png"
+                    src="./../images/sprites/sprite_menu_best.png"
                     class="best__img best__img--scoop"
                     alt=""
                   />
@@ -469,31 +435,23 @@
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcxet="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcxet="./../images/1594025925.png"
+                    srcxet="./../images/sprites/sprite_menu_best.webp"
                     type="image/webp"
                   />
                   <img
                     class="best__img best__img--cone"
-                    src="./../images/1594025925.png"
+                    src="./../images/sprites/sprite_menu_best.png"
                     alt=""
                   />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcxet="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcxet="./../images/1594025925.png"
+                    srcxet="./../images/sprites/sprite_menu_best.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./../images/1594025925.png"
+                    src="./../images/sprites/sprite_menu_best.png"
                     class="best__img best__img--scoop"
                     alt=""
                   />
@@ -513,31 +471,23 @@
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcxet="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcxet="./../images/1594025925.png"
+                    srcxet="./../images/sprites/sprite_menu_best.webp"
                     type="image/webp"
                   />
                   <img
                     class="best__img best__img--cone"
-                    src="./../images/1594025925.png"
+                    src="./../images/sprites/sprite_menu_best.png"
                     alt=""
                   />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcxet="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcxet="./../images/1594025925.png"
+                    srcxet="./../images/sprites/sprite_menu_best.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./../images/1594025925.png"
+                    src="./../images/sprites/sprite_menu_best.webp"
                     class="best__img best__img--scoop"
                     alt=""
                   />
@@ -557,31 +507,23 @@
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcxet="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcxet="./../images/1594025925.png"
+                    srcxet="./../images/sprites/sprite_menu_best.webp"
                     type="image/webp"
                   />
                   <img
                     class="best__img best__img--cone"
-                    src="./../images/1594025925.png"
+                    src="./../images/sprites/sprite_menu_best.png"
                     alt=""
                   />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcxet="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcxet="./../images/1594025925.png"
+                    srcxet="./../images/sprites/sprite_menu_best.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./../images/1594025925.png"
+                    src="./../images/sprites/sprite_menu_best.png"
                     class="best__img best__img--scoop"
                     alt=""
                   />
@@ -601,31 +543,23 @@
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcxet="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcxet="./../images/1594025925.png"
+                    srcxet="./../images/sprites/sprite_menu_best.webp"
                     type="image/webp"
                   />
                   <img
                     class="best__img best__img--cone"
-                    src="./../images/1594025925.png"
+                    src="./../images/sprites/sprite_menu_best.png"
                     alt=""
                   />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcxet="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcxet="./../images/1594025925.png"
+                    srcxet="./../images/sprites/sprite_menu_best.webp"
                     type="image/webp"
                   />
                   <img
-                    src="./../images/1594025925.png"
+                    src="./../images/sprites/sprite_menu_best.png"
                     class="best__img best__img--scoop"
                     alt=""
                   />
@@ -654,92 +588,92 @@
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
                   <img
-                    class="product__img"
-                    src="./../images/1594025925.png"
+                    class="product__img product__img--cone"
+                    src="./../images/sprites/sprite_menu_product.png"
                     alt=""
                   />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
                   <img
-                    class="product__img"
-                    src="./../images/1594025925.png"
+                    class="product__img product__img--scoop"
+                    src="./../images/sprites/sprite_menu_product.png"
                     alt=""
                   />
                 </picture>
               </div>
             </a>
             <!-- 관련 해시태그 목록 -->
-            <ul class="">
+            <ul class="product__hashtag__list">
               <!-- #을 before 요소로 주고 스크린리더가 읽지 못하게 할까 고민했지만
                 '해시태그'가 갖는 의미가 있다고 생각함. 다른 의견 적극 환영합니다! -->
-              <li><a href="">#초당옥수수</a></li>
-              <li><a href="">#치즈아이스크림</a></li>
+              <li class="">
+                <a href="" class="product__hashtag__link">#초당옥수수</a>
+              </li>
+              <li class="">
+                <a href="" class="product__hashtag__link">#치즈아이스크림</a>
+              </li>
             </ul>
           </li>
 
           <!-- 마우나로아 마카다미아 -->
           <li class="product__item">
-            <a href="" class="">
+            <a href="" class="product__link">
               <!-- 아이스크림 이름 -->
               <p class="">마우나로아 마카다미아</p>
               <!-- 아이스크림 이미지 -->
-              <div>
+              <div class="product__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--cone"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--scoop"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
               </div>
             </a>
             <!-- 관련 해시태그 목록 -->
-            <ul class="">
-              <li><a href="">#마우나로아</a></li>
-              <li><a href="">#마카다미아</a></li>
+            <ul class="product__hashtag__list">
+              <li><a href="" class="product__hashtag__link">#마우나로아</a></li>
+              <li><a href="" class="product__hashtag__link">#마카다미아</a></li>
               <button aria-label="해시태그 더보기"></button>
             </ul>
             <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
-            <div>
+            <div class="product__hashtag__modal">
               <div>
                 <ul class="">
-                  <li><a href="">#마우나로아</a></li>
-                  <li><a href="">#마카다미아</a></li>
-                  <li><a href="">#카라멜</a></li>
+                  <li>
+                    <a href="" class="product__hashtag__link">#마우나로아</a>
+                  </li>
+                  <li>
+                    <a href="" class="product__hashtag__link">#마카다미아</a>
+                  </li>
+                  <li><a href="" class="product__hashtag__link">#카라멜</a></li>
                 </ul>
                 <button aria-label="해시태그 목록 닫기"></button>
               </div>
@@ -748,130 +682,130 @@
 
           <!-- 나와라 꼬부기 -->
           <li class="product__item">
-            <a href="" class="">
+            <a href="" class="product__link">
               <!-- 아이스크림 이름 -->
               <p class="">나와라 꼬부기</p>
               <!-- 아이스크림 이미지 -->
-              <div>
+              <div class="product__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--cone"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--scoop"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
               </div>
             </a>
             <!-- 관련 해시태그 목록 -->
-            <ul class="">
-              <li><a href="">#꼬부기</a></li>
-              <li><a href="">#소다</a></li>
+            <ul class="product__hashtag__list">
+              <li><a href="" class="product__hashtag__link">#꼬부기</a></li>
+              <li><a href="" class="product__hashtag__link">#소다</a></li>
             </ul>
           </li>
 
           <!-- 도리도리 팽도리 -->
           <li class="product__item">
-            <a href="" class="">
+            <a href="" class="product__link">
               <!-- 아이스크림 이름 -->
               <p class="">도리도리 팽도리</p>
               <!-- 아이스크림 이미지 -->
-              <div>
+              <div class="product__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--cone"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--scoop"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
               </div>
             </a>
             <!-- 관련 해시태그 목록 -->
-            <ul class="">
-              <li><a href="">#밀크</a></li>
-              <li><a href="">#소다</a></li>
+            <ul class="product__hashtag__list">
+              <li><a href="" class="product__hashtag__link">#밀크</a></li>
+              <li><a href="" class="product__hashtag__link">#소다</a></li>
             </ul>
           </li>
 
           <!-- 치코치코 치코리타 -->
           <li class="product__item">
-            <a href="" class="">
+            <a href="" class="product__link">
               <!-- 아이스크림 이름 -->
               <p class="">치코치코 치코리타</p>
               <!-- 아이스크림 이미지 -->
-              <div>
+              <div class="product__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--cone"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--scoop"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
               </div>
             </a>
             <!-- 관련 해시태그 목록 -->
-            <ul class="">
-              <li><a href="">#청사과</a></li>
-              <li><a href="">#요거트</a></li>
+            <ul class="product__hashtag__list">
+              <li><a href="" class="product__hashtag__link">#청사과</a></li>
+              <li><a href="" class="product__hashtag__link">#요거트</a></li>
               <button aria-label="해시태그 더보기"></button>
             </ul>
             <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
-            <div>
+            <div class="product__hashtag__modal">
               <div>
                 <ul class="">
-                  <li><a href="">#청사과</a></li>
-                  <li><a href="">#요거트</a></li>
-                  <li><a href="">#샤베트</a></li>
+                  <li><a href="" class="product__hashtag__link">#청사과</a></li>
+                  <li><a href="" class="product__hashtag__link">#요거트</a></li>
+                  <li><a href="" class="product__hashtag__link">#샤베트</a></li>
                 </ul>
                 <button aria-label="해시태그 목록 닫기"></button>
               </div>
@@ -880,50 +814,52 @@
 
           <!-- 찰떡콩떡 -->
           <li class="product__item">
-            <a href="" class="">
+            <a href="" class="product__link">
               <!-- 아이스크림 이름 -->
               <p class="">찰떡콩떡</p>
               <!-- 아이스크림 이미지 -->
-              <div>
+              <div class="product__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--cone"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--scoop"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
               </div>
             </a>
             <!-- 관련 해시태그 목록 -->
-            <ul class="">
-              <li><a href="">#찰떡콩떡</a></li>
-              <li><a href="">#콩고물</a></li>
+            <ul class="product__hashtag__list">
+              <li><a href="" class="product__hashtag__link">#찰떡콩떡</a></li>
+              <li><a href="" class="product__hashtag__link">#콩고물</a></li>
               <button aria-label="해시태그 더보기"></button>
             </ul>
             <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
-            <div>
+            <div class="product__hashtag__modal">
               <div>
                 <ul class="">
-                  <li><a href="">#찰떡콩떡</a></li>
-                  <li><a href="">#콩고물</a></li>
-                  <li><a href="">#찰떡</a></li>
+                  <li>
+                    <a href="" class="product__hashtag__link">#찰떡콩떡</a>
+                  </li>
+                  <li><a href="" class="product__hashtag__link">#콩고물</a></li>
+                  <li><a href="" class="product__hashtag__link">#찰떡</a></li>
                 </ul>
                 <button aria-label="해시태그 목록 닫기"></button>
               </div>
@@ -932,50 +868,52 @@
 
           <!-- 피나 콜라다 -->
           <li class="product__item">
-            <a href="" class="">
+            <a href="" class="product__link">
               <!-- 아이스크림 이름 -->
               <p class="">피나 콜라다</p>
               <!-- 아이스크림 이미지 -->
-              <div>
+              <div class="product__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--cone"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--scoop"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
               </div>
             </a>
             <!-- 관련 해시태그 목록 -->
-            <ul class="">
-              <li><a href="">#파인애플</a></li>
-              <li><a href="">#코코넛</a></li>
+            <ul class="product__hashtag__list">
+              <li><a href="" class="product__hashtag__link">#파인애플</a></li>
+              <li><a href="" class="product__hashtag__link">#코코넛</a></li>
               <button aria-label="해시태그 더보기"></button>
             </ul>
             <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
-            <div>
+            <div class="product__hashtag__modal">
               <div>
                 <ul class="">
-                  <li><a href="">#파인애플</a></li>
-                  <li><a href="">#코코넛</a></li>
-                  <li><a href="">#샤베트</a></li>
+                  <li>
+                    <a href="" class="product__hashtag__link">#파인애플</a>
+                  </li>
+                  <li><a href="" class="product__hashtag__link">#코코넛</a></li>
+                  <li><a href="" class="product__hashtag__link">#샤베트</a></li>
                 </ul>
                 <button aria-label="해시태그 목록 닫기"></button>
               </div>
@@ -984,286 +922,297 @@
 
           <!-- 해피 버스데이 -->
           <li class="product__item">
-            <a href="" class="">
+            <a href="" class="product__link">
               <!-- 아이스크림 이름 -->
               <p class="">해피 버스데이</p>
               <!-- 아이스크림 이미지 -->
-              <div>
+              <div class="product__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--cone"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--scoop"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
               </div>
             </a>
             <!-- 관련 해시태그 목록 -->
-            <ul class="">
-              <li><a href="">#해피버스데이</a></li>
+            <ul class="product__hashtag__list">
+              <li>
+                <a href="" class="product__hashtag__link">#해피버스데이</a>
+              </li>
             </ul>
           </li>
 
           <!-- 오레오 쿠키 앤 크림 -->
           <li class="product__item">
-            <a href="" class="">
+            <a href="" class="product__link">
               <!-- 아이스크림 이름 -->
               <p class="">오레오 쿠키 앤 크림</p>
               <!-- 아이스크림 이미지 -->
-              <div>
+              <div class="product__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--cone"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--scoop"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
               </div>
             </a>
             <!-- 관련 해시태그 목록 -->
-            <ul class="">
-              <li><a href="">#오레오쿠키앤크림</a></li>
+            <ul class="product__hashtag__list">
+              <li>
+                <a href="" class="product__hashtag__link">#오레오쿠키앤크림</a>
+              </li>
             </ul>
           </li>
 
           <!-- 월넛 -->
           <li class="product__item">
-            <a href="" class="">
+            <a href="" class="product__link">
               <!-- 아이스크림 이름 -->
               <p class="">월넛</p>
               <!-- 아이스크림 이미지 -->
-              <div>
+              <div class="product__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--cone"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--scoop"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
               </div>
             </a>
             <!-- 관련 해시태그 목록 -->
-            <ul class="">
-              <li><a href="">#월넛</a></li>
+            <ul class="product__hashtag__list">
+              <li><a href="" class="product__hashtag__link">#월넛</a></li>
             </ul>
           </li>
 
           <!-- 블랙 소르베 -->
           <li class="product__item">
-            <a href="" class="">
+            <a href="" class="product__link">
               <!-- 아이스크림 이름 -->
               <p class="">블랙 소르베</p>
               <!-- 아이스크림 이미지 -->
-              <div>
+              <div class="product__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--cone"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--scoop"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
               </div>
             </a>
             <!-- 관련 해시태그 목록 -->
-            <ul class="">
-              <li><a href="">#블랙소르베</a></li>
-              <li><a href="">#레몬라임소르베</a></li>
+            <ul class="product__hashtag__list">
+              <li><a href="" class="product__hashtag__link">#블랙소르베</a></li>
+              <li>
+                <a href="" class="product__hashtag__link">#레몬라임소르베</a>
+              </li>
             </ul>
           </li>
 
           <!-- 바닐라 아몬드 크런치 -->
           <li class="product__item">
-            <a href="" class="">
+            <a href="" class="product__link">
               <!-- 아이스크림 이름 -->
               <p class="">바닐라 아몬드 크런치</p>
               <!-- 아이스크림 이미지 -->
-              <div>
+              <div class="product__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--cone"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--scoop"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
               </div>
             </a>
             <!-- 관련 해시태그 목록 -->
-            <ul class="">
-              <li><a href="">#바닐라아몬드크런치</a></li>
-              <li><a href="">#아몬드크런치</a></li>
+            <ul class="product__hashtag__list">
+              <li>
+                <a href="" class="product__hashtag__link"
+                  >#바닐라아몬드크런치</a
+                >
+              </li>
             </ul>
           </li>
 
           <!-- 알폰소 망고 -->
           <li class="product__item">
-            <a href="" class="">
+            <a href="" class="product__link">
               <!-- 아이스크림 이름 -->
               <p class="">알폰소 망고</p>
               <!-- 아이스크림 이미지 -->
-              <div>
+              <div class="product__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--cone"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--scoop"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
               </div>
             </a>
             <!-- 관련 해시태그 목록 -->
-            <ul class="">
-              <li><a href="">#망고</a></li>
+            <ul class="product__hashtag__list">
+              <li><a href="" class="product__hashtag__link">#망고</a></li>
             </ul>
           </li>
 
           <!-- 엄마는 외계인 -->
           <li class="product__item">
-            <a href="" class="">
+            <a href="" class="product__link">
               <!-- 아이스크림 이름 -->
               <p class="">엄마는 외계인</p>
               <!-- 아이스크림 이미지 -->
-              <div>
+              <div class="product__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--cone"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--scoop"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
               </div>
             </a>
             <!-- 관련 해시태그 목록 -->
-            <ul class="">
-              <li><a href="">#초콜릿</a></li>
-              <li><a href="">#초코볼</a></li>
+            <ul class="product__hashtag__list">
+              <li><a href="" class="product__hashtag__link">#초콜릿</a></li>
+              <li><a href="" class="product__hashtag__link">#초코볼</a></li>
               <button aria-label="해시태그 더보기"></button>
             </ul>
             <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
-            <div>
+            <div class="product__hashtag__modal">
               <div>
                 <ul class="">
-                  <li><a href="">#초콜릿</a></li>
-                  <li><a href="">#초코볼</a></li>
-                  <li><a href="">#엄마는외계인</a></li>
+                  <li><a href="" class="product__hashtag__link">#초콜릿</a></li>
+                  <li><a href="" class="product__hashtag__link">#초코볼</a></li>
+                  <li>
+                    <a href="" class="product__hashtag__link">#엄마는외계인</a>
+                  </li>
                 </ul>
                 <button aria-label="해시태그 목록 닫기"></button>
               </div>
@@ -1272,51 +1221,53 @@
 
           <!-- 아몬드 봉봉 -->
           <li class="product__item">
-            <a href="" class="">
+            <a href="" class="product__link">
               <!-- 아이스크림 이름 -->
               <p class="">아몬드 봉봉</p>
               <!-- 아이스크림 이미지 -->
-              <div>
+              <div class="product__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--cone"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--scoop"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
               </div>
             </a>
             <!-- 관련 해시태그 목록 -->
-            <ul class="">
-              <li><a href="">#아몬드</a></li>
-              <li><a href="">#초콜릿</a></li>
+            <ul class="product__hashtag__list">
+              <li><a href="" class="product__hashtag__link">#아몬드</a></li>
+              <li><a href="" class="product__hashtag__link">#초콜릿</a></li>
               <button aria-label="해시태그 더보기"></button>
             </ul>
             <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
-            <div>
+            <div class="product__hashtag__modal">
               <div>
                 <ul class="">
-                  <li><a href="">#아몬드</a></li>
-                  <li><a href="">#초콜릿</a></li>
-                  <li><a href="">#초코</a></li>
-                  <li><a href="">#아몬드봉봉</a></li>
+                  <li><a href="" class="product__hashtag__link">#아몬드</a></li>
+                  <li><a href="" class="product__hashtag__link">#초콜릿</a></li>
+                  <li><a href="" class="product__hashtag__link">#초코</a></li>
+                  <li>
+                    <a href="" class="product__hashtag__link">#아몬드봉봉</a>
+                  </li>
                 </ul>
                 <button aria-label="해시태그 목록 닫기"></button>
               </div>
@@ -1325,50 +1276,54 @@
 
           <!-- 민트 초콜릿 칩 -->
           <li class="product__item">
-            <a href="" class="">
+            <a href="" class="product__link">
               <!-- 아이스크림 이름 -->
               <p class="">민트 초콜릿 칩</p>
               <!-- 아이스크림 이미지 -->
-              <div>
+              <div class="product__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--cone"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--scoop"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
               </div>
             </a>
             <!-- 관련 해시태그 목록 -->
-            <ul class="">
-              <li><a href="">#민트</a></li>
-              <li><a href="">#초콜릿칩</a></li>
+            <ul class="product__hashtag__list">
+              <li><a href="" class="product__hashtag__link">#민트</a></li>
+              <li><a href="" class="product__hashtag__link">#초콜릿칩</a></li>
               <button aria-label="해시태그 더보기"></button>
             </ul>
             <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
-            <div>
+            <div class="product__hashtag__modal">
               <div>
                 <ul class="">
-                  <li><a href="">#민트</a></li>
-                  <li><a href="">#초콜릿칩</a></li>
-                  <li><a href="">#민트초콜릿칩</a></li>
+                  <li><a href="" class="product__hashtag__link">#민트</a></li>
+                  <li>
+                    <a href="" class="product__hashtag__link">#초콜릿칩</a>
+                  </li>
+                  <li>
+                    <a href="" class="product__hashtag__link">#민트초콜릿칩</a>
+                  </li>
                 </ul>
                 <button aria-label="해시태그 목록 닫기"></button>
               </div>
@@ -1377,51 +1332,61 @@
 
           <!-- 사랑에 빠진 딸기 -->
           <li class="product__item">
-            <a href="" class="">
+            <a href="" class="product__link">
               <!-- 아이스크림 이름 -->
               <p class="">사랑에 빠진 딸기</p>
               <!-- 아이스크림 이미지 -->
-              <div>
+              <div class="product__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--cone"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--scoop"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
               </div>
             </a>
             <!-- 관련 해시태그 목록 -->
-            <ul class="">
-              <li><a href="">#사빠딸</a></li>
-              <li><a href="">#사랑에빠진딸기</a></li>
+            <ul class="product__hashtag__list">
+              <li><a href="" class="product__hashtag__link">#사빠딸</a></li>
+              <li>
+                <a href="" class="product__hashtag__link">#사랑에빠진딸기</a>
+              </li>
               <button aria-label="해시태그 더보기"></button>
             </ul>
             <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
-            <div>
+            <div class="product__hashtag__modal">
               <div>
                 <ul class="">
-                  <li><a href="">#사빠딸</a></li>
-                  <li><a href="">#사랑에빠진딸기</a></li>
-                  <li><a href="">#크런치초콜릿</a></li>
-                  <li><a href="">#치즈케이크</a></li>
+                  <li><a href="" class="product__hashtag__link">#사빠딸</a></li>
+                  <li>
+                    <a href="" class="product__hashtag__link"
+                      >#사랑에빠진딸기</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="product__hashtag__link">#크런치초콜릿</a>
+                  </li>
+                  <li>
+                    <a href="" class="product__hashtag__link">#치즈케이크</a>
+                  </li>
                 </ul>
                 <button aria-label="해시태그 목록 닫기"></button>
               </div>
@@ -1430,51 +1395,53 @@
 
           <!-- 애플 민트 -->
           <li class="product__item">
-            <a href="" class="">
+            <a href="" class="product__link">
               <!-- 아이스크림 이름 -->
               <p class="">애플 민트</p>
               <!-- 아이스크림 이미지 -->
-              <div>
+              <div class="product__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--cone"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--scoop"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
               </div>
             </a>
             <!-- 관련 해시태그 목록 -->
-            <ul class="">
-              <li><a href="">#애플민트</a></li>
-              <li><a href="">#사과</a></li>
+            <ul class="product__hashtag__list">
+              <li><a href="" class="product__hashtag__link">#애플민트</a></li>
+              <li><a href="" class="product__hashtag__link">#사과</a></li>
               <button aria-label="해시태그 더보기"></button>
             </ul>
             <!-- 해시태그 더보기 버튼이 눌렸을 때 위 a 요소를 덮으면서 나타날 부분 -->
-            <div>
+            <div class="product__hashtag__modal">
               <div>
                 <ul class="">
-                  <li><a href="">#애플민트</a></li>
-                  <li><a href="">#사과</a></li>
-                  <li><a href="">#민트</a></li>
-                  <li><a href="">#샤베트</a></li>
+                  <li>
+                    <a href="" class="product__hashtag__link">#애플민트</a>
+                  </li>
+                  <li><a href="" class="product__hashtag__link">#사과</a></li>
+                  <li><a href="" class="product__hashtag__link">#민트</a></li>
+                  <li><a href="" class="product__hashtag__link">#샤베트</a></li>
                 </ul>
                 <button aria-label="해시태그 목록 닫기"></button>
               </div>
@@ -1483,81 +1450,81 @@
 
           <!-- 뉴욕 치즈케이크 -->
           <li class="product__item">
-            <a href="" class="">
+            <a href="" class="product__link">
               <!-- 아이스크림 이름 -->
               <p class="">뉴욕 치즈케이크</p>
               <!-- 아이스크림 이미지 -->
-              <div>
+              <div class="product__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--cone"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--scoop"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
               </div>
             </a>
             <!-- 관련 해시태그 목록 -->
-            <ul class="">
-              <li><a href="">#치즈</a></li>
-              <li><a href="">#치즈케이크</a></li>
+            <ul class="product__hashtag__list">
+              <li><a href="" class="product__hashtag__link">#치즈</a></li>
+              <li><a href="" class="product__hashtag__link">#치즈케이크</a></li>
             </ul>
           </li>
 
           <!-- 피스타치오 아몬드 -->
           <li class="product__item">
-            <a href="" class="">
+            <a href="" class="product__link">
               <!-- 아이스크림 이름 -->
               <p class="">피스타치오 아몬드</p>
               <!-- 아이스크림 이미지 -->
-              <div>
+              <div class="product__img-box">
                 <!-- 아이스크림 콘 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--cone"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
                 <!-- 아이스크림 스쿱 -->
                 <picture>
                   <source
-                    srcset="./../images/1594025925.png"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="./../images/1594025925.png"
+                    srcset="./../images/sprites/sprite_menu_product.webp"
                     type="image/webp"
                   />
-                  <img src="./../images/1594025925.png" alt="" />
+                  <img
+                    class="product__img product__img--scoop"
+                    src="./../images/sprites/sprite_menu_product.png"
+                    alt=""
+                  />
                 </picture>
               </div>
             </a>
             <!-- 관련 해시태그 목록 -->
-            <ul class="">
-              <li><a href="">#피스타치오</a></li>
-              <li><a href="">#아몬드</a></li>
+            <ul class="product__hashtag__list">
+              <li><a href="" class="product__hashtag__link">#피스타치오</a></li>
+              <li><a href="" class="product__hashtag__link">#아몬드</a></li>
             </ul>
           </li>
         </ul>
@@ -1569,7 +1536,8 @@
                 class="pagination__btn pagination__btn--prev"
                 href=""
                 aria-label="이전 페이지"
-              ></a>
+                ><span>&lt;</span></a
+              >
             </li>
             <li>
               <a
@@ -1601,153 +1569,252 @@
                 class="pagination__btn pagination__btn--next"
                 href=""
                 aria-label="다음 페이지"
-              ></a>
+                ><span>&gt;</span></a
+              >
             </li>
           </ul>
         </nav>
       </section>
     </main>
 
-    <!-- 4. 푸터 -->
-    <footer>
+    <footer class="relative border-t-[1px] border-brown1">
       <!-- 1. 가이드 리스트 -->
-      <ul>
+      <ul
+        class="flex flex-wrap justify-center md:max-w-[700px]mx-auto text-sm text-brown2 py-3"
+      >
         <li>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a
+            class="footer-link max-md:hidden"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             점포개설문의
           </a>
         </li>
         <li>
-          <a href="" target="_blank" rel="noopener noreferrer">채용문의</a>
+          <a
+            class="footer-link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            >채용문의</a
+          >
         </li>
         <li>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a
+            class="footer-link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             윤리신고센터
           </a>
         </li>
         <li>
-          <a href="" target="_blank" rel="noopener noreferrer">이용약관</a>
+          <a
+            class="footer-link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            >이용약관</a
+          >
         </li>
         <li>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a
+            class="footer-link text-pink1"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             개인정보처리방침
           </a>
         </li>
         <li>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a
+            class="footer-link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             영상정보처리기기운영관리방침
           </a>
         </li>
         <li>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a
+            class="footer-link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             안전보건 경영방침
           </a>
         </li>
         <li>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a
+            class="footer-link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             거래희망회사 사전등록
           </a>
         </li>
       </ul>
       <!-- 2. 관련 사이트 리스트 -->
       <!-- 사이트 아이콘은 background-image를 사용해서 넣을 예정 -->
-      <ul>
-        <li>
-          <a
-            href="https://www.happypointcard.com/page/main/index.spc"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="bg-btn_happypoint"
-            aria-label="해피포인트 바로가기"
+      <div class="bg-beige1 mb-[40px]">
+        <ul class="relative flex max-w-[1200px] mx-auto justify-center py-8">
+          <li class="mr-[52px] max-md:mr-4">
+            <a
+              href="https://www.happypointcard.com/page/main/index.spc"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block bg-btn-happypoint w-[62px] h-[31px]"
+              aria-label="해피포인트 바로가기"
+            >
+            </a>
+          </li>
+          <li class="mr-[52px] max-md:mr-4">
+            <a
+              href="http://m.celectory.com/mobile/gift/recommend?"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block bg-btn-happymarket w-[65px] h-[31px]"
+              aria-label="해피마켓 바로가기"
+            >
+            </a>
+          </li>
+          <li class="mr-[52px] max-md:mr-4">
+            <a
+              href="http://www.spc.co.kr/contributionAll"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block bg-btn-spc w-[131px] h-[31px] max-md:w-[110px] max-md:bg-contain max-md:bg-no-repeat max-md:bg-center"
+              aria-label="spc 바로가기"
+            >
+            </a>
+          </li>
+          <li class="mr-[12px] max-md:mr-2">
+            <a
+              href="https://sealinfo.verisign.com/splash?form_file=fdf/splash.fdf&dn=WWW.BASKINROBBINS.CO.KR&lang=ko"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block bg-btn-norton w-[55px] h-[31px]"
+              aria-label="norton 바로가기"
+            >
+            </a>
+          </li>
+          <li class="mr-[12px] max-md:mr-2">
+            <a
+              href="https://www.kca.go.kr/ccm/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block bg-btn-ccm bg-contain w-[32px] h-[32px]"
+              aria-label="한국소비자원 바로가기"
+            >
+            </a>
+          </li>
+          <li class="mr-[52px] max-md:mr-0">
+            <a
+              href="https://knqa.ksa.or.kr/knqa/2276/subview.do"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block bg-btn-ksa bg-no-repeat w-[32px] h-[32px]"
+              aria-label="국가품질상 정보 바로가기"
+            >
+            </a>
+          </li>
+          <!-- 패밀리 사이트 -->
+          <!-- 버튼을 누르면 패밀리 사이트 리스트가 보입니다 -->
+          <li
+            class="relative select-dropdown max-md:absolute max-md:bottom-[-48px] max-md:right-[18px]"
           >
-          </a>
+            <label for="family-site-select" class="sr-only"
+              >패밀리 사이트</label
+            >
+            <select
+              name="family-sites"
+              id="family-site-select"
+              onchange="window.open(value, '_blank', 'noopener', 'noreferrer');"
+              class="appearance-none bg-white border-[1px] border-gray px-3 pt-1 rounded-md text-gray2 text-xs max-md:w-[160px] max-md:pt-2 max-md:pb-1 shadow-md"
+            >
+              <option value="none" class="text-xs">FAMILY SITE</option>
+              <option
+                value="https://baskinschool.hunet.co.kr/Login/LoginGate"
+                class="text-xs"
+              >
+                배스킨 스쿨
+              </option>
+              <option value="https://www.spc.co.kr/" class="text-xs">
+                SPC그룹사이트
+              </option>
+              <option value="https://www.spcmagazine.com/" class="text-xs">
+                SPC MAGAZINE
+              </option>
+              <option
+                value="http://www.brkorea.co.kr/main/main.php"
+                class="text-xs"
+              >
+                BR코리아
+              </option>
+              <option
+                value="https://www.caffe-pascucci.co.kr/index.asp"
+                class="text-xs"
+              >
+                파스쿠찌
+              </option>
+              <option value="https://spcsamlip.co.kr/" class="text-xs">
+                삼립
+              </option>
+            </select>
+          </li>
+        </ul>
+      </div>
+      <!-- 모바일에서만 보이는 고객센터, 대표 전화 -->
+      <ul
+        class="hidden max-md:flex absolute text-xs gap-3 text-gray2 max-md:bottom-[60px] max-md:left-[18px] max-md:items-center"
+      >
+        <li>
+          <a href="/" class="px-[18px] py-[8px] bg-brown1 text-white rounded-sm"
+            >고객센터</a
+          >
         </li>
         <li>
           <a
-            href="http://m.celectory.com/mobile/gift/recommend?"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="bg-btn_happymarket"
-            aria-label="해피마켓 바로가기"
+            href="tel:0805553131"
+            class="flex items-center uppercase icon-customer-center align-top"
+            >080-555-3131</a
           >
-          </a>
-        </li>
-        <li>
-          <a
-            href="http://www.spc.co.kr/contributionAll"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="bg-btn_spc_story"
-            aria-label="spc 바로가기"
-          >
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://sealinfo.verisign.com/splash?form_file=fdf/splash.fdf&dn=WWW.BASKINROBBINS.CO.KR&lang=ko"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="bg-btn_norton"
-            aria-label="norton 바로가기"
-          >
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.kca.go.kr/ccm/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="bg-btn_ccm_2"
-            aria-label="한국소비자원 바로가기"
-          >
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://knqa.ksa.or.kr/knqa/2276/subview.do"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="bg-btn_ksa"
-            aria-label="국가품질상 정보 바로가기"
-          >
-          </a>
-        </li>
-        <!-- 패밀리 사이트 -->
-        <!-- 버튼을 누르면 패밀리 사이트 리스트가 보입니다 -->
-        <li>
-          <label for="family-site-select">패밀리 사이트</label>
-          <select
-            name="family-sites"
-            id="family-site-select"
-            onchange="window.open(value, '_blank', 'noopener', 'noreferrer');"
-          >
-            <option value="none">FAMILY SITE</option>
-            <option value="https://baskinschool.hunet.co.kr/Login/LoginGate">
-              배스킨 스쿨
-            </option>
-            <option value="https://www.spc.co.kr/">SPC그룹사이트</option>
-            <option value="https://www.spcmagazine.com/">SPC MAGAZINE</option>
-            <option value="http://www.brkorea.co.kr/main/main.php">
-              BR코리아
-            </option>
-            <option value="https://www.caffe-pascucci.co.kr/index.asp">
-              파스쿠찌
-            </option>
-            <option value="https://spcsamlip.co.kr/">삼립</option>
-          </select>
         </li>
       </ul>
       <!-- 3. 주소, 이메일, 사업자번호 등 -->
       <!-- ::before를 이용해 배스킨라빈스 로고를 넣을 예정 -->
-      <address>
-        <span>사업자 등록번호 : 303-81-09535</span>
-        <span>비알코리아(주) 대표이사 도세호</span>
-        <span>서울특별시 서초구 남부순환로 2620(양재동 11-149번지)</span>
-        <span>TEL : <a href="tel:0805553131">080-555-3131</a></span>
-        <span>개인정보관리책임자 : 김경우</span>
+      <address
+        class="flex flex-wrap justify-center gap-x-[16px] gap-y-[4px] w-[600px] mx-auto text-[10px] text-brown2 not-italic footer-logo max-md:mb-8 max-md:justify-start max-md:w-[290px] max-md:ml-[18px]"
+      >
+        <span class="inline-block mt-[72px] max-md:mt-9"
+          >사업자 등록번호 : 303-81-09535</span
+        >
+        <span class="inline-block mt-[72px] max-md:mt-9"
+          >비알코리아(주) 대표이사 도세호</span
+        >
+        <span class="inline-block mt-[72px] max-md:mt-1"
+          >서울특별시 서초구 남부순환로 2620<span class="max-md:hidden"
+            >(양재동 11-149번지)</span
+          ></span
+        >
+        <span class="inline-block max-md:hidden"
+          >TEL : <a href="tel:0805553131">080-555-3131</a></span
+        >
+        <span class="inline-block max-md:mt-1"
+          >개인정보관리책임자 : 김경우</span
+        >
       </address>
       <!-- 4. 저작권 정보 -->
-      <small>
+      <small
+        class="block mt-[20px] mb-[52px] text-center text-[10px] text-gray2 max-md:hidden"
+      >
         Copyright &copy; 2016 BRKOREA Company. All Rights Reserved.
       </small>
     </footer>

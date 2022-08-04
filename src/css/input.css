@@ -7,8 +7,7 @@
   font-family: 'BaskinRobbins';
   font-weight: 400;
   font-style: normal;
-  src: url('./../fonts/BaskinRobbinsRegular.woff2')
-      format('woff2');
+  src: url('./../fonts/BaskinRobbinsRegular.woff2') format('woff2');
   font-display: swap;
 }
 
@@ -16,8 +15,7 @@
   font-family: 'BaskinRobbins';
   font-weight: 700;
   font-style: normal;
-  src: url('./../fonts/BaskinRobbinsBold.woff2')
-      format('woff2');
+  src: url('./../fonts/BaskinRobbinsBold.woff2') format('woff2');
   font-display: swap;
 }
 
@@ -25,8 +23,7 @@
   font-family: 'NanumSquareRound';
   font-weight: 700;
   font-style: normal;
-  src: url('./../fonts/NanumSquareRound-Bold.woff2')
-      format('woff2');
+  src: url('./../fonts/NanumSquareRound-Bold.woff2') format('woff2');
   font-display: swap;
 }
 
@@ -34,8 +31,7 @@
   font-family: 'NanumSquareRound';
   font-weight: 800;
   font-style: normal;
-  src: url('./../fonts/NanumSquareRound-ExtraBold.woff2')
-      format('woff2');
+  src: url('./../fonts/NanumSquareRound-ExtraBold.woff2') format('woff2');
   font-display: swap;
 }
 
@@ -119,7 +115,6 @@ body::after {
 }
 
 /* 메뉴 페이지 */
-
 *:focus {
   @apply outline-none outline-4 outline-blue-500;
 }
@@ -192,30 +187,44 @@ body::after {
 /* 섹션 타이틀 */
 
 .menu__title {
-  @apply text-center text-4xl mt-[4.5rem];
+  @apply text-center text-4xl mt-[4.5rem] font-baskin;
 }
 .menu__title--crown::before {
   content: '';
   display: block;
   width: 2.5rem;
   height: 2.5rem;
-  background: url('../images/crown.png') no-repeat;
+  background: url('./../images/sprites/sprite_menu_best.png') -460px -528px
+    no-repeat;
   margin-left: auto;
   margin-right: auto;
+}
+.menu__title--spoon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .menu__title--spoon::before,
 .menu__title--spoon::after {
   content: '';
   display: inline-block;
-  width: 2.812rem;
-  height: 2.5rem;
-  background: url('../images/crown.png') no-repeat;
+  width: 43px;
+  height: 11px;
+  background: url('./../images/sprites/sprite_menu_best.png') no-repeat;
 }
 .menu__title--spoon::before {
+  background-position: -460px -568px;
   margin-right: 1rem;
 }
 .menu__title--spoon::after {
+  background-position: -503px -568px;
   margin-left: 1rem;
+}
+
+.menu__banner {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* 추천 메뉴 */
@@ -249,10 +258,21 @@ body::after {
   color: white;
   text-align: center;
   line-height: 1.5rem;
-  background-image: url('../images/icon_rank_1.png');
+  background-image: url('./../images/sprites/sprite_menu_best.png');
+  background-position: -593px -528px;
   background-repeat: no-repeat;
   z-index: 1;
 }
+.best__list li:nth-child(1) .best__link::before {
+  background-position: -500px -528px;
+}
+.best__list li:nth-child(2) .best__link::before {
+  background-position: -531px -528px;
+}
+.best__list li:nth-child(3) .best__link::before {
+  background-position: -562px -528px;
+}
+
 .best__link:hover,
 .best__link:focus {
   transform: scale(1.1);
@@ -276,15 +296,21 @@ body::after {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%) scale(1.2);
   max-width: 100%;
-  width: 8rem;
-  height: 8rem;
+  width: 132px;
+  height: 132px;
   object-fit: none;
-  object-position: 100 100;
+  /* object-position: 0 0; */
 }
 .best__img--cone {
-  display: none;
+  top: 95%;
+  transform: translate(-50%, -50%) scale(0.6);
+  max-width: 100%;
+  width: 100px;
+  height: 100px;
+  object-fit: none;
+  object-position: -264px -528px;
 }
 .best__title {
   @apply text-black2;
@@ -338,34 +364,37 @@ body::after {
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
-  transition: all 450ms;
+  transition: all 350ms;
 }
 .product__link:hover .product__img-box,
 .product__link:focus .product__img-box {
   /* background-color: pink; */
-  background: radial-gradient(
+  /* background: radial-gradient(
     circle at center,
     #e01883 0,
     #ff7c98 65%,
     transparent 66%,
     transparent 90%
-  );
+  ); */
   transform: scale(1.05);
 }
 .product__img {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  /* width: 8rem;
-  height: 8rem;
+  width: 188px;
+  height: 188px;
   object-fit: none;
-  object-position: 100 100; */
+  object-position: 100 100;
 }
 .product__img--scoop {
   top: -10px;
 }
 .product__img--cone {
+  width: 100px;
+  height: 100px;
   top: 65%;
+  object-position: -376px -752px;
   transform: translateX(-50%) scale(0.7);
 }
 .product__hashtag__list {
@@ -398,16 +427,107 @@ body::after {
   margin-top: 1.5rem;
 }
 .pagination__btn {
-  display: block;
-  width: 3rem;
-  height: 3rem;
   border: 1px solid;
-  text-align: center;
   line-height: 3rem;
-  border-radius: 50%;
   transition: all 200ms;
+  @apply border-gray text-center rounded-full w-12 h-12 block;
 }
 .pagination__btn:hover,
 .pagination__btn:focus {
   @apply bg-pink1 text-white;
 }
+
+.pagination__btn--prev,
+.pagination__btn--next {
+  @apply border-pink1 text-pink1 text-center;
+}
+.pagination__btn span {
+  @apply font-bold text-[1.5rem];
+}
+.banner-carousel {
+  max-width: 100vw;
+}
+
+.btn-indicator {
+  @apply w-6 h-6 bg-white rounded-full shadow-lg shadow-gray2 max-md:w-5 max-md:h-5;
+}
+
+.btn-indicator[aria-selected='true'] {
+  @apply bg-navy1;
+}
+
+/* 캐러셀 컨트롤 */
+.controls {
+  padding: 1.5rem 2rem;
+}
+
+.play,
+.previous,
+.next {
+  @apply shadow-md shadow-gray2;
+}
+
+.play {
+  border-radius: 50%;
+  background: no-repeat center white;
+  background-size: 20px;
+}
+
+.pause {
+  background-image: url(../images/playButton.svg);
+}
+
+.rotation {
+  background-image: url(../images/pauseButton.svg);
+}
+
+.rotation {
+  order: 1;
+}
+
+.previous {
+  order: 3;
+  border-radius: 50%;
+  background: url(../images/carouselPrevButton.svg) no-repeat center white;
+  background-size: 20px;
+  margin-left: auto;
+}
+
+.next {
+  order: 4;
+  border-radius: 50%;
+  background: url(../images/carouselNextButton.svg) no-repeat center white;
+  background-size: 20px;
+  margin-left: 20px;
+}
+
+.indicator-list {
+  order: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+}
+
+.carousel-wrapper {
+  max-width: 100vw;
+}
+
+.carousel-image img {
+  max-width: 100vw;
+}
+
+img {
+  width: 100vw;
+}
+
+/* @keyframes fadeInUp {
+  0% {
+    opacity: 1;
+    height: 100%;
+  }
+  to {
+    opacity: 0;
+    height: 0;
+  }
+} */
