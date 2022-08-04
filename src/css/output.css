@@ -1740,7 +1740,7 @@ body::after {
   display: block;
   width: 40px;
   height: 40px;
-  background: url('./../images/sprites/sprite_menu_best.png') -460px -528px
+  background: url('./../images/sprites/sprite_menu_best.webp') -460px -528px
     no-repeat;
   margin-left: auto;
   margin-right: auto;
@@ -1759,7 +1759,7 @@ body::after {
   display: inline-block;
   width: 43px;
   height: 11px;
-  background: url('./../images/sprites/sprite_menu_best.png') no-repeat;
+  background: url('./../images/sprites/sprite_menu_best.webp') no-repeat;
 }
 
 .menu__title--spoon::before {
@@ -1831,7 +1831,7 @@ body::after {
   color: white;
   text-align: center;
   line-height: 1.5rem;
-  background-image: url('./../images/sprites/sprite_menu_best.png');
+  background-image: url('./../images/sprites/sprite_menu_best.webp');
   background-position: -593px -528px;
   background-repeat: no-repeat;
   z-index: 1;
